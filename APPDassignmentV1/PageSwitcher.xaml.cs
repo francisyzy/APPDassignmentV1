@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using APPDassignmentV1;
-using Assignment_Research.Screens;
+using APPDassignmentV1.Screens;
 
 namespace APPDassignmentV1
 {

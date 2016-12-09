@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Assignment_Research.Screens
+namespace APPDassignmentV1.Screens
 {
     /// <summary>
     /// Interaction logic for ChooseResource.xaml
