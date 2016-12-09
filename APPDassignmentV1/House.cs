@@ -8,6 +8,7 @@ namespace APPDassignmentV1.House
 {
     public abstract class Resource
     {
+        
         public string resourceId { get; set; }
         public string fullAddress { get; set; }
         public double price { get; set; }
@@ -15,7 +16,7 @@ namespace APPDassignmentV1.House
 
     }
     
-    public class unitResource
+    public class unitResource:Resource
     {
         public int unitId { get; set; }
         public int houseSize { get; set; }
@@ -24,7 +25,7 @@ namespace APPDassignmentV1.House
         public int aircon { get; set; }
     }
 
-    public class RoomResource
+    public class RoomResource:Resource
     {
         public int roomId { get; set; }
         public int roomSize { get; set; }
