@@ -1,6 +1,6 @@
 ﻿[
 {
-resourceId:'R1',
+resourceId:R1,
 address:
 	{
 		postalCode:123456,
@@ -14,7 +14,7 @@ roomSize:40,
 aircon:true
 },
 {
-resourceId:'U1',
+resourceId:U1,
 address:
 	{
 		postalCode:234567,
