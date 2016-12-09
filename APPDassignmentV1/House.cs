@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APPDassignmentV1.House
 {
-    class Resource
+    public abstract class Resource
     {
         public string resourceId { get; set; }
         public string fullAddress { get; set; }
@@ -15,7 +15,7 @@ namespace APPDassignmentV1.House
 
     }
     
-    class unitResource
+    public class unitResource
     {
         public int unitId { get; set; }
         public int houseSize { get; set; }
@@ -24,7 +24,7 @@ namespace APPDassignmentV1.House
         public int aircon { get; set; }
     }
 
-    class RoomResource
+    public class RoomResource
     {
         public int roomId { get; set; }
         public int roomSize { get; set; }
