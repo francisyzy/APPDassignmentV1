@@ -1,0 +1,29 @@
+﻿[
+  {
+    "resourceId": "R1",
+    "address": {
+      "postalCode": 123456,
+      "fullAddress": "123 street 123 road #123-232",
+      "region": "dover"
+    },
+    "price": 2000,
+    "resourceType": 2,
+    "roomId": 1,
+    "roomSize": 40,
+    "aircon": true
+  },
+  {
+    "resourceId": "U1",
+    "address": {
+      "postalCode": 234567,
+      "fullAddress": "111 streat 324 road",
+      "region": "woodland"
+    },
+    "price": "5000",
+    "resourseType": "1",
+
+  }
+
+
+
+]
