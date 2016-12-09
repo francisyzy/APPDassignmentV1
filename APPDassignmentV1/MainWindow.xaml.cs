@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using System.Text;
 using Newtonsoft.Json.Linq;
+using APPDassignmentV1.House;
+using System.IO;
 
 namespace APPDassignmentV1
 {
@@ -32,7 +34,7 @@ namespace APPDassignmentV1
         {
             List<Resource> resourceList;
 
-            using(StreamReader file = file.OpenText(@"ResourceData.txt"))
+            using(StreamReader file = File.OpenText(@"ResourceData.txt"))
             {
                 using(JsonTextReader reader = new JsonTextReader(file))
                 {
