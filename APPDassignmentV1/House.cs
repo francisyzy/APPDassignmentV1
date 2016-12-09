@@ -10,9 +10,9 @@ namespace APPDassignmentV1.House
     {
         
         public string resourceId { get; set; }
-        public address Address { get; set; }
+        public address Address { get; set; } //maybe call in map api to look up MRT
         public double price { get; set; }
-        public int resourceType { get; set; }
+        public int resourceType { get; set; } //1 = unit || 2= room
 
     }
     
