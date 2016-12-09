@@ -12,7 +12,6 @@ namespace APPDassignmentV1.House
         public string resourceId { get; set; }
         public address Address { get; set; }
         public double price { get; set; }
-        public string region { get; set; }
 
     }
     
@@ -43,7 +42,8 @@ namespace APPDassignmentV1.House
 
     public class address
     {
-        public int postcode { get; set; }
+        public int postalCode { get; set; }
         public string fullAddress { get; set; }
+        public string region { get; set; }
     }
 }

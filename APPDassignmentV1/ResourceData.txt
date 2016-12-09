@@ -1,1 +1,21 @@
-﻿
+﻿[
+{
+resourceId:1,
+address:
+	{
+		postalCode:123456,
+		fullAddress:'123 street 123 road #123-232',
+		region:'dover'
+	},
+price:2000,
+
+
+
+
+
+}
+
+
+
+
+]
