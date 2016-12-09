@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace APPDassignmentV1.House
 {
+
+    class ResourceData
+    {
+        public List<unitResource> Unitresource { get; set; }
+        public List<roomResource> Roomresource { get; set; }
+    }
     public abstract class Resource
     {
         

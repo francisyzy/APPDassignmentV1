@@ -32,13 +32,13 @@ namespace APPDassignmentV1
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            List<Resource> resourceList;
+            ResourceData resourcedata;
 
             using(StreamReader file = File.OpenText(@"ResourceData.txt"))
             {
                 using(JsonTextReader reader = new JsonTextReader(file))
                 {
-                    var data = JToken.ReadFrom(reader).ToObject<List<object>>();
+                    resourcedata = JToken.ReadFrom(reader).ToObject<ResourceData>();
                 }
             }
         }
