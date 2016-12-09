@@ -38,7 +38,7 @@ namespace APPDassignmentV1
             {
                 using(JsonTextReader reader = new JsonTextReader(file))
                 {
-                    resourcedata = JToken.ReadFrom(reader).ToObject<ResourceData>();
+                    var data = JToken.ReadFrom(reader).ToObject<List<object>>();
                 }
             }
         }
