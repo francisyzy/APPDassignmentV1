@@ -12,6 +12,7 @@ namespace APPDassignmentV1.House
         public string resourceId { get; set; }
         public address Address { get; set; }
         public double price { get; set; }
+        public int resourceType { get; set; }
 
     }
     
@@ -24,17 +25,18 @@ namespace APPDassignmentV1.House
         public int aircon { get; set; }
     }
 
-    public class RoomResource:Resource
+    public class roomResource:Resource
     {
         public int roomId { get; set; }
         public int roomSize { get; set; }
         public Boolean aircon { get; set; }
         
+        
     }
 
     public class facilities
     {
-        public int facilityTypeID { get; set; }
+        public int facilityTypeId { get; set; }
         public string facilityTypeName { get; set; }
         
 
