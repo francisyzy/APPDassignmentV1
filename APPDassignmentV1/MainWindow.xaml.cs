@@ -39,6 +39,10 @@ namespace APPDassignmentV1
                 using(JsonTextReader reader = new JsonTextReader(file))
                 {
                     var data = JToken.ReadFrom(reader).ToObject<List<object>>();
+
+                    MessageBox.Show("123");//debug
+
+                    Recomended.Text = data.ToString();//debug
                 }
             }
         }
