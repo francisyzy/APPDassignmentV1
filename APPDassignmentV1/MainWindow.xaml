@@ -8,10 +8,11 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
 
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="221,33,0,0" TextWrapping="Wrap" Text="HouseBooking" VerticalAlignment="Top" Height="23" Width="94"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="221,33,0,0" TextWrapping="Wrap" Text="HouseBooking" VerticalAlignment="Top" Height="23" Width="94"/>
         <Button x:Name="login" Content="Login" HorizontalAlignment="Left" Margin="411,32,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="search" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="35,32,0,0"/>
         <Button x:Name="Hosting" Content="Hosting" HorizontalAlignment="Left" Margin="0,92,0,0" VerticalAlignment="Top" Width="250" Height="35"/>
         <Button x:Name="Renting" Content="Renting" HorizontalAlignment="Left" Margin="255,92,0,0" VerticalAlignment="Top" Width="262" Height="35"/>
+        <TextBlock x:Name="Recomended" HorizontalAlignment="Left" Margin="19,146,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="154" Width="476"/>
     </Grid>
 </Window>
