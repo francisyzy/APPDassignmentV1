@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:APPDassignmentV1"
         mc:Ignorable="d" 
-        Title="MainWindow" Height="350" Width="525" Loaded="MainWindow_Loaded">
+        Height="350" Width="525" Loaded="MainWindow_Loaded">
     <Grid>
 
         <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="221,33,0,0" TextWrapping="Wrap" Text="HouseBooking" VerticalAlignment="Top" Height="23" Width="94"/>

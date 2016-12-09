@@ -32,7 +32,6 @@ namespace APPDassignmentV1
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            ResourceData resourcedata;
 
             using(StreamReader file = File.OpenText(@"ResourceData.txt"))
             {
@@ -40,7 +39,9 @@ namespace APPDassignmentV1
                 {
                     var data = JToken.ReadFrom(reader).ToObject<List<object>>();
                 }
+                
             }
+            MessageBox.Show("123");
         }
 
 
