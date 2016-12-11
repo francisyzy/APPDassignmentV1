@@ -44,46 +44,50 @@ namespace APPDassignmentV1.Screens
             {
                 foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
                 {
-                    StackPanel stackPanel = new StackPanel();
+                    if(item.address.region == _regionSelected){
+                        StackPanel stackPanel = new StackPanel();
 
-                    stackPanel.Children.Add(new TextBlock
-                    {
-                        Width = 100,
-                        Height = 20,
-                        Margin = new Thickness(5),
-                        Text = item.unitId.ToString()
-                    });
-                    stackPanel.Children.Add(new Button
-                    {
-                        Width = 100,
-                        Height = 20,
-                        Margin = new Thickness(5),
-                        Content = "Add to Cart"
-                    });
-                    resourceUniformGrid.Children.Add(stackPanel);
-
+                        stackPanel.Children.Add(new TextBlock
+                        {
+                            Width = 100,
+                            Height = 20,
+                            Margin = new Thickness(5),
+                            Text = item.unitId.ToString()
+                        });
+                        stackPanel.Children.Add(new Button
+                        {
+                            Width = 100,
+                            Height = 20,
+                            Margin = new Thickness(5),
+                            Content = "Add to Cart"
+                        });
+                        resourceUniformGrid.Children.Add(stackPanel);
+                    }
                 }
             }//end if block
             if (_resourceType.Contains("ROOM RESOURCE"))
             {
                 foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
                 {
-                    StackPanel stackPanel = new StackPanel();
-                    resourcesStackPanel.Children.Add(new TextBox
+                    if (item.address.region == _regionSelected)
                     {
-                        Width = 100,
-                        Height = 20,
-                        Margin = new Thickness(5),
-                        Text = item.roomId.ToString()
-                    });
-                    resourcesStackPanel.Children.Add(new Button
-                    {
-                        Width = 100,
-                        Height = 20,
-                        Margin = new Thickness(5),
-                        Content = "Add to cart"
-                    });
-                    resourcesStackPanel.Children.Add(stackPanel);
+                        StackPanel stackPanel = new StackPanel();
+                        resourcesStackPanel.Children.Add(new TextBox
+                        {
+                            Width = 100,
+                            Height = 20,
+                            Margin = new Thickness(5),
+                            Text = item.roomId.ToString()
+                        });
+                        resourcesStackPanel.Children.Add(new Button
+                        {
+                            Width = 100,
+                            Height = 20,
+                            Margin = new Thickness(5),
+                            Content = "Add to cart"
+                        });
+                        resourcesStackPanel.Children.Add(stackPanel);
+                    }
                 }
             }//end if block
         }
