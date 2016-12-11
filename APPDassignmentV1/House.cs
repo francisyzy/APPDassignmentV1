@@ -11,6 +11,7 @@ namespace APPDassignmentV1.House
     {
         public List<unitResource> Unitresource { get; set; }
         public List<roomResource> Roomresource { get; set; }
+        public List<facilities> Facilities { get; set; }
     }
     public abstract class Resource
     {
