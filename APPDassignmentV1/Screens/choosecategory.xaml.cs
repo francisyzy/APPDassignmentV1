@@ -45,7 +45,7 @@ namespace APPDassignmentV1.Screens
                 }
             }//end of 1st using block, file
             Button button;
-            string[] resourceTypes = { "PHYSICAL RESOURCE", "ASSISTANT RESOURCE" };
+            string[] resourceTypes = { "ROOM RESOURCE", "UNIT RESOURCE" };
             foreach (string resourceType in resourceTypes)
             {
                 button = new Button()
