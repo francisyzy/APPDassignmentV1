@@ -26,6 +26,7 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class ChooseCategory : UserControl, ISwitchable
     {
+        public string regionSelected;
         public ChooseCategory()
         {
             InitializeComponent();
@@ -71,6 +72,7 @@ namespace APPDassignmentV1.Screens
 
             // ... Make the first item selected.
             regionList.SelectedIndex = 0;
+
         }
         
 
@@ -81,6 +83,7 @@ namespace APPDassignmentV1.Screens
 
             // ... Set SelectedItem as Window Title.
             string value = comboBox.SelectedItem as string;
+            this.regionSelected = value;
             
         }
 
@@ -92,7 +95,7 @@ namespace APPDassignmentV1.Screens
         private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            Switcher.Switch(new ChooseResource(((Button)sender).Tag.ToString()));
+            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
         }
     }
 }

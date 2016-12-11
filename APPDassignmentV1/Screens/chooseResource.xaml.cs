@@ -23,11 +23,13 @@ namespace APPDassignmentV1.Screens
     public partial class ChooseResource : UserControl, ISwitchable
     {
         private string _resourceType = "";
+        private string _regionSelected = "";
 
-        public ChooseResource(string inResourceType)
+        public ChooseResource(string inResourceType,string _region)
         {
 
             _resourceType = inResourceType;
+            _regionSelected = _region;
             InitializeComponent();
         }
 
