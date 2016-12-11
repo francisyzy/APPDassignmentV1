@@ -21,7 +21,7 @@ namespace APPDassignmentV1.House
         public double price { get; set; }
         public int resourceType { get; set; } //1 = unit || 2= room
 
-    }
+    }//123
     
     public class unitResource:Resource
     {
