@@ -74,17 +74,17 @@ namespace APPDassignmentV1.Screens
                         StackPanel stackPanel = new StackPanel();
                         resourcesStackPanel.Children.Add(new TextBox
                         {
-                            Width = 100,
+                            Width = 300,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Text = item.roomId.ToString()
+                            Text = item.address.fullAddress.ToString()
                         });
                         resourcesStackPanel.Children.Add(new Button
                         {
-                            Width = 100,
+                            Width = 300,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Content = "Add to cart"
+                            Content = "Check Detail"
                         });
                         resourcesStackPanel.Children.Add(stackPanel);
                     }
