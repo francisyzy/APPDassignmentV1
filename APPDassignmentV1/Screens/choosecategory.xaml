@@ -30,5 +30,6 @@
                 </Style>
             </UniformGrid.Resources>
         </UniformGrid>
+        <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="201,2,-99,0" Grid.Row="1" VerticalAlignment="Top" Width="99" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged"/>
     </Grid>
 </UserControl>

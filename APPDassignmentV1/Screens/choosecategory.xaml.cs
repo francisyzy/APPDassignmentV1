@@ -58,6 +58,30 @@ namespace APPDassignmentV1.Screens
                 button.Click += new RoutedEventHandler(chooseResourceTypeButton_Click);
                 this.resourceTypeUniformGrid.Children.Add(button);
             }
+
+        }
+
+        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            // ... Get the ComboBox reference.
+            var comboBox = sender as ComboBox;
+
+            // ... Assign the ItemsSource to the List.
+            regionList.ItemsSource = ((PageSwitcher)this.Parent).Data.region;
+
+            // ... Make the first item selected.
+            regionList.SelectedIndex = 0;
+        }
+        
+
+        private void regionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // ... Get the ComboBox.
+            var comboBox = sender as ComboBox;
+
+            // ... Set SelectedItem as Window Title.
+            string value = comboBox.SelectedItem as string;
+            
         }
 
         public void UtilizeState(object state)
