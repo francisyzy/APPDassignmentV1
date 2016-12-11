@@ -8,14 +8,26 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="400*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row = "1" Grid.Column="1" Name="resultTextBlock"></TextBlock>
+        <UniformGrid Name="menuGrid" 
+	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
+	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
+            <Button Name="goto_ChooseResourceScreenButton"
+                    Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
+        </UniformGrid>
+
+        <UniformGrid Name="resourceUniformGrid" 
+	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="5" Columns="2" 
+	   Grid.Row="1" Grid.Column="0" Margin="2,2,2,0">
+        </UniformGrid>
+
+        <StackPanel Name ="resourcesStackPanel" Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="10,10,10,20"/>
+        <TextBlock Grid.Row="2" Grid.Column="0"  Name="resultTextBlock"></TextBlock>
     </Grid>
 </UserControl>

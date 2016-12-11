@@ -19,8 +19,8 @@
       "fullAddress": "111 streat 324 road",
       "region": "woodland"
     },
-    "price": "5000",
-    "resourseType": "1"
+    "price": 5000,
+    "resourseType": 1
 
   }
 

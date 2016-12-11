@@ -33,15 +33,30 @@ namespace APPDassignmentV1.Screens
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            ResourceData data;
             // read JSON directly from a file
-            using (StreamReader file = File.OpenText(@"ResourceData.txt"))
+            using (StreamReader file = File.OpenText(@"ResourceData.JSON"))
             {
                 using (JsonTextReader reader = new JsonTextReader(file))
                 {
+                    //   rentingSpaceList =  JToken.ReadFrom(reader).ToObject<List<RentingSpace>>();
+                    ((PageSwitcher)this.Parent).Data = JToken.ReadFrom(reader).ToObject<ResourceData>();
 
-                    data = JToken.ReadFrom(reader).ToObject<ResourceData>();
+                    // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
                 }
+            }//end of 1st using block, file
+            Button button;
+            string[] resourceTypes = { "PHYSICAL RESOURCE", "ASSISTANT RESOURCE" };
+            foreach (string resourceType in resourceTypes)
+            {
+                button = new Button()
+                {
+                    Content = string.Format("{0}", resourceType),
+                    Tag = resourceType,
+                    Height = 35,
+                    HorizontalAlignment = HorizontalAlignment.Stretch
+                };
+                button.Click += new RoutedEventHandler(chooseResourceTypeButton_Click);
+                this.resourceTypeUniformGrid.Children.Add(button);
             }
         }
 
@@ -50,10 +65,10 @@ namespace APPDassignmentV1.Screens
             throw new NotImplementedException();
         }
 
-        private void nextButton_Click(object sender, RoutedEventArgs e)
+        private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            Switcher.Switch(new ChooseResource("physical_resource"));
+            Switcher.Switch(new ChooseResource(((Button)sender).Tag.ToString()));
         }
     }
 }

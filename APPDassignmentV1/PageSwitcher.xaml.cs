@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using APPDassignmentV1;
 using APPDassignmentV1.Screens;
+using APPDassignmentV1.House;
 
 namespace APPDassignmentV1
 {
@@ -21,6 +22,8 @@ namespace APPDassignmentV1
     /// </summary>
     public partial class PageSwitcher : Window
     {
+
+        public ResourceData Data { get; set; }
         public PageSwitcher()
         {
             InitializeComponent();

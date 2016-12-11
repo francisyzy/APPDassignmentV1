@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace APPDassignmentV1.House
 {
 
-    class ResourceData
+    public class ResourceData
     {
-        public List<unitResource> Unitresource { get; set; }
-        public List<roomResource> Roomresource { get; set; }
-        public List<facilities> Facilities { get; set; }
+        public List<unitResource> unitResources { get; set; }
+        public List<roomResource> roomResources { get; set; }
+        public List<facility> facilities { get; set; }
     }
     public abstract class Resource
     {
@@ -27,7 +27,7 @@ namespace APPDassignmentV1.House
     {
         public int unitId { get; set; }
         public int houseSize { get; set; }
-        public List<facilities> Facility { get; set; }
+        public List<facility> facilities { get; set; }
         public int roomCount { get; set; }
         public int aircon { get; set; }
     }
@@ -41,7 +41,7 @@ namespace APPDassignmentV1.House
         
     }
 
-    public class facilities
+    public class facility
     {
         public int facilityTypeId { get; set; }
         public string facilityTypeName { get; set; }
