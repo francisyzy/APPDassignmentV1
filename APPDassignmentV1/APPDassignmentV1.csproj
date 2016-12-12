@@ -107,7 +107,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AssignmentResearch %282%29.zip" />
     <None Include="ResourceData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
