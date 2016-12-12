@@ -46,8 +46,8 @@ namespace APPDassignmentV1.Screens
                 }
             }//end of 1st using block, file
             Button button;
-            string[] resourceTypes = { "ROOM RESOURCE", "UNIT RESOURCE" };
-            foreach (string resourceType in resourceTypes)
+            
+            foreach (string resourceType in ((PageSwitcher)this.Parent).Data.resourceType)
             {
                 button = new Button()
                 {
