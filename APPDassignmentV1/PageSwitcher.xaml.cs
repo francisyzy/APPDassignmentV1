@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using APPDassignmentV1;
 using APPDassignmentV1.Screens;
-using APPDassignmentV1.House;
+using APPDassignmentV1.Models;
 
 namespace APPDassignmentV1
 {

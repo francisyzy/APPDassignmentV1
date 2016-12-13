@@ -59,12 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="House.cs" />
+    <Compile Include="Models.cs" />
     <Compile Include="Screens\choosecategory.xaml.cs">
       <DependentUpon>choosecategory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\chooseResource.xaml.cs">
       <DependentUpon>chooseResource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\loginPage.xaml.cs">
+      <DependentUpon>loginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Switcher.cs" />
     <Compile Include="App.xaml.cs">
@@ -72,7 +75,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ISwitchable.cs" />
-    <Compile Include="User.cs" />
     <Page Include="PageSwitcher.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,6 +84,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\chooseResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\loginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,12 +130,6 @@
     <Resource Include="ResourceData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="UserData.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UserData.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

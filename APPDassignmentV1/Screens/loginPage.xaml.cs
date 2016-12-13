@@ -1,6 +1,4 @@
-﻿
-using APPDassignmentV1;
-using APPDassignmentV1.Models;
+﻿using APPDassignmentV1.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -22,19 +20,16 @@ using System.Windows.Shapes;
 namespace APPDassignmentV1.Screens
 {
     /// <summary>
-    /// Interaction logic for ChooseCategory.xaml
+    /// Interaction logic for loginPage.xaml
     /// </summary>
-    public partial class ChooseCategory : UserControl, ISwitchable
+    public partial class loginPage : UserControl
     {
-        public string regionSelected;
-        public ChooseCategory()
+        public loginPage()
         {
             InitializeComponent();
         }
-
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            // read JSON directly from a file
             using (StreamReader file = File.OpenText(@"ResourceData.JSON"))
             {
                 using (JsonTextReader reader = new JsonTextReader(file))
@@ -46,7 +41,7 @@ namespace APPDassignmentV1.Screens
                 }
             }//end of 1st using block, file
             Button button;
-            
+
             foreach (string resourceType in ((PageSwitcher)this.Parent).Data.resourceType)
             {
                 button = new Button()
@@ -56,46 +51,16 @@ namespace APPDassignmentV1.Screens
                     Height = 35,
                     HorizontalAlignment = HorizontalAlignment.Stretch
                 };
-                button.Click += new RoutedEventHandler(chooseResourceTypeButton_Click);
+                button.Click += new RoutedEventHandler(loginButton_Click);
                 this.resourceTypeUniformGrid.Children.Add(button);
             }
-
         }
 
-        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            // ... Get the ComboBox reference.
-            var comboBox = sender as ComboBox;
-
-            // ... Assign the ItemsSource to the List.
-            regionList.ItemsSource = ((PageSwitcher)this.Parent).Data.region;
-
-            // ... Make the first item selected.
-            regionList.SelectedIndex = 0;
-
-        }
-        
-
-        private void regionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // ... Get the ComboBox.
-            var comboBox = sender as ComboBox;
-
-            // ... Set SelectedItem as Window Title.
-            string value = comboBox.SelectedItem as string;
-            this.regionSelected = value;
-            
-        }
-
-        public void UtilizeState(object state)
+        private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
-        }
-
-        private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)
-        {
             Button button = (Button)sender;
-            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
+            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()), this.regionSelected));
         }
     }
 }
