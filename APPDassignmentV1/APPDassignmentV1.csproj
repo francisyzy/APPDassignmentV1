@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cart.cs" />
     <Compile Include="Models.cs" />
     <Compile Include="Screens\choosecategory.xaml.cs">
       <DependentUpon>choosecategory.xaml</DependentUpon>
