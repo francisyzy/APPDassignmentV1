@@ -20,7 +20,7 @@ namespace APPDassignmentV1.Models
         
         public string resourceId { get; set; }
         public address address { get; set; } //maybe call in map api to look up MRT
-        public double pricePerDay { get; set; }
+        public double price { get; set; }
         public int resourceType { get; set; } //1 = unit || 2= room
 
     }//123

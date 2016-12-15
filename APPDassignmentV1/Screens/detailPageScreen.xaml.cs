@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APPDassignmentV1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,45 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class detailPageScreen : UserControl
     {
-        public detailPageScreen()
+        private string _resourceType = "";
+        private string _resourceID = "";
+
+        public detailPageScreen(string tag, string resourcetype)
         {
+            _resourceID = tag;
+            _resourceType = resourcetype;
             InitializeComponent();
+        }
+
+        private void detailPageScreen_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (_resourceType.Contains("UNIT RESOURCE"))
+            {
+                foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
+                {
+                    if (item.resourceId == _resourceID)
+                    {
+                        FullAdressTextBox.Text = item.address.fullAddress;
+                        PostCodeTextBox.Text = item.address.postalCode.ToString();
+                        PriceTextBox.Text = item.price.ToString();
+                        SizeTextBox.Text = item.houseSize.ToString();
+                    }
+
+                }
+            }
+            else if (_resourceType.Contains("ROOM RESOURCE"))
+            {
+                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
+                {
+                    if (item.resourceId == _resourceID)
+                    {
+                        FullAdressTextBox.Text = item.address.fullAddress;
+                        PostCodeTextBox.Text = item.address.postalCode.ToString();
+                        PriceTextBox.Text = item.price.ToString();
+                        SizeTextBox.Text = item.roomSize.ToString();
+                    }
+                }
+            }
         }
     }
 }

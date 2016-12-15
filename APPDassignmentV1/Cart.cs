@@ -34,7 +34,7 @@ namespace APPDassignmentV1
             public CartItem(Resource inResource)
             {
                 this.resourceId = inResource.resourceId;
-                this.pricePerDay = inResource.pricePerDay;
+                this.price = inResource.price;
                 this.resourceType = inResource.resourceType;
                 this.address.Equals(inResource.address);
             }

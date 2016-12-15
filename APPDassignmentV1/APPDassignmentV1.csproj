@@ -67,6 +67,9 @@
     <Compile Include="Screens\chooseResource.xaml.cs">
       <DependentUpon>chooseResource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\dateSelection.xaml.cs">
+      <DependentUpon>dateSelection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\detailPageScreen.xaml.cs">
       <DependentUpon>detailPageScreen.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\chooseResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\dateSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
