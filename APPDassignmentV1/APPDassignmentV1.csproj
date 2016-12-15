@@ -70,9 +70,6 @@
     <Compile Include="Screens\detailPageScreen.xaml.cs">
       <DependentUpon>detailPageScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\loginPage.xaml.cs">
-      <DependentUpon>loginPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Screens\shoppingCartScreen.xaml.cs">
       <DependentUpon>shoppingCartScreen.xaml</DependentUpon>
     </Compile>
@@ -95,10 +92,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\detailPageScreen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\loginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

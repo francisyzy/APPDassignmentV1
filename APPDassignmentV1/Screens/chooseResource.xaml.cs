@@ -97,5 +97,14 @@ namespace APPDassignmentV1.Screens
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());
         }
+
+        private void goto_ShoppingCartScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null)
+            {
+                Switcher.Switch(new ShoppingCartScreen());
+            }
+        }
     }
 }
