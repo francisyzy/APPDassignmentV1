@@ -19,9 +19,9 @@ namespace APPDassignmentV1
             {
                 CartItems.Add(inItem);
             }
-            public static void RemoveCartItem(int inResourceId)
+            public static void RemoveCartItem(string inResourceId)
             {
-                CartItems.RemoveAll(input => input.ResourceId == inResourceId);
+                CartItems.RemoveAll(input => input.resourceId == inResourceId);
             }
             public static List<CartItem> GetCartItems()
             {
@@ -34,8 +34,9 @@ namespace APPDassignmentV1
             public CartItem(Resource inResource)
             {
                 this.resourceId = inResource.resourceId;
-                this.Name = inResource.Name;
-                this.ChargePerHour = inResource.ChargePerHour;
+                this.pricePerDay = inResource.pricePerDay;
+                this.resourceType = inResource.resourceType;
+                this.address.Equals(inResource.address);
             }
             public DateTime BookingDateTime { get; set; }
             public DateTime BookingStartDateAndTime { get; set; }
