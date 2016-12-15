@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace APPDassignmentV1
 {
-    class Cart
-    {
+    
         public static class shoppingCart
         {
             public static void initializeShoppingCart()
@@ -34,7 +33,7 @@ namespace APPDassignmentV1
         {
             public CartItem(Resource inResource)
             {
-                this.ResourceId = inResource.ResourceId;
+                this.resourceId = inResource.resourceId;
                 this.Name = inResource.Name;
                 this.ChargePerHour = inResource.ChargePerHour;
             }
@@ -48,6 +47,6 @@ namespace APPDassignmentV1
                     return 0;
                 }
             }
-        }//End of Cart
+     
     }
 }
