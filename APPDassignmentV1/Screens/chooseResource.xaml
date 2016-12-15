@@ -19,8 +19,8 @@
 	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
             <Button Name="goto_ChooseResourceScreenButton"
                     Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
-            <Button Name="goto_ShoppingCartScreenButton"
-                    Click="goto_ShoppingCartScreenButton_Click" Width="100" Content="CheckOut"></Button>
+            <Button Name="goto_DetailPageScreenButton"
+                    Click="goto_DetailPageScreenButton_Click" Width="100" Content="CheckOut"></Button>
         </UniformGrid>
 
         <UniformGrid Name="resourceUniformGrid" 

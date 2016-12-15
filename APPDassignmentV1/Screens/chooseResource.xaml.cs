@@ -54,13 +54,17 @@ namespace APPDassignmentV1.Screens
                             Margin = new Thickness(5),
                             Text = item.unitId.ToString()
                         });
-                        stackPanel.Children.Add(new Button
+                        Button button = new Button()
                         {
                             Width = 100,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Content = "Add to Cart"
-                        });
+                            Content = "Check Detail",
+                            Tag = item.resourceId
+
+                        };
+                        button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
+                        stackPanel.Children.Add(button);
                         resourceUniformGrid.Children.Add(stackPanel);
                     }
                 }
@@ -79,13 +83,18 @@ namespace APPDassignmentV1.Screens
                             Margin = new Thickness(5),
                             Text = item.address.fullAddress.ToString()
                         });
-                        stackPanel.Children.Add(new Button
+                        Button button = new Button()
                         {
-                            Width = 300,
+                            Width = 100,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Content = "Check Detail"
-                        });
+                            Content = "Check Detail",
+                            Tag = item.resourceId
+                            
+
+                        };
+                        button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
+                        stackPanel.Children.Add(button);
                         resourceUniformGrid.Children.Add(stackPanel);
                     }
                 }
@@ -98,13 +107,14 @@ namespace APPDassignmentV1.Screens
             Switcher.Switch(new ChooseCategory());
         }
 
-        private void goto_ShoppingCartScreenButton_Click(object sender, RoutedEventArgs e)
+        private void goto_DetailPageScreenButton_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            if (button != null)
-            {
-                Switcher.Switch(new ShoppingCartScreen());
-            }
+            //Button button = sender as Button;
+            //if (button != null)
+            //{
+                Button button = (Button)sender;
+                Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceType));
+            //}
         }
     }
 }
