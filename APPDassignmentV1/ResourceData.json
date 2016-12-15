@@ -201,7 +201,7 @@
     "Yishun"
   ],
   "resourceType": [
-    "Unit Resource",
-    "Room Resource"
+    "UNIT RESOURCE",
+    "ROOM RESOURCE"
   ]
 }
