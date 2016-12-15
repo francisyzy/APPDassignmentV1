@@ -52,7 +52,7 @@ namespace APPDassignmentV1.Screens
                             Width = 100,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Text = item.unitId.ToString()
+                            Text = item.address.fullAddress.ToString()
                         });
                         Button button = new Button()
                         {
