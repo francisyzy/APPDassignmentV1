@@ -72,21 +72,21 @@ namespace APPDassignmentV1.Screens
                     if (item.address.region == _regionSelected)
                     {
                         StackPanel stackPanel = new StackPanel();
-                        resourcesStackPanel.Children.Add(new TextBox
+                        stackPanel.Children.Add(new TextBox
                         {
                             Width = 300,
                             Height = 20,
                             Margin = new Thickness(5),
                             Text = item.address.fullAddress.ToString()
                         });
-                        resourcesStackPanel.Children.Add(new Button
+                        stackPanel.Children.Add(new Button
                         {
                             Width = 300,
                             Height = 20,
                             Margin = new Thickness(5),
                             Content = "Check Detail"
                         });
-                        resourcesStackPanel.Children.Add(stackPanel);
+                        resourceUniformGrid.Children.Add(stackPanel);
                     }
                 }
             }//end if block

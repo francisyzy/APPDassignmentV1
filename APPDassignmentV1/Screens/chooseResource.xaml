@@ -28,7 +28,7 @@
 	   Grid.Row="1" Grid.Column="0" Margin="2,2,2,0">
         </UniformGrid>
 
-        <StackPanel Name ="resourcesStackPanel" Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="10,10,10,20"/>
+        
         <TextBlock Grid.Row="2" Grid.Column="0"  Name="resultTextBlock"></TextBlock>
     </Grid>
 </UserControl>
