@@ -1,13 +1,14 @@
 ﻿{
   "roomResources": [
+
     {
       "resourceId": "R1",
       "address": {
         "postalCode": 123456,
-        "fullAddress": "123 street 123 road #123-232",
-        "region": "Newton"
+        "fullAddress": "Blk 35 Mandalay Road #13-37 Mandalay Towers",
+        "region": "Bukit Merah"
       },
-      "price": 2000,
+      "price": 350,
       "resourceType": 2,
       "roomId": 1,
       "roomSize": 20,
@@ -17,10 +18,10 @@
       "resourceId": "R2",
       "address": {
         "postalCode": 234567,
-        "fullAddress": "232 road #123-4123",
-        "region": "Queenstown"
+        "fullAddress": "Blk 23 #02-16 Sandilands Road",
+        "region": "Clementi"
       },
-      "price": 2000,
+      "price": 200,
       "resourceType": 2,
       "roomId": 2,
       "roomSize": 30,
@@ -30,14 +31,53 @@
       "resourceId": "R3",
       "address": {
         "postalCode": 345678,
-        "fullAddress": "123 street 123 road #123-232",
-        "region": "Pioneer"
+        "fullAddress": "Blk 123 #02-16 Siliy Road",
+        "region": "Newton"
       },
-      "price": 2000,
+      "price": 450,
       "resourceType": 2,
       "roomId": 3,
-      "roomSize": 24,
+      "roomSize": 20,
       "aircon": false
+    },
+    {
+      "resourceId": "R4",
+      "address": {
+        "postalCode": 456789,
+        "fullAddress": "Blk 89 Malay Road #13-37 Singapore Towers",
+        "region": "Pasir Ris"
+      },
+      "price": 430,
+      "resourceType": 2,
+      "roomId": 4,
+      "roomSize": 40,
+      "aircon": true
+    },
+    {
+      "resourceId": "R5",
+      "address": {
+        "postalCode": 567900,
+        "fullAddress": "Blk 54 #02-16 Samsung Road",
+        "region": "Punggol"
+      },
+      "price": 480,
+      "resourceType": 2,
+      "roomId": 5,
+      "roomSize": 50,
+      "aircon": true
+    },
+    {
+      "resourceId": "R6",
+      "address": {
+        "postalCode": 679011,
+        "fullAddress": "Blk 189 #02-16 Car Road",
+        "region": "Yishun"
+      },
+      "price": 530,
+      "resourceType": 2,
+      "roomId": 6,
+      "roomSize": 60,
+      "aircon": true
     }
   ],
   "unitResources": [
@@ -45,10 +85,10 @@
       "resourceId": "U1",
       "address": {
         "postalCode": 456789,
-        "fullAddress": "111 streat 324 road",
-        "region": "woodland"
+        "fullAddress": "16 Sandilands Road",
+        "region": "Pasir Ris"
       },
-      "price": 5000,
+      "price": 900,
       "resourseType": 1,
       "unitId": 1,
       "houseSize": 52,
@@ -81,10 +121,10 @@
       "resourceId": "U2",
       "address": {
         "postalCode": 567900,
-        "fullAddress": "211 streat 324 road",
-        "region": "yishun"
+        "fullAddress": "66 Changi Road",
+        "region": "Punggol"
       },
-      "price": 5000,
+      "price": 1125,
       "resourseType": 1,
       "unitId": 2,
       "houseSize": 63,
@@ -110,10 +150,10 @@
       "resourceId": "U3",
       "address": {
         "postalCode": 679011,
-        "fullAddress": "111 streat 324 road",
-        "region": "woodland"
+        "fullAddress": "54 Car Range Road",
+        "region": "Yishun"
       },
-      "price": 5000,
+      "price": 1200,
       "resourseType": 1,
       "unitId": 3,
       "houseSize": 56,
@@ -137,117 +177,151 @@
         }
       ],
       "roomcount": 4,
+      "aircon": 4
+    },
+    {
+      "resourceId": "U4",
+      "address": {
+        "postalCode": 656788,
+        "fullAddress": "99 Beach Road",
+        "region": "Bukit Merah"
+      },
+      "price": 1365,
+      "resourseType": 1,
+      "unitId": 4,
+      "houseSize": 61,
+      "facilities": [
+        {
+          "facilityTypeId": "1",
+          "facilityTypeName": "kitchen"
+        },
+
+        {
+          "facilityTypeId": "2",
+          "facilityTypeName": "bathtub"
+        },
+        {
+          "facilityTypeId": "4",
+          "facilityTypeName": "tv"
+        },
+        {
+          "facilityTypeId": "5",
+          "facilityTypeName": "sofa"
+        }
+      ],
+      "roomcount": 4,
       "aircon": 3
+    },
+    {
+      "resourceId": "U5",
+      "address": {
+        "postalCode": 682185,
+        "fullAddress": "57 Ocean Road",
+        "region": "Clementi"
+      },
+      "price": 1515,
+      "resourseType": 1,
+      "unitId": 5,
+      "houseSize": 63,
+      "facilities": [
+        {
+          "facilityTypeId": "1",
+          "facilityTypeName": "kitchen"
+        },
+        {
+          "facilityTypeId": "4",
+          "facilityTypeName": "tv"
+        },
+        {
+          "facilityTypeId": "6",
+          "facilityTypeName": "swimming pool"
+        }
+      ],
+      "roomcount": 4,
+      "aircon": 3
+    },
+    {
+      "resourceId": "U6",
+      "address": {
+        "postalCode": 707582,
+        "fullAddress": "12 Coral Drive",
+        "region": "Newton"
+      },
+      "price": 1515,
+      "resourseType": 1,
+      "unitId": 6,
+      "houseSize": 65,
+      "facilities": [
+        {
+          "facilityTypeId": "1",
+          "facilityTypeName": "kitchen"
+        },
+
+        {
+          "facilityTypeId": "3",
+          "facilityTypeName": "balcony"
+        },
+        {
+          "facilityTypeId": "4",
+          "facilityTypeName": "tv"
+        }
+      ],
+      "roomcount": 3,
+      "aircon": 1
     }
+  ],
 
 
 
-  ],
-  "region": [
-    "Ang Mo Kio",
-    "Bedok",
-    "Bishan",
-    "Boon Lay",
-    "Bukit Batok",
-    "Bukit Merah",
-    "Bukit Panjang",
-    "Bukit Timah",
-    "Central Water Catchment",
-    "Changi",
-    "Changi Bay",
-    "Choa Chu Kang",
-    "Clementi",
-    "Downtown Core",
-    "Geylang",
-    "Hougang",
-    "Jurong East",
-    "Jurong West",
-    "Kallang",
-    "Lim Chu Kang",
-    "Mandai",
-    "Marina East",
-    "Marina South",
-    "Marine Parade",
-    "Museum",
-    "Newton",
-    "North-Eastern Islands",
-    "Novena",
-    "Orchard",
-    "Outram",
-    "Pasir Ris",
-    "Paya Lebar",
-    "Pioneer",
-    "Punggol",
-    "Queenstown",
-    "River Valley",
-    "Rochor",
-    "Seletar",
-    "Sembawang",
-    "Sengkang",
-    "Serangoon",
-    "Simpang",
-    "Singapore River",
-    "Southern Islands",
-    "Straits View",
-    "Sungei Kadut",
-    "Tampines",
-    "Tanglin",
-    "Tengah",
-    "Toa Payoh",
-    "Tuas",
-    "Western Islands",
-    "Western Water Catchment",
-    "Woodlands",
-    "Yishun"
-  ],
-  "resourceType": [
-    "UNIT RESOURCE",
-    "ROOM RESOURCE"
-  ],
-  "userData": [
-    {
-      "firstName": "Tripp",
-      "lastName": "Jacobson",
-      "email": "Tripp@gmail.com",
-      "password": "password123",
-      "contactNum": 98674633,
-      "birthday": "23-Nov-2000",
-      "creditCardNum": 378282246310005,
-      "creditCardExpiry": "1-Feb-2019",
-      "creditCardCVC": 323
-    },
-    {
-      "firstName": "Braylon",
-      "lastName": "Chang",
-      "email": "Braylon@gmail.com",
-      "password": "password124",
-      "contactNum": 92862343,
-      "birthday": "4-Jan-1990",
-      "creditCardNum": 371449635398431,
-      "creditCardExpiry": "1-May-2020",
-      "creditCardCVC": 367
-    },
-    {
-      "firstName": "Sam",
-      "lastName": "Alston",
-      "email": "Sam@gmail.com",
-      "password": "password125",
-      "contactNum": 87050053,
-      "birthday": "3-Jul-1970",
-      "creditCardNum": 4111111111111110,
-      "creditCardExpiry": "1-Jun-2017",
-      "creditCardCVC": 411
-    },
-    {
-      "firstName": "Fernando",
-      "lastName": "Kerr",
-      "email": "Fernando@gmail.com",
-      "password": "password126",
-      "contactNum": 81237763,
-      "birthday": "31-Feb-1979",
-      "creditCardNum": 5555555555554440,
-      "creditCardExpiry": "1-Aug-2025",
-      "creditCardCVC": 455
+  "region": [ "Bukit Merah", "Clementi", "Newton", "Pasir Ris", "Punggol", "Yishun" ],
+      "resourceType": [
+        "UNIT RESOURCE",
+        "ROOM RESOURCE"
+      ],
+      "userData": [
+        {
+          "firstName": "Tripp",
+          "lastName": "Jacobson",
+          "email": "Tripp@gmail.com",
+          "password": "password123",
+          "contactNum": 98674633,
+          "birthday": "23-Nov-2000",
+          "creditCardNum": 378282246310005,
+          "creditCardExpiry": "1-Feb-2019",
+          "creditCardCVC": 323
+        },
+        {
+          "firstName": "Braylon",
+          "lastName": "Chang",
+          "email": "Braylon@gmail.com",
+          "password": "password124",
+          "contactNum": 92862343,
+          "birthday": "4-Jan-1990",
+          "creditCardNum": 371449635398431,
+          "creditCardExpiry": "1-May-2020",
+          "creditCardCVC": 367
+        },
+        {
+          "firstName": "Sam",
+          "lastName": "Alston",
+          "email": "Sam@gmail.com",
+          "password": "password125",
+          "contactNum": 87050053,
+          "birthday": "3-Jul-1970",
+          "creditCardNum": 4111111111111110,
+          "creditCardExpiry": "1-Jun-2017",
+          "creditCardCVC": 411
+        },
+        {
+          "firstName": "Fernando",
+          "lastName": "Kerr",
+          "email": "Fernando@gmail.com",
+          "password": "password126",
+          "contactNum": 81237763,
+          "birthday": "31-Feb-1979",
+          "creditCardNum": 5555555555554440,
+          "creditCardExpiry": "1-Aug-2025",
+          "creditCardCVC": 455
+        }
+      ]
     }
-  ]
-}
