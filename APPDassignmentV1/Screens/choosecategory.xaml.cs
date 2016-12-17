@@ -1,5 +1,4 @@
-﻿
-using APPDassignmentV1;
+﻿using APPDassignmentV1;
 using APPDassignmentV1.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -96,6 +95,11 @@ namespace APPDassignmentV1.Screens
         {
             Button button = (Button)sender;
             Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
+        }
+        private void goto_loginPageScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Switcher.Switch(new loginPage());
         }
     }
 }

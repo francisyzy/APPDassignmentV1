@@ -1,4 +1,5 @@
-﻿using APPDassignmentV1.Models;
+﻿using APPDassignmentV1;
+using APPDassignmentV1.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -22,11 +23,15 @@ namespace APPDassignmentV1.Screens
     /// <summary>
     /// Interaction logic for loginPage.xaml
     /// </summary>
-    public partial class loginPage : UserControl
+    public partial class loginPage : UserControl, ISwitchable
     {
         public loginPage()
         {
             InitializeComponent();
+        }
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
         }
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
@@ -60,7 +65,22 @@ namespace APPDassignmentV1.Screens
         {
             throw new NotImplementedException();
             Button button = (Button)sender;
-            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()), this.regionSelected));
+            Switcher.Switch(new ChooseCategory());
         }
+
+        private void login_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+            Button button = (Button)sender;
+            Switcher.Switch(new ChooseCategory());
+        }
+
+        private void createAccount_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+            Switcher.Switch(new ChooseCategory());
+        }
+
+        
     }
 }

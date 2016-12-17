@@ -30,5 +30,9 @@
                 </Style>
             </UniformGrid.Resources>
         </UniformGrid>
+        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Height="23" Margin="54,66,-53,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top" Width="200"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="54,94,-53,0" Grid.Row="1" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="54,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="159,123,-53,0" Grid.Row="1" VerticalAlignment="Top" Width="95"/>
     </Grid>
 </UserControl>
