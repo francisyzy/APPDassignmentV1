@@ -38,7 +38,7 @@
         <TextBox x:Name="PostCodeTextBox" HorizontalAlignment="Left" Height="23" Margin="106,74,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166"/>
         <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Height="25" Margin="106,124,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166"/>
         <TextBox x:Name="SizeTextBox" HorizontalAlignment="Left" Height="23" Margin="106,162,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="44,208,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="197,208,-71,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="44,208,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BackButton_Click"/>
+        <Button x:Name="BookButton" Content="Book" HorizontalAlignment="Left" Margin="197,208,-71,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BookButton_Click"/>
     </Grid>
 </UserControl>

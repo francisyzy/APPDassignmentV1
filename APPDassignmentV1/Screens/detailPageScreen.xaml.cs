@@ -61,5 +61,15 @@ namespace APPDassignmentV1.Screens
                 }
             }
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new ChooseCategory());
+        }
+
+        private void BookButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new dateSelection());
+        }
     }
 }

@@ -24,5 +24,11 @@ namespace APPDassignmentV1.Screens
         {
             InitializeComponent();
         }
+
+        private void addToCartButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            Switcher.Switch(new ChooseCategory());
+        }
     }
 }
