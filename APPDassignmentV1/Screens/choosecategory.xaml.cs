@@ -26,8 +26,15 @@ namespace APPDassignmentV1.Screens
     public partial class ChooseCategory : UserControl, ISwitchable
     {
         public string regionSelected;
+        public string _email = "";
         public ChooseCategory()
         {
+            InitializeComponent();
+        }
+
+        public ChooseCategory(string email)
+        {
+            this._email = email;
             InitializeComponent();
         }
 

@@ -23,7 +23,7 @@ namespace APPDassignmentV1.Models
         public double price { get; set; }
         public int resourceType { get; set; } //1 = unit || 2= room
 
-    }//123
+    }
     
     public class unitResource:Resource
     {
@@ -64,10 +64,10 @@ namespace APPDassignmentV1.Models
         public string lastName { get; set; }
         public string email { get; set; }
         public string password { get; set; }
-        public int phoneNum { get; set; }
-        public DateTime birthday { get; set; }
-        public int creditCardNum { get; set; }
-        public DateTime creditCardExpiry { get; set; }
+        public string phoneNum { get; set; }
+        public string birthday { get; set; }
+        public string creditCardNum { get; set; }
+        public string creditCardExpiry { get; set; }
         public int creditCardCVC { get; set; }
     }
 
