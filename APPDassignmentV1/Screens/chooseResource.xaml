@@ -21,8 +21,6 @@
                     Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
             <Button Name="goto_DetailPageScreenButton"
                     Click="goto_DetailPageScreenButton_Click" Width="100" Content="CheckOut"></Button>
-            <Button Name="goto_loginPageScreenButton"
-                    Click="goto_loginPageScreenButton_Click" Width="100" Content="Login"></Button>
         </UniformGrid>
 
         <UniformGrid Name="resourceUniformGrid" 

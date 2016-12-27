@@ -116,11 +116,5 @@ namespace APPDassignmentV1.Screens
                 Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceType));
             //}
         }
-
-        private void goto_loginPageScreenButton_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = (Button)sender;
-            Switcher.Switch(new loginPage());
-        }
     }
 }
