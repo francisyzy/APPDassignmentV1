@@ -51,16 +51,12 @@ namespace APPDassignmentV1.Screens
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-
+            
             foreach (user user in ((PageSwitcher)this.Parent).Data.users)
             {
                 if((emailInput.Text == user.email)&&(passwordInput.Password == user.password))
                 {
                     Switcher.Switch(new ChooseCategory(user.email));
-                }
-                else
-                {
-                    MessageBox.Show("test");
                     break;
                 }
             }
