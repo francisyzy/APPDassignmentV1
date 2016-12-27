@@ -29,7 +29,7 @@ namespace APPDassignmentV1
             InitializeComponent();
             shoppingCart.initializeShoppingCart();
             Switcher.pageSwitcher = this;
-            Switcher.Switch(new ChooseCategory()); 
+            Switcher.Switch(new loginPage()); 
         }
 
         public void Navigate(UserControl nextPage)

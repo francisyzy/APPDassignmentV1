@@ -278,15 +278,15 @@
         "UNIT RESOURCE",
         "ROOM RESOURCE"
       ],
-      "userData": [
+      "users": [
         {
           "firstName": "Tripp",
           "lastName": "Jacobson",
           "email": "Tripp@gmail.com",
           "password": "password123",
-          "contactNum": 98674633,
+          "contactNum": "98674633",
           "birthday": "23-Nov-2000",
-          "creditCardNum": 378282246310005,
+          "creditCardNum": "378282246310005",
           "creditCardExpiry": "1-Feb-2019",
           "creditCardCVC": 323
         },
@@ -295,9 +295,9 @@
           "lastName": "Chang",
           "email": "Braylon@gmail.com",
           "password": "password124",
-          "contactNum": 92862343,
+          "contactNum": "92862343",
           "birthday": "4-Jan-1990",
-          "creditCardNum": 371449635398431,
+          "creditCardNum": "371449635398431",
           "creditCardExpiry": "1-May-2020",
           "creditCardCVC": 367
         },
@@ -306,9 +306,9 @@
           "lastName": "Alston",
           "email": "Sam@gmail.com",
           "password": "password125",
-          "contactNum": 87050053,
+          "contactNum": "87050053",
           "birthday": "3-Jul-1970",
-          "creditCardNum": 4111111111111110,
+          "creditCardNum": "4111111111111110",
           "creditCardExpiry": "1-Jun-2017",
           "creditCardCVC": 411
         },
@@ -317,9 +317,9 @@
           "lastName": "Kerr",
           "email": "Fernando@gmail.com",
           "password": "password126",
-          "contactNum": 81237763,
+          "contactNum": "81237763",
           "birthday": "31-Feb-1979",
-          "creditCardNum": 5555555555554440,
+          "creditCardNum": "5555555555554440",
           "creditCardExpiry": "1-Aug-2025",
           "creditCardCVC": 455
         }

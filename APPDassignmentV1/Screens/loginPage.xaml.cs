@@ -45,34 +45,26 @@ namespace APPDassignmentV1.Screens
                     // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
                 }
             }//end of 1st using block, file
-            Button button;
 
-            foreach (string resourceType in ((PageSwitcher)this.Parent).Data.resourceType)
-            {
-                button = new Button()
-                {
-                    Content = string.Format("{0}", resourceType),
-                    Tag = resourceType,
-                    Height = 35,
-                    HorizontalAlignment = HorizontalAlignment.Stretch
-                };
-                button.Click += new RoutedEventHandler(loginButton_Click);
-                this.resourceTypeUniformGrid.Children.Add(button);
-            }
-        }
-
-        private void loginButton_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-            Button button = (Button)sender;
-            Switcher.Switch(new ChooseCategory());
+            
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
-            Button button = (Button)sender;
-            Switcher.Switch(new ChooseCategory());
+
+            foreach (user user in ((PageSwitcher)this.Parent).Data.users)
+            {
+                if((emailInput.Text == user.email)&&(passwordInput.Password == user.password))
+                {
+                    Switcher.Switch(new ChooseCategory(user.email));
+                }
+                else
+                {
+                    MessageBox.Show("test");
+                    break;
+                }
+            }
+            
         }
 
         private void createAccount_Click(object sender, RoutedEventArgs e)
