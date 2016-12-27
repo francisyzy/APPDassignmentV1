@@ -35,9 +35,9 @@
         <Label x:Name="label2" Content="Price:" HorizontalAlignment="Left" Margin="20,114,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="Size:" HorizontalAlignment="Left" Margin="21,159,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox x:Name="FullAdressTextBox" HorizontalAlignment="Left" Height="37" Margin="106,20,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
-        <TextBox x:Name="PostCodeTextBox" HorizontalAlignment="Left" Height="23" Margin="106,74,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166"/>
-        <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Height="25" Margin="106,124,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166"/>
-        <TextBox x:Name="SizeTextBox" HorizontalAlignment="Left" Height="23" Margin="106,162,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166"/>
+        <TextBox x:Name="PostCodeTextBox" HorizontalAlignment="Left" Height="23" Margin="106,74,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+        <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Height="25" Margin="106,124,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
+        <TextBox x:Name="SizeTextBox" HorizontalAlignment="Left" Height="23" Margin="106,162,-71,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" IsEnabled="False"/>
         <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="44,208,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BackButton_Click"/>
         <Button x:Name="BookButton" Content="Book" HorizontalAlignment="Left" Margin="197,208,-71,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="BookButton_Click"/>
     </Grid>

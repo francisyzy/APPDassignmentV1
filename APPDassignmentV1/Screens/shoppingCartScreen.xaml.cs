@@ -58,6 +58,7 @@ namespace APPDassignmentV1.Screens
                     Height = 20,
                     Margin = new Thickness(5),
                     Text = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime).ToString()
+                    
                 });
                 Button button = new Button()
                 {
