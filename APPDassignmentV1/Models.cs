@@ -71,62 +71,62 @@ namespace APPDassignmentV1.Models
         public int creditCardCVC { get; set; }
     }
 
-    public class shoppingCartItem:Resource
-    {
-        public shoppingCartItem(Resource inResource)
-        {
-            this.resourceId = inResource.resourceId;
-            this.address = inResource.address;
-            this.price = inResource.price;
-            this.resourceType = inResource.resourceType;
-        }
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
-        public double itemPrice;
-        public double CalculatePrice (DateTime S, DateTime E)
-        {
-            double cartItemPrice;
-            TimeSpan totalDate = E - S;
-            cartItemPrice = totalDate.Days * this.price;
-            this.itemPrice = cartItemPrice;
-            return cartItemPrice;
-        }
-    }
+    //public class shoppingCartItem:Resource
+    //{
+    //    public shoppingCartItem(Resource inResource)
+    //    {
+    //        this.resourceId = inResource.resourceId;
+    //        this.address = inResource.address;
+    //        this.price = inResource.price;
+    //        this.resourceType = inResource.resourceType;
+    //    }
+    //    public DateTime startDate { get; set; }
+    //    public DateTime endDate { get; set; }
+    //    public double itemPrice;
+    //    public double CalculatePrice (DateTime S, DateTime E)
+    //    {
+    //        double cartItemPrice;
+    //        TimeSpan totalDate = E - S;
+    //        cartItemPrice = totalDate.Days * this.price;
+    //        this.itemPrice = cartItemPrice;
+    //        return cartItemPrice;
+    //    }
+    //}
 
-    public class shoppingCart
-    {
-        private static List<shoppingCartItem> shoppingCartItems { get; set; }
-        public static void initializeShoppingCart()
-        {
-            shoppingCartItems = new List<shoppingCartItem>();
-        }
+    //public class shoppingCart
+    //{
+    //    private static List<shoppingCartItem> shoppingCartItems { get; set; }
+    //    public static void initializeShoppingCart()
+    //    {
+    //        shoppingCartItems = new List<shoppingCartItem>();
+    //    }
         
-        public static void AddCartItem(shoppingCartItem inItem)
-        {
-            shoppingCartItems.Add(inItem);
-        }
+    //    public static void AddCartItem(shoppingCartItem inItem)
+    //    {
+    //        shoppingCartItems.Add(inItem);
+    //    }
 
-        public static void RemoveCartItem(string inResourceId)
-        {
-            shoppingCartItems.RemoveAll(input => input.resourceId == inResourceId);
-            //kiv
-        }
+    //    public static void RemoveCartItem(string inResourceId)
+    //    {
+    //        shoppingCartItems.RemoveAll(input => input.resourceId == inResourceId);
+    //        //kiv
+    //    }
 
-        public static List<shoppingCartItem> GetCartItem()
-        {
-            return shoppingCartItems;
-        }
+    //    public static List<shoppingCartItem> GetCartItem()
+    //    {
+    //        return shoppingCartItems;
+    //    }
 
-        public double totalPrice()
-        {
-            double a = 0;
-            foreach (shoppingCartItem item in shoppingCartItems)
-            {
-                a += item.itemPrice;
-            }
-            return a;
-        }
-    }
+    //    public double totalPrice()
+    //    {
+    //        double a = 0;
+    //        foreach (shoppingCartItem item in shoppingCartItems)
+    //        {
+    //            a += item.itemPrice;
+    //        }
+    //        return a;
+    //    }
+    //}
 
     
 }

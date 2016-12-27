@@ -28,7 +28,16 @@ namespace APPDassignmentV1
             {
                 return CartItems;
             }
+            public static double totalprice()
+            {
+                double a = 0;
+                foreach (CartItem item in CartItems)
+                {
+                    a += item.itemPrice;
+                }
+                return a;
         }
+    }
 
         public class CartItem : Resource
         {
@@ -39,17 +48,19 @@ namespace APPDassignmentV1
                 this.resourceType = inResource.resourceType;
                 
 
-        }
+            }
             public DateTime BookingDateTime { get; set; }
             public DateTime BookingStartDateAndTime { get; set; }
             public DateTime BookingEndDateAndTime { get; set; }
-            public int SubTotal
+            public double itemPrice;
+            public double CalculatePrice(DateTime S, DateTime E)
             {
-                get
-                {
-                    return 0;
-                }
+                double cartItemPrice;
+                TimeSpan totalDate = E - S;
+                cartItemPrice = totalDate.Days * this.price;
+                this.itemPrice = cartItemPrice;
+                return cartItemPrice;
             }
-     
+
     }
 }

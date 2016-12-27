@@ -52,6 +52,13 @@ namespace APPDassignmentV1.Screens
                     Margin = new Thickness(5),
                     Text = item.BookingEndDateAndTime.ToString()
                 });
+                stackPanel.Children.Add(new TextBox
+                {
+                    Width = 100,
+                    Height = 20,
+                    Margin = new Thickness(5),
+                    Text = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime).ToString()
+                });
                 Button button = new Button()
                 {
                     Width = 100,
@@ -65,6 +72,7 @@ namespace APPDassignmentV1.Screens
                 stackPanel.Children.Add(button);
                 ShoppingCartUniformGrid.Children.Add(stackPanel);
             }
+            totalPrice.Content = shoppingCart.totalprice();
         }
 
         private void removeItemButton_Click(object sender, RoutedEventArgs e)
