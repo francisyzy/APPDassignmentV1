@@ -46,8 +46,7 @@ namespace APPDassignmentV1.Screens
                 {
                     if(item.address.region == _regionSelected){
                         StackPanel stackPanel = new StackPanel();
-
-                        stackPanel.Children.Add(new TextBlock
+                        stackPanel.Children.Add(new TextBox
                         {
                             Width = 100,
                             Height = 20,
