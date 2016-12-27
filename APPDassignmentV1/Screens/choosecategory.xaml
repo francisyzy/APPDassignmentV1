@@ -33,8 +33,8 @@
         <UniformGrid Name="menuGrid" 
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
 	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
-            <Button Name="goto_loginPageScreenButton"
-                    Click="goto_loginPageScreenButton_Click" Width="100" Content="Login"></Button>
+            <Button x:Name="goto_shoppingCartScreenButton"
+                    Click="goto_shoppingCartScreenButton_Click" Width="60" Content="Cart"/>
         </UniformGrid>
         <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="201,2,-99,0" Grid.Row="1" VerticalAlignment="Top" Width="99" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged"/>
     </Grid>

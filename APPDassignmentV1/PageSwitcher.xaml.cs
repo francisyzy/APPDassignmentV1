@@ -27,6 +27,7 @@ namespace APPDassignmentV1
         public PageSwitcher()
         {
             InitializeComponent();
+            shoppingCart.initializeShoppingCart();
             Switcher.pageSwitcher = this;
             Switcher.Switch(new ChooseCategory()); 
         }

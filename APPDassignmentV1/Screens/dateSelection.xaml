@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <DatePicker x:Name="startTimeDatePicker" HorizontalAlignment="Left" Margin="150,55,0,0" VerticalAlignment="Top" Width="140"/>
-        <DatePicker x:Name="endTimeDatePicker" HorizontalAlignment="Left" Margin="150,176,0,0" VerticalAlignment="Top" Width="140"/>
+        <DatePicker x:Name="startTimeDatePicker" HorizontalAlignment="Left" Margin="150,55,0,0" VerticalAlignment="Top" Width="140" SelectedDateChanged="startTimeDatePicker_SelectedDateChanged"/>
+        <DatePicker x:Name="endTimeDatePicker" HorizontalAlignment="Left" Margin="150,176,0,0" VerticalAlignment="Top" Width="140" SelectedDateChanged="endTimeDatePicker_SelectedDateChanged"/>
         <Button x:Name="addToCartButton" Content="AddToCart" HorizontalAlignment="Left" Margin="112,261,0,0" VerticalAlignment="Top" Width="75" Click="addToCartButton_Click"/>
         <Label x:Name="Starttime" Content="Start Time:" HorizontalAlignment="Left" Margin="44,54,0,0" VerticalAlignment="Top" Width="80"/>
         <Label x:Name="Endtime" Content="End Time:" HorizontalAlignment="Left" Margin="44,174,0,0" VerticalAlignment="Top" Width="80"/>

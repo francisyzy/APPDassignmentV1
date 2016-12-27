@@ -23,6 +23,7 @@ namespace APPDassignmentV1.Screens
     {
         private string _resourceType = "";
         private string _resourceID = "";
+        private Resource selectedResource = null;
 
         public detailPageScreen(string tag, string resourcetype)
         {
@@ -69,7 +70,16 @@ namespace APPDassignmentV1.Screens
 
         private void BookButton_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new dateSelection());
+            if (_resourceType.Contains("UNIT RESOURCE"))
+            {
+                selectedResource = ((PageSwitcher)this.Parent).Data.unitResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
+            }
+            else if (_resourceType.Contains("ROOM RESOURCE"))
+            {
+                selectedResource = ((PageSwitcher)this.Parent).Data.roomResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
+            }
+            CartItem cartItem = new CartItem(selectedResource);
+            Switcher.Switch(new dateSelection(cartItem));
         }
     }
 }

@@ -17,6 +17,7 @@ namespace APPDassignmentV1
             private static List<CartItem> CartItems { get; set; }
             public static void AddCartItem(CartItem inItem)
             {
+                
                 CartItems.Add(inItem);
             }
             public static void RemoveCartItem(string inResourceId)
@@ -36,8 +37,9 @@ namespace APPDassignmentV1
                 this.resourceId = inResource.resourceId;
                 this.price = inResource.price;
                 this.resourceType = inResource.resourceType;
-                this.address.Equals(inResource.address);
-            }
+                
+
+        }
             public DateTime BookingDateTime { get; set; }
             public DateTime BookingStartDateAndTime { get; set; }
             public DateTime BookingEndDateAndTime { get; set; }
