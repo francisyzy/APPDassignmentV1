@@ -10,18 +10,19 @@ namespace APPDassignmentV1
     
         public static class shoppingCart
         {
-            public static void initializeShoppingCart()
+            public static void initializeShoppingCart()//When program is opened, shopping cart will be created
             {
                 CartItems = new List<CartItem>();
             }
             private static List<CartItem> CartItems { get; set; }
-            public static void AddCartItem(CartItem inItem)
+            public static void AddCartItem(CartItem inItem)//Add item into cart
             {
-                
+                //inItem is the item that will be added to cart
                 CartItems.Add(inItem);
             }
-            public static void RemoveCartItem(string inResourceId)
+            public static void RemoveCartItem(string inResourceId)//Remove item from shopping card
             {
+                //Read the input resoure id to remove that item with the matching resource id
                 CartItems.RemoveAll(input => input.resourceId == inResourceId);
             }
             public static List<CartItem> GetCartItems()

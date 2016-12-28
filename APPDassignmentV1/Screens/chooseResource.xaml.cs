@@ -20,7 +20,7 @@ namespace APPDassignmentV1.Screens
     /// <summary>
     /// Interaction logic for ChooseResource.xaml
     /// </summary>
-    public partial class ChooseResource : UserControl, ISwitchable
+    public partial class ChooseResource : UserControl, ISwitchable//ISwitchable means that the page allows for page switching
     {
         private string _resourceType = "";
         private string _regionSelected = "";
@@ -40,20 +40,21 @@ namespace APPDassignmentV1.Screens
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_resourceType.Contains("UNIT RESOURCE"))
+            if (_resourceType.Contains("UNIT RESOURCE")) //Check what kind of resource user selected
             {
                 foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
                 {
                     if(item.address.region == _regionSelected){
-                        StackPanel stackPanel = new StackPanel();
+                        StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
                         stackPanel.Children.Add(new TextBox
                         {
                             Width = 100,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Text = item.address.fullAddress.ToString()
+                            Text = item.address.fullAddress.ToString(),
+                            IsEnabled = false
                         });
-                        Button button = new Button()
+                        Button button = new Button() //Adds button to check the details of the item that user selected
                         {
                             Width = 100,
                             Height = 20,
@@ -68,7 +69,7 @@ namespace APPDassignmentV1.Screens
                     }
                 }
             }//end if block
-            if (_resourceType.Contains("ROOM RESOURCE"))
+            if (_resourceType.Contains("ROOM RESOURCE"))//Same code when generating rooom resource stack panel
             {
                 foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
                 {
@@ -80,7 +81,8 @@ namespace APPDassignmentV1.Screens
                             Width = 300,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Text = item.address.fullAddress.ToString()
+                            Text = item.address.fullAddress.ToString(),
+                            IsEnabled = false
                         });
                         Button button = new Button()
                         {
@@ -89,8 +91,6 @@ namespace APPDassignmentV1.Screens
                             Margin = new Thickness(5),
                             Content = "Check Detail",
                             Tag = item.resourceId
-                            
-
                         };
                         button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
                         stackPanel.Children.Add(button);
@@ -108,12 +108,13 @@ namespace APPDassignmentV1.Screens
 
         private void goto_DetailPageScreenButton_Click(object sender, RoutedEventArgs e)
         {
-            //Button button = sender as Button;
-            //if (button != null)
-            //{
-                Button button = (Button)sender;
-                Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceType));
-            //}
+            Button button = (Button)sender;
+            Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceType));
+        }
+
+        private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)//Button to goto shopping cart
+        {
+            Switcher.Switch(new ShoppingCartScreen());
         }
     }
 }

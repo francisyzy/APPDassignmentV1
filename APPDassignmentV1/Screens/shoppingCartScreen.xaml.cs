@@ -36,29 +36,33 @@ namespace APPDassignmentV1.Screens
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = item.resourceId.ToString()
+                    Text = item.resourceId.ToString(),
+                    IsEnabled = false
                 });
                 stackPanel.Children.Add(new TextBox
                 {
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = item.BookingStartDateAndTime.ToString()
+                    Text = item.BookingStartDateAndTime.ToString(),
+                    IsEnabled = false
                 });
                 stackPanel.Children.Add(new TextBox
                 {
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = item.BookingEndDateAndTime.ToString()
+                    Text = item.BookingEndDateAndTime.ToString(),
+                    IsEnabled = false
                 });
                 stackPanel.Children.Add(new TextBox
                 {
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime).ToString()
-                    
+                    Text = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime).ToString(),
+                    IsEnabled = false
+
                 });
                 Button button = new Button()
                 {
@@ -81,6 +85,11 @@ namespace APPDassignmentV1.Screens
             Button button = (Button)sender;
             shoppingCart.RemoveCartItem(((Button)sender).Tag.ToString());
             Switcher.Switch(new ShoppingCartScreen());
+        }
+        private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Switcher.Switch(new ChooseCategory());
         }
     }
 }

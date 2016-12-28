@@ -8,12 +8,12 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="400*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <UniformGrid Name="resourceTypeUniformGrid" 
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="4" Columns="2" 
@@ -34,7 +34,7 @@
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
 	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
             <Button x:Name="goto_shoppingCartScreenButton"
-                    Click="goto_shoppingCartScreenButton_Click" Width="60" Content="Cart"/>
+                    Click="goto_shoppingCartScreenButton_Click" Width="100" Content="Cart"/>
         </UniformGrid>
         <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="201,2,-99,0" Grid.Row="1" VerticalAlignment="Top" Width="99" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged"/>
     </Grid>

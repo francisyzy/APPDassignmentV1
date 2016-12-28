@@ -31,6 +31,12 @@
                 </Style>
             </UniformGrid.Resources>
         </UniformGrid>
+        <UniformGrid Name="menuGrid" 
+	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
+	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
+            <Button Name="goto_ChooseResourceScreenButton"
+                    Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
+        </UniformGrid>
         <Label x:Name="label" Content="Total Price" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Grid.Column="0"/>
         <Label x:Name="totalPrice"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
     </Grid>
