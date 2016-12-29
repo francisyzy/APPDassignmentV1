@@ -113,6 +113,63 @@ namespace APPDassignmentV1.Screens
         {
             Switcher.Switch(new ShoppingCartScreen());
         }
+
+        //private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    // ... Get the ComboBox.
+        //    var comboBox = sender as ComboBox;
+
+        //    // ... Set SelectedItem as Window Title.
+        //    string value = comboBox.SelectedItem as string;
+
+        //    var app = (App)Application.Current;
+        //    switch (value)
+        //    {
+        //        case "ExpressionDark":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ExpressionDark.xaml"));
+        //            break;
+        //        case "ExpressionLight":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ExpressionLight.xaml"));
+        //            break;
+        //        case "BureauBlack":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/BureauBlack.xaml"));
+        //            break;
+        //        case "BureauBlue":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/BureauBlue.xaml"));
+        //            break;
+        //        case "ShinyBlue":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ShinyBlue.xaml"));
+        //            break;
+        //        case "ShinyRed":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ShinyRed.xaml"));
+        //            break;
+        //        case "WhistlerBlue":
+        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/WhistlerBlue.xaml"));
+        //            break;
+        //        default:
+        //            break;
+
+        //    }
+        //}
+
+        //private void theme_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    // ... Get the ComboBox reference.
+        //    var comboBox = sender as ComboBox;
+
+        //    // ... Assign the ItemsSource to the List.
+        //    themeList.Items.Add("ExpressionDark");
+        //    themeList.Items.Add("ExpressionLight");
+        //    themeList.Items.Add("BureauBlack");
+        //    themeList.Items.Add("BureauBlue");
+        //    themeList.Items.Add("ShinyBlue");
+        //    themeList.Items.Add("ShinyRed");
+        //    themeList.Items.Add("WhistlerBlue");
+
+        //    // ... Make the first item selected.
+        //    themeList.SelectedIndex = 0;
+
+        //}
     }
 }
     

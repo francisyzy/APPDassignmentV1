@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:APPDassignmentV1.Screens"
              mc:Ignorable="d" Loaded="UserControl_Loaded"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="700" d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -43,5 +43,6 @@
         <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="54,94,-53,0" Grid.Row="1" VerticalAlignment="Top" Width="200"/>
         <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="54,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95"/>
         <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="159,123,-53,0" Grid.Row="1" VerticalAlignment="Top" Width="95" IsEnabled="False"/>
+        <ComboBox x:Name="themeList" HorizontalAlignment="Left" Margin="10,8,-9,0" VerticalAlignment="Top" Width="200" Loaded="theme_Loaded" SelectionChanged="themeList_SelectionChanged"/>
     </Grid>
 </UserControl>

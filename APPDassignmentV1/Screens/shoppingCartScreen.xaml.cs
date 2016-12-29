@@ -31,6 +31,10 @@ namespace APPDassignmentV1.Screens
             {
 
                 StackPanel stackPanel = new StackPanel();
+                stackPanel.Children.Add(new Label
+                {
+                    Content = "ResourceID"
+                });
                 stackPanel.Children.Add(new TextBox
                 {
                     Width = 100,
@@ -38,6 +42,7 @@ namespace APPDassignmentV1.Screens
                     Margin = new Thickness(5),
                     Text = item.resourceId.ToString(),
                     IsEnabled = false
+                    
                 });
                 stackPanel.Children.Add(new TextBox
                 {

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:APPDassignmentV1.Screens"
              mc:Ignorable="d"  Loaded="UserControl_Loaded"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="700" d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
@@ -19,7 +19,7 @@
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="4" Columns="2" 
 	   Grid.Row="1" Grid.Column="0" Margin="2,2,2,0">
             <UniformGrid.Resources>
-                <Style TargetType="{x:Type Button}">
+                <!--<Style TargetType="{x:Type Button}">
                     <Setter Property="Foreground" Value="Blue"/>
                     <Setter Property="IsEnabled" Value="True"/>
                     <Style.Triggers>
@@ -27,7 +27,7 @@
                             <Setter Property="Foreground" Value="#FFADADAD"/>
                         </Trigger>
                     </Style.Triggers>
-                </Style>
+                </Style>-->
             </UniformGrid.Resources>
         </UniformGrid>
         <UniformGrid Name="menuGrid" 
@@ -36,6 +36,6 @@
             <Button x:Name="goto_shoppingCartScreenButton"
                     Click="goto_shoppingCartScreenButton_Click" Width="100" Content="Cart"/>
         </UniformGrid>
-        <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="201,2,-99,0" Grid.Row="1" VerticalAlignment="Top" Width="99" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged"/>
+        <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="630,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="360" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged"/>
     </Grid>
 </UserControl>

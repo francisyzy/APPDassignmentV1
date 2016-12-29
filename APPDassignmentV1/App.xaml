@@ -4,6 +4,21 @@
              xmlns:local="clr-namespace:APPDassignmentV1"
              StartupUri="PageSwitcher.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <!--<ResourceDictionary.MergedDictionaries>
+                -->
+            <!--<ResourceDictionary Source="Themes/Expression/Common.xaml"/>-->
+            <!--<ResourceDictionary Source="Themes/Expression/Dark.xaml"/>-->
+            <!--
+                <ResourceDictionary x:Name="ThemeDictionary"  Source="Themes/ExpressionDark.xaml"/>
+            </ResourceDictionary.MergedDictionaries>-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="ThemeDictionary">
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="Themes/ExpressionLight.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
