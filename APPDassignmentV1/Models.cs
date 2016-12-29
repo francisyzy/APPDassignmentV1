@@ -71,6 +71,37 @@ namespace APPDassignmentV1.Models
         public int creditCardCVC { get; set; }
     }
 
+    public class currentUser : user
+    {
+        public static currentUser cu;
+        public static void initializeCurrentuser()
+        {
+            cu = new currentUser();
+        }
+        public void setcurrentUser(user u)
+        {
+            cu.firstName = u.firstName;
+            cu.lastName = u.lastName;
+            cu.email = u.email;
+            cu.phoneNum = u.phoneNum;
+            cu.creditCardNum = u.creditCardNum;
+        }
+
+        //public currentUser(user u)
+        //{
+        //    this.firstName = u.firstName;
+        //    this.lastName = u.lastName;
+        //    this.email = u.email;
+        //    this.phoneNum = u.phoneNum;
+        //    this.creditCardNum = u.creditCardNum;
+        //}
+
+        public static currentUser GetCurrentUser()
+        {
+            return cu;
+        }
+    }
+
     //public class shoppingCartItem:Resource
     //{
     //    public shoppingCartItem(Resource inResource)

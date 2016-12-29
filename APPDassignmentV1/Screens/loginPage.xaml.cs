@@ -25,6 +25,7 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class loginPage : UserControl, ISwitchable
     {
+        private Boolean pass;
         public loginPage()
         {
             InitializeComponent();
@@ -54,13 +55,21 @@ namespace APPDassignmentV1.Screens
             
             foreach (user user in ((PageSwitcher)this.Parent).Data.users)
             {
-                if((emailInput.Text == user.email)&&(passwordInput.Password == user.password))
+                if ((emailInput.Text == user.email) && (passwordInput.Password == user.password))
                 {
-                    Switcher.Switch(new ChooseCategory(user.email));
+                    currentUser c = new currentUser();
+                    c.setcurrentUser(user);
+                    pass = true;
                     break;
                 }
             }
-            
+
+            if (pass)
+            {
+                Switcher.Switch(new ChooseCategory());
+            }
+            else
+                MessageBox.Show("wrong email or password");
         }
 
         private void createAccount_Click(object sender, RoutedEventArgs e)

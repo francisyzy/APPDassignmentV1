@@ -12,15 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using APPDassignmentV1.Models;
+
 
 namespace APPDassignmentV1.Screens
 {
     /// <summary>
     /// Interaction logic for ShoppingCartScreen.xaml
     /// </summary>
-    public partial class ShoppingCartScreen : UserControl
+    public partial class reciptScreen : UserControl
     {
-        public ShoppingCartScreen()
+        public reciptScreen()
         {
             InitializeComponent();
         }
@@ -64,37 +66,22 @@ namespace APPDassignmentV1.Screens
                     IsEnabled = false
 
                 });
-                Button button = new Button()
-                {
-                    Width = 100,
-                    Height = 50,
-                    Margin = new Thickness(5),
-                    Content = "Remove",
-                    Tag = item.resourceId
-
-                };
-                button.Click += new RoutedEventHandler(removeItemButton_Click);
-                stackPanel.Children.Add(button);
-                ShoppingCartUniformGrid.Children.Add(stackPanel);
+                
+                reciptScreenUniformGrid.Children.Add(stackPanel);
             }
             totalPrice.Content = shoppingCart.totalprice();
+
+            firstNameLabel.Content = currentUser.cu.firstName;
+            lastNameLabel.Content = currentUser.cu.lastName;
+            emailLabel.Content = currentUser.cu.email;
+            phoneNumberLabel.Content = currentUser.cu.phoneNum;
+            creditNumberLabel.Content = currentUser.cu.creditCardNum;
         }
 
-        private void removeItemButton_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = (Button)sender;
-            shoppingCart.RemoveCartItem(((Button)sender).Tag.ToString());
-            Switcher.Switch(new ShoppingCartScreen());
-        }
         private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());
-        }
-
-        private void goto_ReciptScreenButton_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new reciptScreen());
         }
     }
 }

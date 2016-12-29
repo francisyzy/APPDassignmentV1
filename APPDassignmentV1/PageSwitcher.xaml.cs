@@ -28,6 +28,7 @@ namespace APPDassignmentV1
         {
             InitializeComponent();
             shoppingCart.initializeShoppingCart();
+            currentUser.initializeCurrentuser();
             Switcher.pageSwitcher = this;
             Switcher.Switch(new loginPage()); 
         }
