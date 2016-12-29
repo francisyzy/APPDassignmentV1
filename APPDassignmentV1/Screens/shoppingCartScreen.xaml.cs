@@ -67,7 +67,7 @@ namespace APPDassignmentV1.Screens
                 Button button = new Button()
                 {
                     Width = 100,
-                    Height = 20,
+                    Height = 50,
                     Margin = new Thickness(5),
                     Content = "Remove",
                     Tag = item.resourceId

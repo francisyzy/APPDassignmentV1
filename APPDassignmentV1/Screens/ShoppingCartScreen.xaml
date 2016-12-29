@@ -8,13 +8,13 @@
              d:DesignHeight="600" d:DesignWidth="600">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="400*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
-            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300*" />
+            <ColumnDefinition Width="300*" />
         </Grid.ColumnDefinitions>
         <UniformGrid Name="ShoppingCartUniformGrid" 
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="3" Columns="2" 
