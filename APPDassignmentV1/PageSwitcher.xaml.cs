@@ -49,5 +49,7 @@ namespace APPDassignmentV1
                 throw new ArgumentException("NextPage is not ISwitchable! "
                   + nextPage.Name.ToString());
         }
+
+        
     }
 }

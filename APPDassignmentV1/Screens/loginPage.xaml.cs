@@ -25,7 +25,7 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class loginPage : UserControl, ISwitchable
     {
-        private Boolean pass;
+        private Boolean pass = false;
         public loginPage()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace APPDassignmentV1.Screens
                 }
             }//end of 1st using block, file
 
-            
+            emailInput.Foreground = new SolidColorBrush(Colors.Red);
         }
 
         private void login_Click(object sender, RoutedEventArgs e)

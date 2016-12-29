@@ -1,8 +1,8 @@
-﻿<Window x:Class="APPDassignmentV1.PageSwitcher"
+﻿<Window Name="window"
+        x:Class="APPDassignmentV1.PageSwitcher"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="700" Width="1050">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="700" Width="1000"
+        Background="Gray">
+    <Grid />
 </Window>

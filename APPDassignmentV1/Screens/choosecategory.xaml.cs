@@ -41,16 +41,16 @@ namespace APPDassignmentV1.Screens
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             // read JSON directly from a file
-            using (StreamReader file = File.OpenText(@"ResourceData.JSON"))
-            {
-                using (JsonTextReader reader = new JsonTextReader(file))
-                {
-                    //   rentingSpaceList =  JToken.ReadFrom(reader).ToObject<List<RentingSpace>>();
-                    ((PageSwitcher)this.Parent).Data = JToken.ReadFrom(reader).ToObject<ResourceData>();
+            //using (StreamReader file = File.OpenText(@"ResourceData.JSON"))
+            //{
+            //    using (JsonTextReader reader = new JsonTextReader(file))
+            //    {
+            //        //   rentingSpaceList =  JToken.ReadFrom(reader).ToObject<List<RentingSpace>>();
+            //        ((PageSwitcher)this.Parent).Data = JToken.ReadFrom(reader).ToObject<ResourceData>();
 
-                    // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
-                }
-            }//end of 1st using block, file
+            //        // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
+            //    }
+            //}//end of 1st using block, file
             Button button;
             
             foreach (string resourceType in ((PageSwitcher)this.Parent).Data.resourceType)
