@@ -25,7 +25,7 @@ namespace APPDassignmentV1
                 //Read the input resoure id to remove that item with the matching resource id
                 CartItems.RemoveAll(input => input.resourceId == inResourceId);
             }
-            public static void RemoveAllCartItem()//Remove item from shopping card
+            public static void RemoveAllCartItem()//Remove all from shopping card
             {
                 //Read the input resoure id to remove that item with the matching resource id
                 CartItems.Clear();
@@ -57,11 +57,11 @@ namespace APPDassignmentV1
             public DateTime BookingStartDateAndTime { get; set; }
             public DateTime BookingEndDateAndTime { get; set; }
             public double itemPrice;
-            public double CalculatePrice(DateTime S, DateTime E)
+            public double CalculatePrice(DateTime S, DateTime E)//e = end time, s = start
             {
                 double cartItemPrice;
                 TimeSpan totalDate = E - S;
-                cartItemPrice = totalDate.Days * this.price;
+                cartItemPrice = (totalDate.Days + 1) * this.price; //missing one day
                 this.itemPrice = cartItemPrice;
                 return cartItemPrice;
             }

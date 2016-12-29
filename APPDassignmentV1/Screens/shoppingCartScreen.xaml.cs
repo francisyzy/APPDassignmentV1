@@ -70,7 +70,7 @@ namespace APPDassignmentV1.Screens
                 });
                 stackPanel.Children.Add(new Label
                 {
-                    Content = "Cart Price"
+                    Content = "Booking Price"
                 });
                 stackPanel.Children.Add(new TextBox
                 {
@@ -88,7 +88,6 @@ namespace APPDassignmentV1.Screens
                     Margin = new Thickness(5),
                     Content = "Remove",
                     Tag = item.resourceId
-
                 };
                 button.Click += new RoutedEventHandler(removeItemButton_Click);
                 stackPanel.Children.Add(button);

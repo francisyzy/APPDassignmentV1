@@ -45,9 +45,7 @@ namespace APPDassignmentV1.Screens
 
                     // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
                 }
-            }//end of 1st using block, file
-
-            emailInput.Foreground = new SolidColorBrush(Colors.Red);
+            }//end of 1st using block, 
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
