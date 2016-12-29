@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using APPDassignmentV1;
 using APPDassignmentV1.Screens;
 using APPDassignmentV1.Models;
+using Braintree;
 
 namespace APPDassignmentV1
 {
@@ -30,7 +31,7 @@ namespace APPDassignmentV1
             shoppingCart.initializeShoppingCart();
             currentUser.initializeCurrentuser();
             Switcher.pageSwitcher = this;
-            Switcher.Switch(new loginPage()); 
+            Switcher.Switch(new loginPage());
         }
 
         public void Navigate(UserControl nextPage)

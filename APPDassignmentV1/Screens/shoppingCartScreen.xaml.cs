@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Braintree;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,6 +22,14 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class ShoppingCartScreen : UserControl
     {
+
+        var gateway = new BraintreeGateway
+        {
+            Environment = Braintree.Environment.SANDBOX,
+            MerchantId = "pwkgm6dh9scwq8hp",
+            PublicKey = "djzhmwmxm85zymyq",
+            PrivateKey = "8b51991c9dfc9df934c35c5a27b54738"
+        };
         public ShoppingCartScreen()
         {
             InitializeComponent();
@@ -91,9 +101,29 @@ namespace APPDassignmentV1.Screens
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());
         }
+        public class ClientTokenHandler : IHttpHandler
+        {
+            public void ProcessRequest(HttpContext context)
+            {
+                var clientToken = gateway.ClientToken.generate();
+                context.Response.Write(clientToken);
+            }
+        }
 
         private void goto_ReciptScreenButton_Click(object sender, RoutedEventArgs e)
         {
+
+            var request = new TransactionRequest
+            {
+                Amount = 10.00M,
+                PaymentMethodNonce = nonceFromTheClient,
+                Options = new TransactionOptionsRequest
+                {
+                    SubmitForSettlement = true
+                }
+            };
+
+            Result<Transaction> result = gateway.Transaction.Sale(request);
             Switcher.Switch(new reciptScreen());
         }
     }
