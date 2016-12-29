@@ -38,11 +38,14 @@
                     </Style.Triggers>
                 </Style>
             </UniformGrid.Resources>
+
         </UniformGrid>
-        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Height="23" Margin="54,66,-53,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top" Width="200"/>
-        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="54,94,-53,0" Grid.Row="1" VerticalAlignment="Top" Width="200"/>
-        <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="54,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95"/>
-        <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="159,123,-53,0" Grid.Row="1" VerticalAlignment="Top" Width="95" IsEnabled="False"/>
+        <TextBox x:Name="emailInput" Height="23" Margin="154,66,-153,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="154,94,-153,0" Grid.Row="1" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="154,123,-48,0" Grid.Row="1" VerticalAlignment="Top" Width="95"/>
+        <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="259,123,-153,0" Grid.Row="1" VerticalAlignment="Top" Width="95" IsEnabled="False"/>
         <ComboBox x:Name="themeList" HorizontalAlignment="Left" Margin="10,8,-9,0" VerticalAlignment="Top" Width="200" Loaded="theme_Loaded" SelectionChanged="themeList_SelectionChanged"/>
+        <Label x:Name="UsernameLabel" Content="UserName:" HorizontalAlignment="Left" Margin="10,68,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="21"/>
+        <Label x:Name="PasswordLabel" Content="Password:" HorizontalAlignment="Left" Margin="10,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="21"/>
     </Grid>
 </UserControl>
