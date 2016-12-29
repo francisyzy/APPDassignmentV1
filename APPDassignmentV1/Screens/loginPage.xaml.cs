@@ -91,17 +91,17 @@ namespace APPDassignmentV1.Screens
             {
 
                 case "ExpressionLight":
-                    app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ExpressionLight.xaml"));
+                    app.ChangeTheme(new Uri(@"/Themes/ExpressionLight.xaml",UriKind.Relative));
                     break;
                 case "BureauBlack":
-                    app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/BureauBlack.xaml"));
+                    app.ChangeTheme(new Uri(@"/Themes/BureauBlack.xaml", UriKind.Relative));
                     break;
                 case "BureauBlue":
-                    app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/BureauBlue.xaml"));
+                    app.ChangeTheme(new Uri(@"/Themes/BureauBlue.xaml", UriKind.Relative));
                     break;
 
                 case "WhistlerBlue":
-                    app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/WhistlerBlue.xaml"));
+                    app.ChangeTheme(new Uri(@"/Themes/WhistlerBlue.xaml", UriKind.Relative));
                     break;
                 default:
                     break;
