@@ -126,25 +126,25 @@ namespace APPDassignmentV1.Screens
         //    switch (value)
         //    {
         //        case "ExpressionDark":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ExpressionDark.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/ExpressionDark.xaml"));
         //            break;
         //        case "ExpressionLight":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ExpressionLight.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/ExpressionLight.xaml"));
         //            break;
         //        case "BureauBlack":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/BureauBlack.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/BureauBlack.xaml"));
         //            break;
         //        case "BureauBlue":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/BureauBlue.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/BureauBlue.xaml"));
         //            break;
         //        case "ShinyBlue":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ShinyBlue.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/ShinyBlue.xaml"));
         //            break;
         //        case "ShinyRed":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/ShinyRed.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/ShinyRed.xaml"));
         //            break;
         //        case "WhistlerBlue":
-        //            app.ChangeTheme(new Uri("D:/SP/PROG/Appd/APPDassignmentV1/APPDassignmentV1/Themes/WhistlerBlue.xaml"));
+        //            app.ChangeTheme(new Uri(@"Themes/WhistlerBlue.xaml"));
         //            break;
         //        default:
         //            break;
