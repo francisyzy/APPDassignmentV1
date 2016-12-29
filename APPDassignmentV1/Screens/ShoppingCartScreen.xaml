@@ -36,10 +36,10 @@
 	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
             <Button Name="goto_ChooseResourceScreenButton"
                     Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
-            <Button x:Name="goto_ReciptScreenButton"
-                Click="goto_ReciptScreenButton_Click" Width="100" Content="Check out"/>
+            <Button x:Name="goto_TransactionButton"
+                Click="goto_TransactionButton_Click" Width="100" Content="Check out"/>
         </UniformGrid>
-        <Label x:Name="label" Content="Total Price" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Grid.Column="0"/>
-        <Label x:Name="totalPrice"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
+        <Label x:Name="label" Content="Total Price" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" FontSize="36" Margin="0,551,0,0"/>
+        <Label x:Name="totalPrice" Content="S$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" FontSize="36" Margin="0,550,0,0"/>
     </Grid>
 </UserControl>

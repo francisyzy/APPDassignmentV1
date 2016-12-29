@@ -25,7 +25,12 @@ namespace APPDassignmentV1
                 //Read the input resoure id to remove that item with the matching resource id
                 CartItems.RemoveAll(input => input.resourceId == inResourceId);
             }
-            public static List<CartItem> GetCartItems()//allow shopping cart screen to see all the cart items
+            public static void RemoveAllCartItem()//Remove item from shopping card
+            {
+                //Read the input resoure id to remove that item with the matching resource id
+                CartItems.Clear();
+            }
+        public static List<CartItem> GetCartItems()//allow shopping cart screen to see all the cart items
             {
                 return CartItems;
             }

@@ -20,9 +20,9 @@ namespace APPDassignmentV1.Screens
     /// <summary>
     /// Interaction logic for ShoppingCartScreen.xaml
     /// </summary>
-    public partial class reciptScreen : UserControl
+    public partial class Transaction : UserControl
     {
-        public reciptScreen()
+        public Transaction()
         {
             InitializeComponent();
         }
@@ -69,13 +69,14 @@ namespace APPDassignmentV1.Screens
                 
                 reciptScreenUniformGrid.Children.Add(stackPanel);
             }
-            totalPrice.Content = shoppingCart.totalprice();
+            totalPrice.Content = "S$" + shoppingCart.totalprice();
 
             firstNameLabel.Content = currentUser.cu.firstName;
             lastNameLabel.Content = currentUser.cu.lastName;
             emailLabel.Content = currentUser.cu.email;
             phoneNumberLabel.Content = currentUser.cu.phoneNum;
             creditNumberLabel.Content = currentUser.cu.creditCardNum;
+            shoppingCart.RemoveAllCartItem();
         }
 
         private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)

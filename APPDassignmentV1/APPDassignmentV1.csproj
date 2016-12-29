@@ -106,8 +106,8 @@
     <Compile Include="Screens\loginPage.xaml.cs">
       <DependentUpon>loginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\reciptScreen.xaml.cs">
-      <DependentUpon>reciptScreen.xaml</DependentUpon>
+    <Compile Include="Screens\Transaction.xaml.cs">
+      <DependentUpon>Transaction.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\shoppingCartScreen.xaml.cs">
       <DependentUpon>shoppingCartScreen.xaml</DependentUpon>
@@ -142,7 +142,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Screens\reciptScreen.xaml">
+    <Page Include="Screens\Transaction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -205,6 +205,12 @@
     <Resource Include="ResourceData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ScreenType2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ScreenType3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

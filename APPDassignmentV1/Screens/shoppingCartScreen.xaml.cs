@@ -44,6 +44,10 @@ namespace APPDassignmentV1.Screens
                     IsEnabled = false
                     
                 });
+                stackPanel.Children.Add(new Label
+                {
+                    Content = "Booking Start Date"
+                });
                 stackPanel.Children.Add(new TextBox
                 {
                     Width = 100,
@@ -52,6 +56,10 @@ namespace APPDassignmentV1.Screens
                     Text = item.BookingStartDateAndTime.ToString(),
                     IsEnabled = false
                 });
+                stackPanel.Children.Add(new Label
+                {
+                    Content = "Booking End Date"
+                });
                 stackPanel.Children.Add(new TextBox
                 {
                     Width = 100,
@@ -59,6 +67,10 @@ namespace APPDassignmentV1.Screens
                     Margin = new Thickness(5),
                     Text = item.BookingEndDateAndTime.ToString(),
                     IsEnabled = false
+                });
+                stackPanel.Children.Add(new Label
+                {
+                    Content = "Cart Price"
                 });
                 stackPanel.Children.Add(new TextBox
                 {
@@ -82,7 +94,7 @@ namespace APPDassignmentV1.Screens
                 stackPanel.Children.Add(button);
                 ShoppingCartUniformGrid.Children.Add(stackPanel);
             }
-            totalPrice.Content = shoppingCart.totalprice();
+            totalPrice.Content = "S$" + shoppingCart.totalprice();
         }
 
         private void removeItemButton_Click(object sender, RoutedEventArgs e)
@@ -97,9 +109,9 @@ namespace APPDassignmentV1.Screens
             Switcher.Switch(new ChooseCategory());
         }
 
-        private void goto_ReciptScreenButton_Click(object sender, RoutedEventArgs e)
+        private void goto_TransactionButton_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new reciptScreen());
+            Switcher.Switch(new Transaction());
         }
     }
 }
