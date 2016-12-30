@@ -33,7 +33,9 @@ namespace APPDassignmentV1.Screens
                 StackPanel stackPanel = new StackPanel();
                 stackPanel.Children.Add(new Label
                 {
-                    Content = "ResourceID"
+                    Content = "ResourceID",
+                    Foreground = new SolidColorBrush(Colors.White),
+                    FontWeight = FontWeights.Bold
                 });
                 stackPanel.Children.Add(new TextBox
                 {
@@ -46,7 +48,9 @@ namespace APPDassignmentV1.Screens
                 });
                 stackPanel.Children.Add(new Label
                 {
-                    Content = "Booking Start Date"
+                    Content = "Booking Start Date",
+                    Foreground = new SolidColorBrush(Colors.White),
+                    FontWeight = FontWeights.Bold
                 });
                 stackPanel.Children.Add(new TextBox
                 {
@@ -58,7 +62,9 @@ namespace APPDassignmentV1.Screens
                 });
                 stackPanel.Children.Add(new Label
                 {
-                    Content = "Booking End Date"
+                    Content = "Booking End Date",
+                    Foreground = new SolidColorBrush(Colors.White),
+                    FontWeight = FontWeights.Bold
                 });
                 stackPanel.Children.Add(new TextBox
                 {
@@ -70,7 +76,9 @@ namespace APPDassignmentV1.Screens
                 });
                 stackPanel.Children.Add(new Label
                 {
-                    Content = "Booking Price"
+                    Content = "Booking Price",
+                    Foreground = new SolidColorBrush(Colors.White),
+                    FontWeight = FontWeights.Bold
                 });
                 stackPanel.Children.Add(new TextBox
                 {
