@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <UniformGrid Name="resourceTypeUniformGrid" 
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="4" Columns="2" 
-	   Grid.Row="1" Grid.Column="0" Margin="2,2,2,0">
+	   Grid.Row="1" Grid.Column="0" Margin="410,148,-209,-172" Grid.RowSpan="2">
             <UniformGrid.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Foreground" Value="Blue"/>
@@ -40,12 +40,12 @@
             </UniformGrid.Resources>
 
         </UniformGrid>
-        <TextBox x:Name="emailInput" Height="23" Margin="154,66,-153,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="154,94,-153,0" Grid.Row="1" VerticalAlignment="Top" Width="200"/>
-        <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="154,123,-48,0" Grid.Row="1" VerticalAlignment="Top" Width="95"/>
-        <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="259,123,-153,0" Grid.Row="1" VerticalAlignment="Top" Width="95" IsEnabled="False"/>
+        <TextBox x:Name="emailInput" Height="25" Margin="464,218,-463,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="464,248,-463,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="22"/>
+        <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="464,338,-358,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Height="20"/>
+        <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="569,338,-463,0" Grid.Row="1" VerticalAlignment="Top" Width="95" IsEnabled="False" Height="20"/>
         <ComboBox x:Name="themeList" HorizontalAlignment="Left" Margin="10,8,-9,0" VerticalAlignment="Top" Width="200" Loaded="theme_Loaded" SelectionChanged="themeList_SelectionChanged"/>
-        <Label x:Name="UsernameLabel" Content="UserName:" HorizontalAlignment="Left" Margin="10,68,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="21"/>
-        <Label x:Name="PasswordLabel" Content="Password:" HorizontalAlignment="Left" Margin="10,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="21"/>
+        <Label x:Name="UsernameLabel" Content="UserName:" HorizontalAlignment="Left" Margin="320,220,-263,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="23" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="PasswordLabel" Content="Password:" HorizontalAlignment="Left" Margin="320,247,-263,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="23" Foreground="White" FontWeight="Bold"/>
     </Grid>
 </UserControl>

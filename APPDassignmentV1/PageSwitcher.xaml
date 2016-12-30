@@ -11,7 +11,7 @@
             </ImageBrush.Transform>
 
             <ImageBrush.ImageSource>
-                <BitmapImage UriSource="/img/ScreenTYpe3.jpg"/>
+                <BitmapImage UriSource="/img/S1.jpg"/>
             </ImageBrush.ImageSource>
         </ImageBrush>
     </Window.Background>
