@@ -30,20 +30,20 @@ namespace APPDassignmentV1
                 //Read the input resoure id to remove that item with the matching resource id
                 CartItems.Clear();
             }
-        public static List<CartItem> GetCartItems()//allow shopping cart screen to see all the cart items
-            {
-                return CartItems;
-            }
-            public static double totalprice()
-            {
-                double a = 0;
-                foreach (CartItem item in CartItems)
+            public static List<CartItem> GetCartItems()//allow shopping cart screen to see all the cart items
                 {
-                    a += item.itemPrice;
+                    return CartItems;
                 }
-                return a;
+                public static double totalprice()
+                {
+                    double a = 0;
+                    foreach (CartItem item in CartItems)
+                    {
+                        a += item.itemPrice;
+                    }
+                    return a;
+                }
         }
-    }
 
         public class CartItem : Resource
         {

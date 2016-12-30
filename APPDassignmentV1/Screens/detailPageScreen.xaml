@@ -30,10 +30,10 @@
                 </Style>
             </UniformGrid.Resources>
         </UniformGrid>
-        <Label x:Name="label" Content="Full Adress:" HorizontalAlignment="Left" Margin="337,138,-224,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="88"/>
-        <Label x:Name="label1" Content="Post Code" HorizontalAlignment="Left" Margin="337,202,-216,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="80"/>
-        <Label x:Name="label2" Content="Price:" HorizontalAlignment="Left" Margin="337,261,-177,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="41"/>
-        <Label x:Name="label3" Content="Size:" HorizontalAlignment="Left" Margin="339,315,-172,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="34"/>
+        <Label x:Name="label" Content="Full Adress:" HorizontalAlignment="Left" Margin="337,138,-224,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="88" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Post Code" HorizontalAlignment="Left" Margin="337,202,-216,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="80" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Price:" HorizontalAlignment="Left" Margin="337,261,-177,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="41" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="label3" Content="Size:" HorizontalAlignment="Left" Margin="339,315,-172,0" Grid.Row="1" VerticalAlignment="Top" Height="19" Width="34" Foreground="White" FontWeight="Bold"/>
         <TextBox x:Name="FullAdressTextBox" HorizontalAlignment="Left" Height="44" Margin="455,150,-481,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227" IsEnabled="False"/>
         <TextBox x:Name="PostCodeTextBox" HorizontalAlignment="Left" Height="28" Margin="455,213,-481,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227" IsEnabled="False"/>
         <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Height="29" Margin="455,273,-481,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227" IsEnabled="False"/>

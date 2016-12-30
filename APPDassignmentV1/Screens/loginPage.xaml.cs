@@ -40,12 +40,9 @@ namespace APPDassignmentV1.Screens
             {
                 using (JsonTextReader reader = new JsonTextReader(file))
                 {
-                    //   rentingSpaceList =  JToken.ReadFrom(reader).ToObject<List<RentingSpace>>();
                     ((PageSwitcher)this.Parent).Data = JToken.ReadFrom(reader).ToObject<ResourceData>();
-
-                    // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
                 }
-            }//end of 1st using block, 
+            }
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
@@ -70,10 +67,10 @@ namespace APPDassignmentV1.Screens
                 MessageBox.Show("wrong email or password");
         }
 
-        private void createAccount_Click(object sender, RoutedEventArgs e)
+        private void createAccount_Click(object sender, RoutedEventArgs e)//Implementing in CA2
         {
             throw new NotImplementedException();
-            Switcher.Switch(new ChooseCategory());
+            //Switcher.Switch(new ChooseCategory());
         }
 
         private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
