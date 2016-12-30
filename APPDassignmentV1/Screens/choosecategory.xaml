@@ -34,7 +34,7 @@
         </UniformGrid>
         <UniformGrid Name="menuGrid" 
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
-	   Grid.Row="0" Grid.Column="0" Margin="2,2,2,0">
+	   Grid.Row="0" Grid.Column="1" Margin="2,2,2,0">
             <Button x:Name="goto_shoppingCartScreenButton"
                     Click="goto_shoppingCartScreenButton_Click" Width="100" Content="Cart"/>
         </UniformGrid>
