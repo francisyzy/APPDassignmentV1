@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1000">
     <Grid>
-        <DatePicker x:Name="startTimeDatePicker" HorizontalAlignment="Left" Margin="150,55,0,0" VerticalAlignment="Top" Width="140" SelectedDateChanged="startTimeDatePicker_SelectedDateChanged"/>
-        <DatePicker x:Name="endTimeDatePicker" HorizontalAlignment="Left" Margin="150,176,0,0" VerticalAlignment="Top" Width="140" SelectedDateChanged="endTimeDatePicker_SelectedDateChanged"/>
-        <Button x:Name="addToCartButton" Content="AddToCart" HorizontalAlignment="Left" Margin="112,261,0,0" VerticalAlignment="Top" Width="75" Click="addToCartButton_Click"/>
-        <Label x:Name="Starttime" Content="Start Time:" HorizontalAlignment="Left" Margin="44,54,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label x:Name="Endtime" Content="End Time:" HorizontalAlignment="Left" Margin="44,174,0,0" VerticalAlignment="Top" Width="80"/>
+        <DatePicker x:Name="startTimeDatePicker" HorizontalAlignment="Left" Margin="476,159,0,0" VerticalAlignment="Top" Width="274" SelectedDateChanged="startTimeDatePicker_SelectedDateChanged" Height="39"/>
+        <DatePicker x:Name="endTimeDatePicker" HorizontalAlignment="Left" Margin="476,358,0,0" VerticalAlignment="Top" Width="274" SelectedDateChanged="endTimeDatePicker_SelectedDateChanged" Height="39"/>
+        <Button x:Name="addToCartButton" Content="AddToCart" HorizontalAlignment="Left" Margin="402,497,0,0" VerticalAlignment="Top" Width="147" Click="addToCartButton_Click" Height="30"/>
+        <Label x:Name="Starttime" Content="Start Time:" HorizontalAlignment="Left" Margin="269,157,0,0" VerticalAlignment="Top" Width="157" Height="26"/>
+        <Label x:Name="Endtime" Content="End Time:" HorizontalAlignment="Left" Margin="269,354,0,0" VerticalAlignment="Top" Width="157" Height="27"/>
 
     </Grid>
 </UserControl>

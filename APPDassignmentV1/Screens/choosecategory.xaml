@@ -14,10 +14,12 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <UniformGrid Name="resourceTypeUniformGrid" 
-	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="4" Columns="2" 
-	   Grid.Row="1" Grid.Column="0" Margin="2,2,2,0">
+	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="2" Columns="1" 
+	   Grid.Row="1" Grid.Column="1" Margin="2,2,2,0">
             <UniformGrid.Resources>
                 <!--<Style TargetType="{x:Type Button}">
                     <Setter Property="Foreground" Value="Blue"/>
@@ -36,6 +38,6 @@
             <Button x:Name="goto_shoppingCartScreenButton"
                     Click="goto_shoppingCartScreenButton_Click" Width="100" Content="Cart"/>
         </UniformGrid>
-        <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="630,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="360" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged"/>
+        <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged" Grid.Column="2"/>
     </Grid>
 </UserControl>
