@@ -12,8 +12,14 @@ namespace APPDassignmentV1.Models
         public List<unitResource> unitResources { get; set; }
         public List<roomResource> roomResources { get; set; }
         public List<string> region { get; set; }
-        public List<string> resourceType { get; set; }
+        public List<resourceType> resourceTypes { get; set; }
         public List<user> users { get; set; }
+    }
+
+    public class resourceType
+    {
+        public string resourceTypeName { get; set; }
+        public string resourceTypeID { get; set; }
     }
     public abstract class Resource
     {
@@ -21,7 +27,7 @@ namespace APPDassignmentV1.Models
         public string resourceId { get; set; }
         public address address { get; set; } //maybe call in map api to look up MRT
         public double price { get; set; }
-        public int resourceType { get; set; } //1 = unit || 2= room
+        public int resourceTypeID { get; set; } //1 = unit || 2= room
 
     }
     

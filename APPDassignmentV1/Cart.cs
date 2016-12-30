@@ -51,7 +51,7 @@ namespace APPDassignmentV1
             {
                 this.resourceId = inResource.resourceId;
                 this.price = inResource.price;
-                this.resourceType = inResource.resourceType;
+                this.resourceTypeID = inResource.resourceTypeID;
             }
             public DateTime BookingDateTime { get; set; }
             public DateTime BookingStartDateAndTime { get; set; }

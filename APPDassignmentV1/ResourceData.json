@@ -9,7 +9,7 @@
         "region": "Bukit Merah"
       },
       "price": 350,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 1,
       "roomSize": 20,
       "aircon": true
@@ -22,7 +22,7 @@
         "region": "Clementi"
       },
       "price": 200,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 2,
       "roomSize": 30,
       "aircon": true
@@ -35,7 +35,7 @@
         "region": "Newton"
       },
       "price": 450,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 3,
       "roomSize": 20,
       "aircon": false
@@ -48,7 +48,7 @@
         "region": "Pasir Ris"
       },
       "price": 430,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 4,
       "roomSize": 40,
       "aircon": true
@@ -61,7 +61,7 @@
         "region": "Punggol"
       },
       "price": 480,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 5,
       "roomSize": 50,
       "aircon": true
@@ -74,7 +74,7 @@
         "region": "Yishun"
       },
       "price": 530,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 6,
       "roomSize": 60,
       "aircon": true
@@ -87,7 +87,7 @@
         "region": "Bukit Merah"
       },
       "price": 530,
-      "resourceType": 2,
+      "resourceTypeID": 2,
       "roomId": 6,
       "roomSize": 60,
       "aircon": true
@@ -103,7 +103,7 @@
         "region": "Pasir Ris"
       },
       "price": 900,
-      "resourseType": 1,
+      "resourseTypeID": 1,
       "unitId": 1,
       "houseSize": 52,
       "facilities": [
@@ -139,7 +139,7 @@
         "region": "Punggol"
       },
       "price": 1125,
-      "resourseType": 1,
+      "resourseTypeID": 1,
       "unitId": 2,
       "houseSize": 63,
       "facilities": [
@@ -168,7 +168,7 @@
         "region": "Yishun"
       },
       "price": 1200,
-      "resourseType": 1,
+      "resourseTypeID": 1,
       "unitId": 3,
       "houseSize": 56,
       "facilities": [
@@ -201,7 +201,7 @@
         "region": "Bukit Merah"
       },
       "price": 1365,
-      "resourseType": 1,
+      "resourseTypeID": 1,
       "unitId": 4,
       "houseSize": 61,
       "facilities": [
@@ -234,7 +234,7 @@
         "region": "Clementi"
       },
       "price": 1515,
-      "resourseType": 1,
+      "resourseTypeID": 1,
       "unitId": 5,
       "houseSize": 63,
       "facilities": [
@@ -262,7 +262,7 @@
         "region": "Newton"
       },
       "price": 1515,
-      "resourseType": 1,
+      "resourseTypeID": 1,
       "unitId": 6,
       "houseSize": 65,
       "facilities": [
@@ -288,10 +288,16 @@
 
 
   "region": [ "Bukit Merah", "Clementi", "Newton", "Pasir Ris", "Punggol", "Yishun" ],
-      "resourceType": [
-        "UNIT RESOURCE",
-        "ROOM RESOURCE"
-      ],
+  "resourceTypes": [
+    {
+      "resourceTypeName": "UNIT RESOURCE",
+      "resourceTypeID": 1
+    },
+    {
+      "resourceTypeName": "ROOM RESOURCE",
+      "resourceTypeID": 2
+    }
+  ],
   "users": [
     {
       "firstName": "Tripp",

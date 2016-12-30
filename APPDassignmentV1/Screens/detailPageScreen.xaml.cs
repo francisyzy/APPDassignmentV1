@@ -21,20 +21,20 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class detailPageScreen : UserControl
     {
-        private string _resourceType = "";
+        private int _resourceTypeID = 0;
         private string _resourceID = "";
         private Resource selectedResource = null;
 
-        public detailPageScreen(string tag, string resourcetype)
+        public detailPageScreen(string tag, int resourcetypeID)
         {
             _resourceID = tag;
-            _resourceType = resourcetype;
+            _resourceTypeID = resourcetypeID;
             InitializeComponent();
         }
 
         private void detailPageScreen_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_resourceType.Contains("UNIT RESOURCE"))
+            if (_resourceTypeID == 1)
             {
                 foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
                 {
@@ -48,7 +48,7 @@ namespace APPDassignmentV1.Screens
 
                 }
             }
-            else if (_resourceType.Contains("ROOM RESOURCE"))
+            else if (_resourceTypeID == 2)
             {
                 foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
                 {
@@ -70,11 +70,11 @@ namespace APPDassignmentV1.Screens
 
         private void BookButton_Click(object sender, RoutedEventArgs e)
         {
-            if (_resourceType.Contains("UNIT RESOURCE"))
+            if (_resourceTypeID == 1)
             {
                 selectedResource = ((PageSwitcher)this.Parent).Data.unitResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
             }
-            else if (_resourceType.Contains("ROOM RESOURCE"))
+            else if (_resourceTypeID == 2)
             {
                 selectedResource = ((PageSwitcher)this.Parent).Data.roomResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
             }

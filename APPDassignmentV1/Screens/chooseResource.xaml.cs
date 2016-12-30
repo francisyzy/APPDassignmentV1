@@ -24,6 +24,7 @@ namespace APPDassignmentV1.Screens
     {
         private string _resourceType = "";
         private string _regionSelected = "";
+        private int _resourceTypeID = 0;
 
         public ChooseResource(string inResourceType,string _region)
         {
@@ -40,7 +41,8 @@ namespace APPDassignmentV1.Screens
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_resourceType.Contains("UNIT RESOURCE")) //Check what kind of resource user selected
+            _resourceTypeID = int.Parse(_resourceType);
+            if (_resourceTypeID == 1) //Check what kind of resource user selected
             {
                 foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
                 {
@@ -69,7 +71,7 @@ namespace APPDassignmentV1.Screens
                     }
                 }
             }//end if block
-            if (_resourceType.Contains("ROOM RESOURCE"))//Same code when generating rooom resource stack panel
+            if (_resourceTypeID == 2)//Same code when generating rooom resource stack panel
             {
                 foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
                 {
@@ -109,7 +111,7 @@ namespace APPDassignmentV1.Screens
         private void goto_DetailPageScreenButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceType));
+            Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceTypeID));
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)//Button to goto shopping cart

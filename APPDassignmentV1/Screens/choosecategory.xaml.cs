@@ -53,12 +53,12 @@ namespace APPDassignmentV1.Screens
             //}//end of 1st using block, file
             Button button;
             
-            foreach (string resourceType in ((PageSwitcher)this.Parent).Data.resourceType)
+            foreach (resourceType resourceTypes in ((PageSwitcher)this.Parent).Data.resourceTypes)
             {
                 button = new Button()
                 {
-                    Content = string.Format("{0}", resourceType),
-                    Tag = resourceType,
+                    Content = string.Format("{0}", resourceTypes.resourceTypeName),
+                    Tag = resourceTypes.resourceTypeID,
                     Height = 35,
                     HorizontalAlignment = HorizontalAlignment.Stretch
                 };
