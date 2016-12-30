@@ -43,14 +43,15 @@
         </UniformGrid>
         <Label x:Name="label" Content="Total Price" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" FontSize="36" Margin="0,550,0,0"/>
         <Label x:Name="totalPrice" Content="S$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" FontSize="36" Margin="0,552,0,0"/>
-        <Label x:Name="label1" Content="UserName:" Grid.Column="1" HorizontalAlignment="Left" Margin="55,43,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label1_Copy" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="55,148,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label1_Copy1" Content="PhoneNumber:" Grid.Column="1" HorizontalAlignment="Left" Margin="55,254,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="label1_Copy2" Content="CreditCardNO:" Grid.Column="1" HorizontalAlignment="Left" Margin="55,367,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
-        <Label x:Name="firstNameLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="55,84,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="115"/>
-        <Label x:Name="lastNameLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="191,84,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="84"/>
-        <Label x:Name="emailLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="55,189,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235"/>
-        <Label x:Name="phoneNumberLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="55,295,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235"/>
-        <Label x:Name="creditNumberLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="55,424,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235"/>
+        <Label x:Name="FirstName_Label" Content="First Name:" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="LastName_Label" Content="Last Name:" HorizontalAlignment="Left" Margin="0,50,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Grid.Column="1"/>
+        <Label x:Name="Email_Label" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,100,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="PhoneNum_Label" Content="PhoneNumber:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,150,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="CreditCardNo_Label" Content="CreditCardNO:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,200,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="firstNameLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="150,50,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="115"/>
+        <Label x:Name="lastNameLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="150,50,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="84"/>
+        <Label x:Name="emailLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="150,100,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235"/>
+        <Label x:Name="phoneNumberLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="150,150,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235"/>
+        <Label x:Name="creditNumberLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="150,200,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235"/>
     </Grid>
 </UserControl>
