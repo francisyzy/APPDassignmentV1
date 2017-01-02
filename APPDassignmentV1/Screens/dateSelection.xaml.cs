@@ -77,8 +77,8 @@ namespace APPDassignmentV1.Screens
             
             _cartitem.BookingStartDateAndTime = this.startDateTime;
             _cartitem.BookingEndDateAndTime = this.endDateTime;
-            shoppingCart.AddCartItem(_cartitem);
-            Switcher.Switch(new ChooseCategory());
+            shoppingCart.AddCartItem(_cartitem);//add datetime into cart
+            Switcher.Switch(new ChooseCategory());//goes back into main page
         }
     }
 }

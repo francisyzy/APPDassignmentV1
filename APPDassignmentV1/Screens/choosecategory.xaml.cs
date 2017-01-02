@@ -45,19 +45,17 @@ namespace APPDassignmentV1.Screens
             //{
             //    using (JsonTextReader reader = new JsonTextReader(file))
             //    {
-            //        //   rentingSpaceList =  JToken.ReadFrom(reader).ToObject<List<RentingSpace>>();
             //        ((PageSwitcher)this.Parent).Data = JToken.ReadFrom(reader).ToObject<ResourceData>();
-
-            //        // PhysicalResource obj = JsonConvert.DeserializeObject< PhysicalResource> (reader.Value.ToString());
             //    }
             //}//end of 1st using block, file
+            //Json loader moved to login page since login page is the first page to be loaded that requires json data
             Button button;
             
-            foreach (resourceType resourceTypes in ((PageSwitcher)this.Parent).Data.resourceTypes)
+            foreach (resourceType resourceTypes in ((PageSwitcher)this.Parent).Data.resourceTypes)//generate buttons based on json file
             {
                 button = new Button()
                 {
-                    Content = string.Format("{0}", resourceTypes.resourceTypeName),
+                    Content = string.Format("{0}", resourceTypes.resourceTypeName),//generate button content based on resourceTypeName data
                     Tag = resourceTypes.resourceTypeID,
                     Height = 35,
                     HorizontalAlignment = HorizontalAlignment.Stretch
@@ -98,15 +96,10 @@ namespace APPDassignmentV1.Screens
             throw new NotImplementedException();
         }
 
-        private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)
+        private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)//goes into new page
         {
             Button button = (Button)sender;
             Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
-        }
-        private void goto_loginPageScreenButton_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = (Button)sender;
-            Switcher.Switch(new loginPage());
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)
@@ -170,6 +163,8 @@ namespace APPDassignmentV1.Screens
         //    themeList.SelectedIndex = 0;
 
         //}
+
+        //theme changing code moved to login page
     }
 }
     

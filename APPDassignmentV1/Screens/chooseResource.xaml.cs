@@ -102,16 +102,16 @@ namespace APPDassignmentV1.Screens
             }//end if block
         }
 
-        private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)
+        private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)//button to go back
         {
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());
         }
 
-        private void goto_DetailPageScreenButton_Click(object sender, RoutedEventArgs e)
+        private void goto_DetailPageScreenButton_Click(object sender, RoutedEventArgs e)//page switching
         {
             Button button = (Button)sender;
-            Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceTypeID));
+            Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString()), this._resourceTypeID));//bring info from previous page to new page
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)//Button to goto shopping cart
