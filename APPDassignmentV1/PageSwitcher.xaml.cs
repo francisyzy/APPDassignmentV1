@@ -27,10 +27,10 @@ namespace APPDassignmentV1
         public PageSwitcher()
         {
             InitializeComponent();
-            shoppingCart.initializeShoppingCart();
-            currentUser.initializeCurrentuser();
+            shoppingCart.initializeShoppingCart();//loads shopping cart
+            currentUser.initializeCurrentuser();//load current user list
             Switcher.pageSwitcher = this;
-            Switcher.Switch(new loginPage()); 
+            Switcher.Switch(new loginPage());//goes to login page (first page) 
         }
 
         public void Navigate(UserControl nextPage)

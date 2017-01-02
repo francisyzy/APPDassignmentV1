@@ -32,9 +32,9 @@ namespace APPDassignmentV1.Screens
             InitializeComponent();
         }
 
-        private void detailPageScreen_Loaded(object sender, RoutedEventArgs e)
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)//runs when page is loaded
         {
-            if (_resourceTypeID == 1)
+            if (_resourceTypeID == 1)//resource type id 1 = unit resource
             {
                 foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
                 {
@@ -48,7 +48,7 @@ namespace APPDassignmentV1.Screens
 
                 }
             }
-            else if (_resourceTypeID == 2)
+            else if (_resourceTypeID == 2)//resource type id 2 = room resource
             {
                 foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
                 {
@@ -63,14 +63,14 @@ namespace APPDassignmentV1.Screens
             }
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)//back button on the screen
         {
             Switcher.Switch(new ChooseCategory());
         }
 
-        private void BookButton_Click(object sender, RoutedEventArgs e)
+        private void BookButton_Click(object sender, RoutedEventArgs e)//When book button is clicked
         {
-            if (_resourceTypeID == 1)
+            if (_resourceTypeID == 1)//finding appropirate datatype
             {
                 selectedResource = ((PageSwitcher)this.Parent).Data.unitResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
             }
@@ -78,8 +78,8 @@ namespace APPDassignmentV1.Screens
             {
                 selectedResource = ((PageSwitcher)this.Parent).Data.roomResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
             }
-            CartItem cartItem = new CartItem(selectedResource);
-            Switcher.Switch(new dateSelection(cartItem));
+            CartItem cartItem = new CartItem(selectedResource);//adds item into cart
+            Switcher.Switch(new dateSelection(cartItem));//brings cart item info into next page
         }
     }
 }

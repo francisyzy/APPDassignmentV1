@@ -27,19 +27,19 @@ namespace APPDassignmentV1.Screens
             InitializeComponent();
         }
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)//When user control is loaded, run:
         {
-            foreach (CartItem item in shoppingCart.GetCartItems())
+            foreach (CartItem item in shoppingCart.GetCartItems())//Generate display information for every item in the cart
             {
 
                 StackPanel stackPanel = new StackPanel();
-                stackPanel.Children.Add(new Label
+                stackPanel.Children.Add(new Label//generate label for resourceId
                 {
                     Content = "ResourceID",
                     Foreground = new SolidColorBrush(Colors.White),
                     FontWeight = FontWeights.Bold
                 });
-                stackPanel.Children.Add(new TextBox
+                stackPanel.Children.Add(new TextBox//generate textbox (used as label) for resourceId
                 {
                     Width = 100,
                     Height = 20,
@@ -94,17 +94,17 @@ namespace APPDassignmentV1.Screens
 
                 reciptScreenUniformGrid.Children.Add(stackPanel);
             }
-            totalPrice.Content = "S$" + shoppingCart.totalprice();
+            totalPrice.Content = "S$" + shoppingCart.totalprice();//get total S$
 
-            firstNameLabel.Content = currentUser.cu.firstName;
+            firstNameLabel.Content = currentUser.cu.firstName;//Gets userinformation & Display them
             lastNameLabel.Content = currentUser.cu.lastName;
             emailLabel.Content = currentUser.cu.email;
             phoneNumberLabel.Content = currentUser.cu.phoneNum;
             creditNumberLabel.Content = currentUser.cu.creditCardNum;
-            shoppingCart.RemoveAllCartItem();
+            shoppingCart.RemoveAllCartItem();//remove all shopping cart items after transection is over
         }
 
-        private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)
+        private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)//Button to go back
         {
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());

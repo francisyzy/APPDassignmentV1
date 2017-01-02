@@ -45,7 +45,7 @@ namespace APPDassignmentV1
                 }
         }
 
-        public class CartItem : Resource
+        public class CartItem : Resource//let cart item get info from resource
         {
             public CartItem(Resource inResource)
             {

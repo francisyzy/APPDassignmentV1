@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace APPDassignmentV1.Models
 {
 
-    public class ResourceData
+    public class ResourceData//main data structure
     {
         public List<unitResource> unitResources { get; set; }
         public List<roomResource> roomResources { get; set; }
@@ -16,12 +16,12 @@ namespace APPDassignmentV1.Models
         public List<user> users { get; set; }
     }
 
-    public class resourceType
+    public class resourceType//data structure for resource type as there is resource type id
     {
         public string resourceTypeName { get; set; }
         public string resourceTypeID { get; set; }
     }
-    public abstract class Resource
+    public abstract class Resource//main data type for abstraction
     {
         
         public string resourceId { get; set; }
@@ -31,7 +31,7 @@ namespace APPDassignmentV1.Models
 
     }
     
-    public class unitResource:Resource
+    public class unitResource:Resource //inherit from resource class
     {
         public int unitId { get; set; }
         public int houseSize { get; set; }
@@ -40,7 +40,7 @@ namespace APPDassignmentV1.Models
         public int aircon { get; set; }
     }
 
-    public class roomResource:Resource
+    public class roomResource:Resource //inherit from resource class
     {
         public int roomId { get; set; }
         public int roomSize { get; set; }
@@ -64,7 +64,7 @@ namespace APPDassignmentV1.Models
         public string region { get; set; }
     }
 
-    public class user
+    public class user //user class
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
@@ -77,7 +77,7 @@ namespace APPDassignmentV1.Models
         public int creditCardCVC { get; set; }
     }
 
-    public class currentUser : user
+    public class currentUser : user //something like shopping cart but to check which user is currently using the program
     {
         public static currentUser cu;
         public static void initializeCurrentuser()
@@ -164,6 +164,7 @@ namespace APPDassignmentV1.Models
     //        return a;
     //    }
     //}
+    //shopping cart code moved to cart.cs
 
     
 }

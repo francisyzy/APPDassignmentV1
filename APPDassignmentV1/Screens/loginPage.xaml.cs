@@ -34,9 +34,9 @@ namespace APPDassignmentV1.Screens
         {
             throw new NotImplementedException();
         }
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)//runs when screen is loaded
         {
-            using (StreamReader file = File.OpenText(@"ResourceData.JSON"))
+            using (StreamReader file = File.OpenText(@"ResourceData.JSON"))//start json parsing
             {
                 using (JsonTextReader reader = new JsonTextReader(file))
                 {
@@ -45,7 +45,7 @@ namespace APPDassignmentV1.Screens
             }
         }
 
-        private void login_Click(object sender, RoutedEventArgs e)
+        private void login_Click(object sender, RoutedEventArgs e)//check login credentials
         {
             
             foreach (user user in ((PageSwitcher)this.Parent).Data.users)
@@ -64,7 +64,7 @@ namespace APPDassignmentV1.Screens
                 Switcher.Switch(new ChooseCategory());
             }
             else
-                MessageBox.Show("wrong email or password");
+                MessageBox.Show("wrong email or password");//prompt if password incorrect
         }
 
         private void createAccount_Click(object sender, RoutedEventArgs e)//Implementing in CA2
@@ -73,7 +73,7 @@ namespace APPDassignmentV1.Screens
             //Switcher.Switch(new ChooseCategory());
         }
 
-        private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)//themes for user to select
         {
             // ... Get the ComboBox.
             var comboBox = sender as ComboBox;
