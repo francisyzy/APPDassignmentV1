@@ -28,6 +28,7 @@ namespace APPDassignmentV1.Models
         public address address { get; set; } //maybe call in map api to look up MRT
         public double price { get; set; }
         public int resourceTypeID { get; set; } //1 = unit || 2= room
+        abstract public int getsize(); // only for show
 
     }
     
@@ -38,6 +39,11 @@ namespace APPDassignmentV1.Models
         public List<facility> facilities { get; set; }
         public int roomCount { get; set; }
         public int aircon { get; set; }
+        public override int getsize()//only for show
+        {
+            return houseSize;
+            throw new NotImplementedException();
+        }
     }
 
     public class roomResource:Resource
@@ -45,8 +51,12 @@ namespace APPDassignmentV1.Models
         public int roomId { get; set; }
         public int roomSize { get; set; }
         public Boolean aircon { get; set; }
-        
-        
+        public override int getsize()//only for show
+        {
+            return roomSize;
+            throw new NotImplementedException();
+        }
+
     }
 
     public class facility
