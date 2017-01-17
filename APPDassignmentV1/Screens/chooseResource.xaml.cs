@@ -19,7 +19,7 @@ namespace APPDassignmentV1.Screens
 {
     /// <summary>
     /// Interaction logic for ChooseResource.xaml
-    /// </summary>
+    /// </summary> 
     public partial class ChooseResource : UserControl, ISwitchable//ISwitchable means that the page allows for page switching
     {
         private string _resourceType = "";
