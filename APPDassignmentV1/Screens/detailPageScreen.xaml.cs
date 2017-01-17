@@ -36,7 +36,7 @@ namespace APPDassignmentV1.Screens
         {
             if (_resourceTypeID == 1)//resource type id 1 = unit resource
             {
-                foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
+                foreach (unitResource item in ((PageSwitcher)this.Parent).Data.resource)
                 {
                     if (item.resourceId == _resourceID)
                     {
@@ -50,7 +50,7 @@ namespace APPDassignmentV1.Screens
             }
             else if (_resourceTypeID == 2)//resource type id 2 = room resource
             {
-                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
+                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.resource)
                 {
                     if (item.resourceId == _resourceID)
                     {
@@ -72,11 +72,11 @@ namespace APPDassignmentV1.Screens
         {
             if (_resourceTypeID == 1)//finding appropirate datatype
             {
-                selectedResource = ((PageSwitcher)this.Parent).Data.unitResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
+                selectedResource = ((PageSwitcher)this.Parent).Data.resource.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
             }
             else if (_resourceTypeID == 2)
             {
-                selectedResource = ((PageSwitcher)this.Parent).Data.roomResources.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
+                selectedResource = ((PageSwitcher)this.Parent).Data.resource.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
             }
             CartItem cartItem = new CartItem(selectedResource);//adds item into cart
             Switcher.Switch(new dateSelection(cartItem));//brings cart item info into next page

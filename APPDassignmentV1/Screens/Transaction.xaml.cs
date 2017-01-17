@@ -100,7 +100,6 @@ namespace APPDassignmentV1.Screens
             lastNameLabel.Content = currentUser.cu.lastName;
             emailLabel.Content = currentUser.cu.email;
             phoneNumberLabel.Content = currentUser.cu.phoneNum;
-            creditNumberLabel.Content = currentUser.cu.creditCardNum;
             shoppingCart.RemoveAllCartItem();//remove all shopping cart items after transection is over
         }
 

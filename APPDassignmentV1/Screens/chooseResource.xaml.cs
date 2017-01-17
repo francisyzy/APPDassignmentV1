@@ -44,7 +44,7 @@ namespace APPDassignmentV1.Screens
             _resourceTypeID = int.Parse(_resourceType);
             if (_resourceTypeID == 1) //Check what kind of resource user selected
             {
-                foreach (unitResource item in ((PageSwitcher)this.Parent).Data.unitResources)
+                foreach (resource item in ((PageSwitcher)this.Parent).Data.resource)
                 {
                     if(item.address.region == _regionSelected){
                         StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
@@ -73,7 +73,7 @@ namespace APPDassignmentV1.Screens
             }//end if block
             if (_resourceTypeID == 2)//Same code when generating rooom resource stack panel
             {
-                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.roomResources)
+                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.resource)
                 {
                     if (item.address.region == _regionSelected)
                     {

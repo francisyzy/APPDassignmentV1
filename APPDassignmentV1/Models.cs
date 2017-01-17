@@ -9,11 +9,10 @@ namespace APPDassignmentV1.Models
 
     public class ResourceData//main data structure
     {
-        public List<unitResource> unitResources { get; set; }
-        public List<roomResource> roomResources { get; set; }
-        public List<string> region { get; set; }
-        public List<resourceType> resourceTypes { get; set; }
+        public List<Resource> resource { get; set; }
+        public List<region> region { get; set; }
         public List<user> users { get; set; }
+        public List<resourceType> resourceTypes { get; set; }
     }
 
     public class resourceType//data structure for resource type as there is resource type id
@@ -25,53 +24,26 @@ namespace APPDassignmentV1.Models
     {
         
         public string resourceId { get; set; }
-        public address address { get; set; } //maybe call in map api to look up MRT
+        public int postalCode { get; set; }
+        public string fullAddress { get; set; }
+        public int regionId { get; set; } //maybe call in map api to look up MRT
         public double price { get; set; }
         public int resourceTypeID { get; set; } //1 = unit || 2= room
+        public int resourceSize { get; set; }
+        public int aircon { get; set; }
         abstract public int getsize(); // only for show
 
     }
-    
-    public class unitResource:Resource //inherit from resource class
-    {
-        public int unitId { get; set; }
-        public int houseSize { get; set; }
-        public List<facility> facilities { get; set; }
-        public int roomCount { get; set; }
-        public int aircon { get; set; }
-        public override int getsize()//only for show
-        {
-            return houseSize;
-            throw new NotImplementedException();
-        }
-    }
-
-    public class roomResource:Resource //inherit from resource class
-    {
-        public int roomId { get; set; }
-        public int roomSize { get; set; }
-        public Boolean aircon { get; set; }
-        public override int getsize()//only for show
-        {
-            return roomSize;
-            throw new NotImplementedException();
-        }
+   
 
     }
 
-    public class facility
+    public class region
     {
-        public int facilityTypeId { get; set; }
-        public string facilityTypeName { get; set; }
+        public int regionId { get; set; }
+        public string regionName { get; set; }
         
 
-    }
-
-    public class address
-    {
-        public int postalCode { get; set; }
-        public string fullAddress { get; set; }
-        public string region { get; set; }
     }
 
     public class user //user class
@@ -81,10 +53,6 @@ namespace APPDassignmentV1.Models
         public string email { get; set; }
         public string password { get; set; }
         public string phoneNum { get; set; }
-        public string birthday { get; set; }
-        public string creditCardNum { get; set; }
-        public string creditCardExpiry { get; set; }
-        public int creditCardCVC { get; set; }
     }
 
     public class currentUser : user //something like shopping cart but to check which user is currently using the program
@@ -100,7 +68,6 @@ namespace APPDassignmentV1.Models
             cu.lastName = u.lastName;
             cu.email = u.email;
             cu.phoneNum = u.phoneNum;
-            cu.creditCardNum = u.creditCardNum;
         }
 
         //public currentUser(user u)
@@ -175,6 +142,3 @@ namespace APPDassignmentV1.Models
     //    }
     //}
     //shopping cart code moved to cart.cs
-
-    
-}
