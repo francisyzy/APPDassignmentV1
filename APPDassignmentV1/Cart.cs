@@ -53,11 +53,7 @@ namespace APPDassignmentV1
                 this.price = inResource.price;
                 this.resourceTypeID = inResource.resourceTypeID;
             }
-        public override int getsize() //only for show
-        {
-            
-            throw new NotImplementedException();
-        }
+
         public DateTime BookingDateTime { get; set; }
             public DateTime BookingStartDateAndTime { get; set; }
             public DateTime BookingEndDateAndTime { get; set; }

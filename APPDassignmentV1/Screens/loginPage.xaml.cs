@@ -17,6 +17,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Firebase.Auth;
+using Firebase.Database;
 
 namespace APPDassignmentV1.Screens
 {
@@ -25,7 +27,10 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class loginPage : UserControl, ISwitchable
     {
-        private Boolean pass = false;
+        private const string BASE_PATH = "https://appd-assignmentv2.firebaseio.com";
+        private const string API_KEY = " AIzaSyDkxUrEOTFiAorYh810vKSeO-FC_u_zd8I";
+
+        
         public loginPage()
         {
             InitializeComponent();
@@ -34,43 +39,52 @@ namespace APPDassignmentV1.Screens
         {
             throw new NotImplementedException();
         }
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)//runs when screen is loaded
-        {
-            using (StreamReader file = File.OpenText(@"ResourceData.JSON"))//start json parsing
-            {
-                using (JsonTextReader reader = new JsonTextReader(file))
-                {
-                    ((PageSwitcher)this.Parent).Data = JToken.ReadFrom(reader).ToObject<ResourceData>();
-                }
-            }
-        }
 
-        private void login_Click(object sender, RoutedEventArgs e)//check login credentials
-        {
-            
-            foreach (user user in ((PageSwitcher)this.Parent).Data.users)
-            {
-                if ((emailInput.Text == user.email) && (passwordInput.Password == user.password))
-                {
-                    currentUser c = new currentUser();
-                    c.setcurrentUser(user);
-                    pass = true;
-                    break;
-                }
-            }
 
-            if (pass)
+        private async void login_Click(object sender, RoutedEventArgs e)//check login credentials
+        {
+
+            var provider = new FirebaseAuthProvider(new FirebaseConfig(API_KEY));
+            FirebaseClient database;
+            FirebaseAuthLink auth;
+            try
             {
-                Switcher.Switch(new ChooseCategory());
+
+                auth = await provider.SignInWithEmailAndPasswordAsync(emailInput.Text,
+                   passwordInput.Password);
+                database = new FirebaseClient(BASE_PATH, new FirebaseOptions
+                {
+                    AuthTokenAsyncFactory = () => Task.FromResult(auth.FirebaseToken)
+                });
+                //Store the user id and token inside a Static class.
+                //So that other supporting C# code in other classes can retrive them
+                //for Firebase data operations.
+                ApplicationConfiguration.UserId = emailInput.Text;
+                ApplicationConfiguration.UserFirebaseToken = auth.FirebaseToken;
+                /* For testing only */
+                /*
+                for (int count = 3; count <= 6; count++)
+                {
+                        var venues = await database
+                                        .Child("venues")
+                                            .PostAsync(new Venue { VenueId = count, VenueTitle = "VENUE " + count });
+                }
+                */
+                //Switcher.Switch(new ChooseCategory());
+                MessageBox.Show("abc");
             }
-            else
-                MessageBox.Show("wrong email or password");//prompt if password incorrect
+            catch (FirebaseAuthException ex)
+            {
+                MessageBox.Show("User Id or Password is incorrect. Please try again.");
+            }
         }
 
         private void createAccount_Click(object sender, RoutedEventArgs e)//Implementing in CA2
         {
-            throw new NotImplementedException();
-            //Switcher.Switch(new ChooseCategory());
+
+            Switcher.Switch(new CreateAccount());
+            
+            
         }
 
         private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)//themes for user to select
