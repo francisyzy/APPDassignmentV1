@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace APPDassignmentV1.Models
 {
 
@@ -20,7 +21,7 @@ namespace APPDassignmentV1.Models
         public string resourceTypeName { get; set; }
         public string resourceTypeID { get; set; }
     }
-    public abstract class Resource//main data type for abstraction
+    public class Resource//main data type for abstraction
     {
         
         public string resourceId { get; set; }
@@ -31,7 +32,7 @@ namespace APPDassignmentV1.Models
         public int resourceTypeID { get; set; } //1 = unit || 2= room
         public int resourceSize { get; set; }
         public int aircon { get; set; }
-        abstract public int getsize(); // only for show
+        
 
     }
    
