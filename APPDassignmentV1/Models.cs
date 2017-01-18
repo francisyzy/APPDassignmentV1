@@ -12,8 +12,9 @@ namespace APPDassignmentV1.Models
     {
         public List<Resource> resource { get; set; }
         public List<region> region { get; set; }
-        public List<user> users { get; set; }
         public List<resourceType> resourceTypes { get; set; }
+        public List<picture> pictures { get; set; }
+        public List<booking> bookings { get; set; }
     }
 
     public class resourceType//data structure for resource type as there is resource type id
@@ -23,7 +24,7 @@ namespace APPDassignmentV1.Models
     }
     public class Resource//main data type for abstraction
     {
-        
+
         public string resourceId { get; set; }
         public int postalCode { get; set; }
         public string fullAddress { get; set; }
@@ -32,19 +33,27 @@ namespace APPDassignmentV1.Models
         public int resourceTypeID { get; set; } //1 = unit || 2= room
         public int resourceSize { get; set; }
         public int aircon { get; set; }
-        
-
     }
-   
-
+    public class picture
+    {
+        public int pictureId { get; set; }
+        public byte[] picturee { get; set; }
     }
 
     public class region
     {
         public int regionId { get; set; }
         public string regionName { get; set; }
-        
+    }
 
+    public class booking
+    {
+        public int bookingId { get; set; }
+        public DateTime bookingDate { get; set; }
+        public DateTime bookingStartDate { get; set; }
+        public DateTime bookingEndDate { get; set; }
+        public int resourceId { get; set; }
+        public string email { get; set; }
     }
 
     public class user //user class
@@ -115,7 +124,7 @@ namespace APPDassignmentV1.Models
     //    {
     //        shoppingCartItems = new List<shoppingCartItem>();
     //    }
-        
+
     //    public static void AddCartItem(shoppingCartItem inItem)
     //    {
     //        shoppingCartItems.Add(inItem);
@@ -143,3 +152,4 @@ namespace APPDassignmentV1.Models
     //    }
     //}
     //shopping cart code moved to cart.cs
+}
