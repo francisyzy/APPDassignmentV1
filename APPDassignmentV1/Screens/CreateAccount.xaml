@@ -42,10 +42,37 @@
         </UniformGrid>
         <TextBox x:Name="emailInput" Height="25" Margin="464,218,-463,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top"/>
         <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="464,248,-463,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="22"/>
+        <PasswordBox x:Name="confirmPasswordInput"
+                     HorizontalAlignment="Left"
+                     Margin="464,276,-463,0"
+                     Grid.Row="1"
+                     VerticalAlignment="Top"
+                     Width="200"
+                     Height="22" />
         <Button x:Name="createBtn" Content="Create" Click="createBtn_Click" HorizontalAlignment="Left" Margin="464,338,-358,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Height="20"/>
         <Button x:Name="cancelBtn" Content="Cancel" Click="cancelBtn_Click" HorizontalAlignment="Left" Margin="569,338,-463,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Height="20"/>
         
         <Label x:Name="UsernameLabel" Content="UserName:" HorizontalAlignment="Left" Margin="320,220,-263,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="23" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="PasswordLabel" Content="Password:" HorizontalAlignment="Left" Margin="320,247,-263,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="23" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="PasswordLabel"
+               Content="Password:"
+               HorizontalAlignment="Left"
+               Margin="320,247,-263,0"
+               Grid.Row="1"
+               VerticalAlignment="Top"
+               Width="144"
+               Height="23"
+               Foreground="White"
+               FontWeight="Bold" />
+        <Label x:Name="confirmPassword"
+               Content="Confirm Password:"
+               HorizontalAlignment="Left"
+               Margin="320,277,-263,0"
+               Grid.Row="1"
+               VerticalAlignment="Top"
+               Width="144"
+               Height="23"
+               Foreground="White"
+               FontWeight="Bold" />
+
     </Grid>
 </UserControl>

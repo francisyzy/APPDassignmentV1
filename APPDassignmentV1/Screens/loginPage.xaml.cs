@@ -79,12 +79,10 @@ namespace APPDassignmentV1.Screens
             }
         }
 
-        private void createAccount_Click(object sender, RoutedEventArgs e)//Implementing in CA2
+        private void createAccount_Click(object sender, RoutedEventArgs e)//Brings to create account page
         {
 
             Switcher.Switch(new CreateAccount());
-            
-            
         }
 
         private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)//themes for user to select

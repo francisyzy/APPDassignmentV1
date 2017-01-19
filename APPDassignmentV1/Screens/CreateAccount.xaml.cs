@@ -39,8 +39,14 @@ namespace APPDassignmentV1.Screens
         {
             var provider = new FirebaseAuthProvider(new FirebaseConfig(API_KEY));
             FirebaseClient database;
-            provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);
-            MessageBox.Show("Successful Created");
+            if (passwordInput.Password == confirmPasswordInput.Password)
+            {
+                provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);
+                MessageBox.Show("Successful Created");
+            }
+            else
+                MessageBox.Show("Passwords do not match! \n Please check passwords");
+
             //Switcher.Switch(new ChooseCategory());
         }
 
