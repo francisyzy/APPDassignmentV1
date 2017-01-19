@@ -70,8 +70,8 @@ namespace APPDassignmentV1.Screens
                                             .PostAsync(new Venue { VenueId = count, VenueTitle = "VENUE " + count });
                 }
                 */
-                //Switcher.Switch(new ChooseCategory());
-                MessageBox.Show("abc");
+                Switcher.Switch(new ChooseCategory());
+                //MessageBox.Show("abc");
             }
             catch (FirebaseAuthException ex)
             {

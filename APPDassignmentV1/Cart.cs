@@ -23,7 +23,7 @@ namespace APPDassignmentV1
             public static void RemoveCartItem(string inResourceId)//Remove item from shopping card
             {
                 //Read the input resoure id to remove that item with the matching resource id
-                CartItems.RemoveAll(input => input.resourceId == inResourceId);
+                CartItems.RemoveAll(input => input.ResourceId == inResourceId);
             }
             public static void RemoveAllCartItem()//Remove all from shopping card
             {
@@ -49,9 +49,9 @@ namespace APPDassignmentV1
         {
             public CartItem(Resource inResource)
             {
-                this.resourceId = inResource.resourceId;
-                this.price = inResource.price;
-                this.resourceTypeID = inResource.resourceTypeID;
+                this.ResourceId = inResource.ResourceId;
+                this.Price = inResource.Price;
+                this.ResourceTypeId = inResource.ResourceTypeId;
             }
 
         public DateTime BookingDateTime { get; set; }
@@ -62,7 +62,7 @@ namespace APPDassignmentV1
             {
                 double cartItemPrice;
                 TimeSpan totalDate = E - S;
-                cartItemPrice = (totalDate.Days + 1) * this.price; //missing one day
+                cartItemPrice = (totalDate.Days + 1) * this.Price; //missing one day
                 this.itemPrice = cartItemPrice;
                 return cartItemPrice;
             }

@@ -24,12 +24,11 @@ namespace APPDassignmentV1
     public partial class PageSwitcher : Window
     {
 
-        public ResourceData Data { get; set; }
+        //public ResourceData Data { get; set; }
         public PageSwitcher()
         {
             InitializeComponent();
             shoppingCart.initializeShoppingCart();//loads shopping cart
-            currentUser.initializeCurrentuser();//load current user list
             Switcher.pageSwitcher = this;
             Switcher.Switch(new loginPage());//goes to login page (first page) 
         }

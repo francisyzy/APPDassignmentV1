@@ -17,6 +17,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace APPDassignmentV1.Screens
 {
@@ -27,6 +29,7 @@ namespace APPDassignmentV1.Screens
     {
         public string regionSelected;
         public string _email = "";
+        private APPD_Assignment_V2Context data = new APPD_Assignment_V2Context();
         public ChooseCategory()
         {
             InitializeComponent();
@@ -51,12 +54,12 @@ namespace APPDassignmentV1.Screens
             //Json loader moved to login page since login page is the first page to be loaded that requires json data
             Button button;
             
-            foreach (resourceType resourceTypes in ((PageSwitcher)this.Parent).Data.resourceTypes)//generate buttons based on json file
+            foreach (ResourceType resourceTypes in (data.ResourceType.ToList()))//generate buttons based on json file
             {
                 button = new Button()
                 {
-                    Content = string.Format("{0}", resourceTypes.resourceTypeName),//generate button content based on resourceTypeName data
-                    Tag = resourceTypes.resourceTypeID,
+                    Content = string.Format("{0}", resourceTypes.ResourceTypeName),//generate button content based on resourceTypeName data
+                    Tag = resourceTypes.ResourceTypeId,
                     Height = 35,
                     HorizontalAlignment = HorizontalAlignment.Stretch
                 };
@@ -72,8 +75,11 @@ namespace APPDassignmentV1.Screens
             var comboBox = sender as ComboBox;
 
             // ... Assign the ItemsSource to the List.
-            regionList.ItemsSource = ((PageSwitcher)this.Parent).Data.region;
+            foreach (Region region in (data.Region.ToList()))
+            {
 
+                regionList.Items.Add(region.RegionName);
+            }
             // ... Make the first item selected.
             regionList.SelectedIndex = 0;
 
@@ -99,12 +105,12 @@ namespace APPDassignmentV1.Screens
         private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)//goes into new page
         {
             Button button = (Button)sender;
-            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
+            //Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new ShoppingCartScreen());
+            //Switcher.Switch(new ShoppingCartScreen());
         }
 
         //private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
