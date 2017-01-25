@@ -44,7 +44,7 @@ namespace APPDassignmentV1.Screens
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = item.resourceId.ToString(),
+                    Text = item.ResourceId.ToString(),
                     IsEnabled = false
 
                 });
@@ -96,10 +96,10 @@ namespace APPDassignmentV1.Screens
             }
             totalPrice.Content = "S$" + shoppingCart.totalprice();//get total S$
 
-            firstNameLabel.Content = currentUser.cu.firstName;//Gets userinformation & Display them
-            lastNameLabel.Content = currentUser.cu.lastName;
-            emailLabel.Content = currentUser.cu.email;
-            phoneNumberLabel.Content = currentUser.cu.phoneNum;
+            //firstNameLabel.Content = currentUser.cu.firstName;//Gets userinformation & Display them
+            //lastNameLabel.Content = currentUser.cu.lastName;
+            //emailLabel.Content = currentUser.cu.email;
+            //phoneNumberLabel.Content = currentUser.cu.phoneNum;
             shoppingCart.RemoveAllCartItem();//remove all shopping cart items after transection is over
         }
 

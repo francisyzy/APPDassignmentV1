@@ -29,7 +29,7 @@ namespace APPDassignmentV1.Screens
     {
         public string regionSelected;
         public string _email = "";
-        private APPD_Assignment_V2Context data = new APPD_Assignment_V2Context();
+        
         public ChooseCategory()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace APPDassignmentV1.Screens
             //Json loader moved to login page since login page is the first page to be loaded that requires json data
             Button button;
             
-            foreach (ResourceType resourceTypes in (data.ResourceType.ToList()))//generate buttons based on json file
+            foreach (ResourceType resourceTypes in ((PageSwitcher)this.Parent).data.ResourceType.ToList())//generate buttons based on json file
             {
                 button = new Button()
                 {
@@ -75,7 +75,7 @@ namespace APPDassignmentV1.Screens
             var comboBox = sender as ComboBox;
 
             // ... Assign the ItemsSource to the List.
-            foreach (Region region in (data.Region.ToList()))
+            foreach (Region region in ((PageSwitcher)this.Parent).data.Region.ToList())
             {
 
                 regionList.Items.Add(region.RegionName);
@@ -105,12 +105,12 @@ namespace APPDassignmentV1.Screens
         private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)//goes into new page
         {
             Button button = (Button)sender;
-            //Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
+            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)
         {
-            //Switcher.Switch(new ShoppingCartScreen());
+            Switcher.Switch(new ShoppingCartScreen());
         }
 
         //private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)

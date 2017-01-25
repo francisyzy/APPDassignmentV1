@@ -14,7 +14,7 @@ namespace APPDassignmentV1.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=tcp:appd-assignment-v2.database.windows.net,1433;Initial Catalog=APPD_Assignment_V2;Persist Security Info=False;User ID=appdassignmenttwo;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer(@"Server=tcp:appd-assignment-v2.database.windows.net,1433;Initial Catalog=APPD_Assignment_V2;Persist Security Info=False;User ID=appdassignmenttwo;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;MultipleActiveResultSets=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -113,6 +113,7 @@ namespace APPDassignmentV1.Models
                 entity.HasOne(d => d.Picture)
                     .WithMany(p => p.Resource)
                     .HasForeignKey(d => d.PictureId)
+                    .OnDelete(DeleteBehavior.Restrict)
                     .HasConstraintName("FK__resource__pictur__0D7A0286");
 
                 entity.HasOne(d => d.Region)

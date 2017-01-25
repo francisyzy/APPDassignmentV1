@@ -34,33 +34,19 @@ namespace APPDassignmentV1.Screens
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)//runs when page is loaded
         {
-            if (_resourceTypeID == 1)//resource type id 1 = unit resource
-            {
-                foreach (unitResource item in ((PageSwitcher)this.Parent).Data.resource)
+            
+                foreach (Resource item in ((PageSwitcher)this.Parent).data.Resource)
                 {
-                    if (item.resourceId == _resourceID)
+                    if (item.ResourceId == _resourceID)
                     {
-                        FullAdressTextBox.Text = item.address.fullAddress;
-                        PostCodeTextBox.Text = item.address.postalCode.ToString();
-                        PriceTextBox.Text = item.price.ToString();
-                        SizeTextBox.Text = item.houseSize.ToString();
+                        FullAdressTextBox.Text = item.Fulladdress;
+                        PostCodeTextBox.Text = item.PostalCode.ToString();
+                        PriceTextBox.Text = item.Price.ToString();
+                        SizeTextBox.Text = item.ResourceSize.ToString();
                     }
 
                 }
-            }
-            else if (_resourceTypeID == 2)//resource type id 2 = room resource
-            {
-                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.resource)
-                {
-                    if (item.resourceId == _resourceID)
-                    {
-                        FullAdressTextBox.Text = item.address.fullAddress;
-                        PostCodeTextBox.Text = item.address.postalCode.ToString();
-                        PriceTextBox.Text = item.price.ToString();
-                        SizeTextBox.Text = item.roomSize.ToString();
-                    }
-                }
-            }
+            
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)//back button on the screen
@@ -72,11 +58,11 @@ namespace APPDassignmentV1.Screens
         {
             if (_resourceTypeID == 1)//finding appropirate datatype
             {
-                selectedResource = ((PageSwitcher)this.Parent).Data.resource.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
+                selectedResource = ((PageSwitcher)this.Parent).data.Resource.Where(input => input.ResourceId == _resourceID).Single<Resource>();//ask database for resource
             }
             else if (_resourceTypeID == 2)
             {
-                selectedResource = ((PageSwitcher)this.Parent).Data.resource.Where(input => input.resourceId == _resourceID).Single<Resource>();//ask database for resource
+                selectedResource = ((PageSwitcher)this.Parent).data.Resource.Where(input => input.ResourceId == _resourceID).Single<Resource>();//ask database for resource
             }
             CartItem cartItem = new CartItem(selectedResource);//adds item into cart
             Switcher.Switch(new dateSelection(cartItem));//brings cart item info into next page

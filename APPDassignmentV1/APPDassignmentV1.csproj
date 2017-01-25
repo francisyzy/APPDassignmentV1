@@ -265,11 +265,26 @@
     <Compile Include="Screens\choosecategory.xaml.cs">
       <DependentUpon>choosecategory.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\chooseResource.xaml.cs">
+      <DependentUpon>chooseResource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\CreateAccount.xaml.cs">
       <DependentUpon>CreateAccount.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\dateSelection.xaml.cs">
+      <DependentUpon>dateSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\detailPageScreen.xaml.cs">
+      <DependentUpon>detailPageScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\loginPage.xaml.cs">
       <DependentUpon>loginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\shoppingCartScreen.xaml.cs">
+      <DependentUpon>ShoppingCartScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Transaction.xaml.cs">
+      <DependentUpon>Transaction.xaml</DependentUpon>
     </Compile>
     <Compile Include="Switcher.cs" />
     <Compile Include="App.xaml.cs">
@@ -285,11 +300,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Screens\chooseResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Screens\CreateAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Screens\dateSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\detailPageScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Screens\loginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\ShoppingCartScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\Transaction.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -353,7 +388,9 @@
   <ItemGroup>
     <Resource Include="img\S2.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="view\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

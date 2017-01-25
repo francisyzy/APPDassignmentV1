@@ -13,9 +13,7 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+
         </Grid.ColumnDefinitions>
         <UniformGrid Name="resourceTypeUniformGrid" 
 	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="2" Columns="1" 

@@ -42,7 +42,7 @@ namespace APPDassignmentV1.Screens
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = item.resourceId.ToString(),
+                    Text = item.ResourceId.ToString(),
                     IsEnabled = false
                     
                 });
@@ -95,7 +95,7 @@ namespace APPDassignmentV1.Screens
                     Height = 50,
                     Margin = new Thickness(5),
                     Content = "Remove",
-                    Tag = item.resourceId
+                    Tag = item.ResourceId
                 };
                 button.Click += new RoutedEventHandler(removeItemButton_Click);//generate button to remove item from shopping cart
                 stackPanel.Children.Add(button);

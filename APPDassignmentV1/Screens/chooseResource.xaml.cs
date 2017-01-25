@@ -42,18 +42,29 @@ namespace APPDassignmentV1.Screens
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _resourceTypeID = int.Parse(_resourceType);
-            if (_resourceTypeID == 1) //Check what kind of resource user selected
-            {
-                foreach (resource item in ((PageSwitcher)this.Parent).Data.resource)
+            
+                foreach (Resource item in ((PageSwitcher)this.Parent).data.Resource)
                 {
-                    if(item.address.region == _regionSelected){
+                    if((item.Region.RegionName == _regionSelected)&&(item.ResourceTypeId == _resourceTypeID)){
                         StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
-                        stackPanel.Children.Add(new TextBox
+
+
+                    stackPanel.Children.Add(new Image
+                    {
+                        Width = 150,
+                        Height = 150,
+                        //http://stackoverflow.com/questions/14337071/convert-array-of-bytes-to-bitmapimage
+                        Source = (BitmapSource)new ImageSourceConverter().ConvertFrom(
+                            ((PageSwitcher)this.Parent).data.Picture.Where
+                            (x => x.PictureId == (int)item.PictureId).Single<Picture>().Picturee),//(BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
+                        Stretch = Stretch.UniformToFill
+                    });
+                    stackPanel.Children.Add(new TextBox
                         {
                             Width = 100,
                             Height = 20,
                             Margin = new Thickness(5),
-                            Text = item.address.fullAddress.ToString(),
+                            Text = item.Fulladdress.ToString(),
                             IsEnabled = false
                         });
                         Button button = new Button() //Adds button to check the details of the item that user selected
@@ -62,7 +73,7 @@ namespace APPDassignmentV1.Screens
                             Height = 20,
                             Margin = new Thickness(5),
                             Content = "Check Detail",
-                            Tag = item.resourceId
+                            Tag = item.ResourceId
 
                         };
                         button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
@@ -70,36 +81,7 @@ namespace APPDassignmentV1.Screens
                         resourceUniformGrid.Children.Add(stackPanel);
                     }
                 }
-            }//end if block
-            if (_resourceTypeID == 2)//Same code when generating rooom resource stack panel
-            {
-                foreach (roomResource item in ((PageSwitcher)this.Parent).Data.resource)
-                {
-                    if (item.address.region == _regionSelected)
-                    {
-                        StackPanel stackPanel = new StackPanel();
-                        stackPanel.Children.Add(new TextBox
-                        {
-                            Width = 300,
-                            Height = 20,
-                            Margin = new Thickness(5),
-                            Text = item.address.fullAddress.ToString(),
-                            IsEnabled = false
-                        });
-                        Button button = new Button()
-                        {
-                            Width = 100,
-                            Height = 20,
-                            Margin = new Thickness(5),
-                            Content = "Check Detail",
-                            Tag = item.resourceId
-                        };
-                        button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
-                        stackPanel.Children.Add(button);
-                        resourceUniformGrid.Children.Add(stackPanel);
-                    }
-                }
-            }//end if block
+            
         }
 
         private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)//button to go back
@@ -120,4 +102,4 @@ namespace APPDassignmentV1.Screens
         }
     }
 }
- 
+ 0
