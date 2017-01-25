@@ -38,7 +38,7 @@ namespace APPDassignmentV1.Screens
         private void createBtn_Click(object sender, RoutedEventArgs e)
         {
             var provider = new FirebaseAuthProvider(new FirebaseConfig(API_KEY));
-            FirebaseClient database;
+            //FirebaseClient database;
             if (passwordInput.Password == confirmPasswordInput.Password)
             {
                 provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);

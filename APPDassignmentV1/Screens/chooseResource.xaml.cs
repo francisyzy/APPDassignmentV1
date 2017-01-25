@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using APPDassignmentV1.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace APPDassignmentV1.Screens
 {
@@ -42,8 +43,8 @@ namespace APPDassignmentV1.Screens
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _resourceTypeID = int.Parse(_resourceType);
-            
-                foreach (Resource item in ((PageSwitcher)this.Parent).data.Resource)
+            var resourceList = ((PageSwitcher)this.Parent).data.Resource.Include(input => input.Picture).ToList();
+                foreach (Resource item in resourceList)
                 {
                     if((item.Region.RegionName == _regionSelected)&&(item.ResourceTypeId == _resourceTypeID)){
                         StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
@@ -54,9 +55,9 @@ namespace APPDassignmentV1.Screens
                         Width = 150,
                         Height = 150,
                         //http://stackoverflow.com/questions/14337071/convert-array-of-bytes-to-bitmapimage
-                        Source = (BitmapSource)new ImageSourceConverter().ConvertFrom(
-                            ((PageSwitcher)this.Parent).data.Picture.Where
-                            (x => x.PictureId == (int)item.PictureId).Single<Picture>().Picturee),//(BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
+                        Source = (BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
+                            //((PageSwitcher)this.Parent).data.Picture.Where
+                            //(x => x.PictureId == (int)item.PictureId).Single<Picture>().Picturee),//(BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
                         Stretch = Stretch.UniformToFill
                     });
                     stackPanel.Children.Add(new TextBox
