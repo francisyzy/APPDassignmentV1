@@ -94,7 +94,7 @@ namespace APPDassignmentV1.Screens
         {
             bool valid = true;
 
-            foreach (Booking booking in ((PageSwitcher)this.Parent).data.Booking)
+            foreach (Booking booking in (((PageSwitcher)this.Parent).data.Booking).Where(x=>x.ResourceId == _cartitem.ResourceId))
             {
                 int bigthanzero = DateTime.Compare(start, booking.BookingEndDate);
                 int smallthanzero = DateTime.Compare(end, booking.BookingStartDate);

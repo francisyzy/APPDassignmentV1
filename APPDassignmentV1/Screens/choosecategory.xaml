@@ -79,6 +79,8 @@
                MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
                Height="41">
         </Image>
         <Image Source="/img/map/Clementi.png"
@@ -92,6 +94,8 @@
                MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
                Height="54">
         </Image>
         <Image Source="/img/map/Newton.png"
@@ -105,6 +109,8 @@
                MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
                Height="51">
         </Image>
         <Image Source="/img/map/Pasir Ris.png"
@@ -117,7 +123,9 @@
                MouseDown="Btn_Click"
                MouseEnter="MouseEnter"
                Panel.ZIndex="1"
-               Visibility="Visible">
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave">
         </Image>
         <Image Source="/img/map/Punggol.png"
                x:Name="Punggol"
@@ -130,6 +138,8 @@
                MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
                Height="39">
         </Image>
         <Image Source="/img/map/Yishun.png"
@@ -144,7 +154,8 @@
                Panel.ZIndex="1"
                Visibility="Visible"
                Opacity="0"
-               Height="62" MouseLeave="MouseLeave">
+               MouseLeave="MouseLeave"
+               Height="62" >
         </Image>
 
     </Grid>
