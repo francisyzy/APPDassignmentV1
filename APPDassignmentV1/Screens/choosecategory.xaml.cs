@@ -98,11 +98,24 @@ namespace APPDassignmentV1.Screens
             Switcher.Switch(new ShoppingCartScreen());
         }
 
-        private void Bukit_MerahBtn_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void Btn_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            
+            regionSelected = ((Image)sender).Name;
+            ((Image)sender).Opacity = 100;
+            MessageBox.Show("hi");
         }
 
+        private void MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ((Image)sender).Opacity = 100;
+        }
+
+        private void MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            ((Image)sender).Opacity = 0;
+        }
         //private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
         //    // ... Get the ComboBox.

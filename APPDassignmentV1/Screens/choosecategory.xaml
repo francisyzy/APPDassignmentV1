@@ -75,8 +75,8 @@
                Width="63"
                Margin="452,361,0,0"
                Grid.Row="1"
-               MouseDown="Bukit_MerahBtn_Click"
-               MouseEnter="Bukit_MerahMouseEnter"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
                Height="41">
@@ -88,8 +88,8 @@
                Width="32"
                Margin="392,311,0,0"
                Grid.Row="1"
-               MouseDown="ClementiBtn_Click"
-               MouseEnter="ClementiMouseEnter"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
                Height="54">
@@ -101,8 +101,8 @@
                Width="50"
                Margin="480,337,0,0"
                Grid.Row="1"
-               MouseDown="NewtonBtn_Click"
-               MouseEnter="NewtonMouseEnter"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
                Height="51">
@@ -114,8 +114,8 @@
                Width="75"
                Margin="589,241,0,0"
                Grid.Row="1"
-               MouseDown="Pasir_RisBtn_Click"
-               MouseEnter="Pasir_RisMouseEnter"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible">
         </Image>
@@ -126,8 +126,8 @@
                Width="43"
                Margin="558,216,0,0"
                Grid.Row="1"
-               MouseDown="PunggolBtn_Click"
-               MouseEnter="PunggolMouseEnter"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
                Height="39">
@@ -139,11 +139,12 @@
                Width="68"
                Margin="461,188,0,0"
                Grid.Row="1"
-               MouseDown="YishunBtn_Click"
-               MouseEnter="YishunMouseEnter"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
                Panel.ZIndex="1"
                Visibility="Visible"
-               Height="62">
+               Opacity="0"
+               Height="62" MouseLeave="MouseLeave">
         </Image>
 
     </Grid>
