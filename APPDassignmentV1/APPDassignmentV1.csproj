@@ -258,7 +258,6 @@
     <Compile Include="Cart.cs" />
     <Compile Include="Models\APPD_Assignment_V2Context.cs" />
     <Compile Include="Models\Booking.cs" />
-    <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\Region.cs" />
     <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\ResourceType.cs" />

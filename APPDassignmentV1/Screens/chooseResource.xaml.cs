@@ -43,7 +43,7 @@ namespace APPDassignmentV1.Screens
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _resourceTypeID = int.Parse(_resourceType);
-            var resourceList = ((PageSwitcher)this.Parent).data.Resource.Include(input => input.Picture).ToList();
+            var resourceList = ((PageSwitcher)this.Parent).data.Resource;
                 foreach (Resource item in resourceList)
                 {
                     if((item.Region.RegionName == _regionSelected)&&(item.ResourceTypeId == _resourceTypeID)){
@@ -55,7 +55,7 @@ namespace APPDassignmentV1.Screens
                         Width = 150,
                         Height = 150,
                         //http://stackoverflow.com/questions/14337071/convert-array-of-bytes-to-bitmapimage
-                        Source = (BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
+                        Source = (BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture),
                             //((PageSwitcher)this.Parent).data.Picture.Where
                             //(x => x.PictureId == (int)item.PictureId).Single<Picture>().Picturee),//(BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
                         Stretch = Stretch.UniformToFill

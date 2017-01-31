@@ -18,10 +18,10 @@ namespace APPDassignmentV1.Models
         public int ResourceTypeId { get; set; }
         public short ResourceSize { get; set; }
         public byte Aircon { get; set; }
-        public int? PictureId { get; set; }
+        public byte[] Picture { get; set; }
 
         public virtual ICollection<Booking> Booking { get; set; }
-        public virtual Picture Picture { get; set; }
+        
         public virtual Region Region { get; set; }
         public virtual ResourceType ResourceType { get; set; }
     }

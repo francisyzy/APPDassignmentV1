@@ -7,7 +7,7 @@ namespace APPDassignmentV1.Models
     public partial class APPD_Assignment_V2Context : DbContext
     {
         public virtual DbSet<Booking> Booking { get; set; }
-        public virtual DbSet<Picture> Picture { get; set; }
+        //public virtual DbSet<Picture> Picture { get; set; }
         public virtual DbSet<Region> Region { get; set; }
         public virtual DbSet<Resource> Resource { get; set; }
         public virtual DbSet<ResourceType> ResourceType { get; set; }
@@ -56,18 +56,18 @@ namespace APPDassignmentV1.Models
                     .HasConstraintName("FK__booking__resourc__0C85DE4D");
             });
 
-            modelBuilder.Entity<Picture>(entity =>
-            {
-                entity.ToTable("picture");
+            //modelBuilder.Entity<Picture>(entity =>
+            //{
+            //    entity.ToTable("picture");
 
-                entity.Property(e => e.PictureId)
-                    .HasColumnName("pictureId")
-                    .ValueGeneratedNever();
+            //    entity.Property(e => e.PictureId)
+            //        .HasColumnName("pictureId")
+            //        .ValueGeneratedNever();
 
-                entity.Property(e => e.Picturee)
-                    .IsRequired()
-                    .HasColumnName("picturee");
-            });
+            //    entity.Property(e => e.Picturee)
+            //        .IsRequired()
+            //        .HasColumnName("picturee");
+            //});
 
             modelBuilder.Entity<Region>(entity =>
             {
@@ -98,7 +98,7 @@ namespace APPDassignmentV1.Models
                     .HasColumnName("fulladdress")
                     .HasColumnType("varchar(200)");
 
-                entity.Property(e => e.PictureId).HasColumnName("pictureId");
+                entity.Property(e => e.Picture).HasColumnName("picture");
 
                 entity.Property(e => e.PostalCode).HasColumnName("postalCode");
 
@@ -110,11 +110,6 @@ namespace APPDassignmentV1.Models
 
                 entity.Property(e => e.ResourceTypeId).HasColumnName("resourceTypeId");
 
-                entity.HasOne(d => d.Picture)
-                    .WithMany(p => p.Resource)
-                    .HasForeignKey(d => d.PictureId)
-                    .OnDelete(DeleteBehavior.Restrict)
-                    .HasConstraintName("FK__resource__pictur__0D7A0286");
 
                 entity.HasOne(d => d.Region)
                     .WithMany(p => p.Resource)
