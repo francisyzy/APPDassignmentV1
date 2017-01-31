@@ -29,7 +29,8 @@ namespace APPDassignmentV1.Screens
     {
         private const string BASE_PATH = "https://appd-assignmentv2.firebaseio.com";
         private const string API_KEY = " AIzaSyDkxUrEOTFiAorYh810vKSeO-FC_u_zd8I";
-
+        
+        
         
         public loginPage()
         {
@@ -70,6 +71,7 @@ namespace APPDassignmentV1.Screens
                                             .PostAsync(new Venue { VenueId = count, VenueTitle = "VENUE " + count });
                 }
                 */
+                Models.User.setUser(emailInput.Text);
                 Switcher.Switch(new ChooseCategory());
                 //MessageBox.Show("abc");
             }
