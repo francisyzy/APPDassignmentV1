@@ -390,6 +390,18 @@
   <ItemGroup>
     <Folder Include="view\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Map\Singapore_Planning_Regions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Map\BlackWhite.png" />
+    <Resource Include="img\Map\Bukit Merah.png" />
+    <Resource Include="img\Map\Clementi.png" />
+    <Resource Include="img\Map\Newton.png" />
+    <Resource Include="img\Map\Pasir Ris.png" />
+    <Resource Include="img\Map\Punggol.png" />
+    <Resource Include="img\Map\Yishun.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

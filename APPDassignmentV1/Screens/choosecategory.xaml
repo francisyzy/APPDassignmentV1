@@ -1,11 +1,13 @@
 ﻿<UserControl x:Class="APPDassignmentV1.Screens.ChooseCategory"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:APPDassignmentV1.Screens"
-             mc:Ignorable="d"  Loaded="UserControl_Loaded"
-             d:DesignHeight="700" d:DesignWidth="1000">
+             mc:Ignorable="d"
+             Loaded="UserControl_Loaded"
+             d:DesignHeight="700"
+             d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
@@ -15,9 +17,14 @@
         <Grid.ColumnDefinitions>
 
         </Grid.ColumnDefinitions>
-        <UniformGrid Name="resourceTypeUniformGrid" 
-	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="2" Columns="1" 
-	   Grid.Row="1" Grid.Column="1" Margin="2,2,2,0">
+        <UniformGrid Name="resourceTypeUniformGrid"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Center"
+                     Rows="2"
+                     Columns="1"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="2,2,2,0">
             <UniformGrid.Resources>
                 <!--<Style TargetType="{x:Type Button}">
                     <Setter Property="Foreground" Value="Blue"/>
@@ -30,12 +37,35 @@
                 </Style>-->
             </UniformGrid.Resources>
         </UniformGrid>
-        <UniformGrid Name="menuGrid" 
-	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
-	   Grid.Row="0" Grid.Column="1" Margin="2,2,2,0">
+        <UniformGrid Name="menuGrid"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Center"
+                     Rows="1"
+                     Columns="3"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Margin="2,2,2,0">
             <Button x:Name="goto_shoppingCartScreenButton"
-                    Click="goto_shoppingCartScreenButton_Click" Width="100" Content="Cart"/>
+                    Click="goto_shoppingCartScreenButton_Click"
+                    Width="100"
+                    Content="Cart" />
         </UniformGrid>
-        <ComboBox x:Name="regionList" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Loaded="ComboBox_Loaded" SelectionChanged="regionList_SelectionChanged" Grid.Column="2"/>
+        <ComboBox x:Name="regionList"
+                  HorizontalAlignment="Left"
+                  Margin="10,10,0,0"
+                  Grid.Row="1"
+                  VerticalAlignment="Top"
+                  Width="160"
+                  Loaded="ComboBox_Loaded"
+                  SelectionChanged="regionList_SelectionChanged"
+                  Grid.Column="2" />
+        <Image x:Name="image"
+               Source="C:\Users\Francis Yeo Zhao Yik\Source\Repos\APPDassignmentV1\APPDassignmentV1\img\Map\BlackWhite.png"
+               HorizontalAlignment="Left"
+               Height="387"
+               Margin="210,158,0,0"
+               Grid.Row="1"
+               VerticalAlignment="Top"
+               Width="613" />
     </Grid>
 </UserControl>
