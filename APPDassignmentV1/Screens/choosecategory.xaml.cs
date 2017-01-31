@@ -98,6 +98,11 @@ namespace APPDassignmentV1.Screens
             Switcher.Switch(new ShoppingCartScreen());
         }
 
+        private void Bukit_MerahBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         //private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
         //    // ... Get the ComboBox.

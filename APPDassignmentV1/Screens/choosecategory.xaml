@@ -60,12 +60,26 @@
                   SelectionChanged="regionList_SelectionChanged"
                   Grid.Column="2" />
         <Image x:Name="image"
-               Source="C:\Users\Francis Yeo Zhao Yik\Source\Repos\APPDassignmentV1\APPDassignmentV1\img\Map\BlackWhite.png"
+               Source="/img/Map/BlackWhite.png"
                HorizontalAlignment="Left"
                Height="387"
                Margin="210,158,0,0"
                Grid.Row="1"
                VerticalAlignment="Top"
                Width="613" />
+        <Button x:Name="Bukit_MerahBtn"
+                Content="Bukit Merah"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="442,357,0,0"
+                Grid.Row="1"
+                Click="Bukit_MerahBtn_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/img/map/Bukit Merah.png" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </UserControl>
