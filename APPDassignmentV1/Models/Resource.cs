@@ -21,7 +21,6 @@ namespace APPDassignmentV1.Models
         public byte[] Picture { get; set; }
 
         public virtual ICollection<Booking> Booking { get; set; }
-        
         public virtual Region Region { get; set; }
         public virtual ResourceType ResourceType { get; set; }
     }

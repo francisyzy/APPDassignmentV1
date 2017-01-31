@@ -24,8 +24,9 @@ namespace APPDassignmentV1.Models
                 entity.ToTable("booking");
 
                 entity.Property(e => e.BookingId)
+                    
                     .HasColumnName("bookingId")
-                    .ValueGeneratedNever();
+                    ;
 
                 entity.Property(e => e.BookingDate)
                     .HasColumnName("bookingDate")

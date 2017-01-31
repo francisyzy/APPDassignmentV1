@@ -13,7 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using APPDassignmentV1.Models;
-
+using Microsoft.EntityFrameworkCore;
+using System.Transactions;
+using System.Runtime.Remoting.Contexts;
 
 namespace APPDassignmentV1.Screens
 {
@@ -26,6 +28,8 @@ namespace APPDassignmentV1.Screens
         {
             InitializeComponent();
         }
+
+        public string _connectionstring = @"Server=tcp:appd-assignment-v2.database.windows.net,1433;Initial Catalog = APPD_Assignment_V2; Persist Security Info=False;User ID = appdassignmenttwo; Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30; MultipleActiveResultSets=true;";
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)//When user control is loaded, run:
         {
@@ -93,6 +97,36 @@ namespace APPDassignmentV1.Screens
                 });
 
                 reciptScreenUniformGrid.Children.Add(stackPanel);
+
+                Booking _booking = new Booking()
+                {
+                    
+                    BookingDate = DateTime.Now,
+                    BookingStartDate = item.BookingStartDateAndTime,
+                    BookingEndDate = item.BookingEndDateAndTime,
+                    ResourceId = item.ResourceId,
+                    Email = Models.User.getuser()
+                    
+
+                };
+                //using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+                //{
+                //    using (var conn = new System.Data.SqlClient.SqlConnection(_connectionstring))
+                //    {
+                //        conn.Open();
+                        
+                //            ((PageSwitcher)this.Parent).data.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[Booking] ON");
+                            ((PageSwitcher)this.Parent).data.Booking.Add(_booking);
+                            ((PageSwitcher)this.Parent).data.SaveChanges();
+                //            ((PageSwitcher)this.Parent).data.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [dbo].[Booking] OFF");
+
+
+                //        scope.Complete();
+                //    }
+                //}
+
+
+
             }
             totalPrice.Content = "S$" + shoppingCart.totalprice();//get total S$
 

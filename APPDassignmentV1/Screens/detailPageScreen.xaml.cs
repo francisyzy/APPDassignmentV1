@@ -67,5 +67,8 @@ namespace APPDassignmentV1.Screens
             CartItem cartItem = new CartItem(selectedResource);//adds item into cart
             Switcher.Switch(new dateSelection(cartItem));//brings cart item info into next page
         }
+
+
+        
     }
 }

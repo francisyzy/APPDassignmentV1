@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APPDassignmentV1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -73,12 +74,38 @@ namespace APPDassignmentV1.Screens
 
         private void addToCartButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            
-            _cartitem.BookingStartDateAndTime = this.startDateTime;
-            _cartitem.BookingEndDateAndTime = this.endDateTime;
-            shoppingCart.AddCartItem(_cartitem);//add datetime into cart
-            Switcher.Switch(new ChooseCategory());//goes back into main page
+            if (checkvalidation(this.startDateTime, this.endDateTime))
+            {
+                _cartitem.BookingStartDateAndTime = this.startDateTime;
+                _cartitem.BookingEndDateAndTime = this.endDateTime;
+                shoppingCart.AddCartItem(_cartitem);//add datetime into cart
+                Switcher.Switch(new ChooseCategory());//goes back into main page
+            }
+            else
+            {
+                MessageBox.Show("Invalid Date");
+            }
+        }
+
+
+
+
+        public bool checkvalidation(DateTime start, DateTime end)
+        {
+            bool valid = true;
+
+            foreach (Booking booking in ((PageSwitcher)this.Parent).data.Booking)
+            {
+                int bigthanzero = DateTime.Compare(start, booking.BookingEndDate);
+                int smallthanzero = DateTime.Compare(end, booking.BookingStartDate);
+
+                if (!((bigthanzero > 0) || (smallthanzero < 0)))
+                {
+                    valid = false;
+                }
+            }
+            return valid;
+
         }
     }
 }
