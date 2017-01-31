@@ -67,19 +67,87 @@
                Grid.Row="1"
                VerticalAlignment="Top"
                Width="613" />
-        <Button x:Name="Bukit_MerahBtn"
-                Content="Bukit Merah"
+        <!--<Border BorderThickness="2" BorderBrush="AliceBlue">-->
+            <Image Source="/img/map/Bukit Merah.png" x:Name="Bukit_MerahBtn"
+                
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Width="75"
-                Margin="442,357,0,0"
+                Margin="444,356,0,0"
                 Grid.Row="1"
-                Click="Bukit_MerahBtn_Click">
-            <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/img/map/Bukit Merah.png" />
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
+                MouseDown="Bukit_MerahBtn_Click"
+               MouseEnter="bukitmeraMouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               >
+            </Image>
+        <Image Source="/img/map/Clementi.png" x:Name="Clementi"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="444,356,0,0"
+                Grid.Row="1"
+                MouseDown="Bukit_MerahBtn_Click"
+               MouseEnter="bukitmeraMouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               >
+        </Image>
+        <Image Source="/img/map/Newton.png" x:Name="Newton"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="444,356,0,0"
+                Grid.Row="1"
+                MouseDown="Bukit_MerahBtn_Click"
+               MouseEnter="bukitmeraMouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               >
+        </Image>
+        <Image Source="/img/map/Pasir Ris.png" x:Name="PasirRis"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="444,356,0,0"
+                Grid.Row="1"
+                MouseDown="Bukit_MerahBtn_Click"
+               MouseEnter="bukitmeraMouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               >
+        </Image>
+        <Image Source="/img/map/Punggol.png" x:Name="Punggol"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="444,356,0,0"
+                Grid.Row="1"
+                MouseDown="Bukit_MerahBtn_Click"
+               MouseEnter="bukitmeraMouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               >
+        </Image>
+        <Image Source="/img/map/Yishun.png" x:Name="Yishun"
+                
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"
+                Margin="444,356,0,0"
+                Grid.Row="1"
+                MouseDown="Bukit_MerahBtn_Click"
+               MouseEnter="bukitmeraMouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               >
+        </Image>
+
+
+
     </Grid>
 </UserControl>
