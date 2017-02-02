@@ -54,21 +54,21 @@ namespace APPDassignmentV1.Screens
 
         }
 
-        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            // ... Get the ComboBox reference.
-            var comboBox = sender as ComboBox;
+        //private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    // ... Get the ComboBox reference.
+        //    var comboBox = sender as ComboBox;
 
-            // ... Assign the ItemsSource to the List.
-            foreach (Region region in ((PageSwitcher)this.Parent).data.Region.ToList())
-            {
+        //    // ... Assign the ItemsSource to the List.
+        //    foreach (Region region in ((PageSwitcher)this.Parent).data.Region.ToList())
+        //    {
 
-                regionList.Items.Add(region.RegionName);
-            }
-            // ... Make the first item selected.
-            regionList.SelectedIndex = 0;
+        //        regionList.Items.Add(region.RegionName);
+        //    }
+        //    // ... Make the first item selected.
+        //    regionList.SelectedIndex = 0;
 
-        }
+        //}
         
 
         private void regionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -104,7 +104,7 @@ namespace APPDassignmentV1.Screens
             
             regionSelected = ((Image)sender).Name;
             ((Image)sender).Opacity = 100;
-            MessageBox.Show("hi");
+            MessageBox.Show(regionSelected);
         }
 
         private void MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)

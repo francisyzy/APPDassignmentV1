@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <UniformGrid Name="resourceTypeUniformGrid"
                      VerticalAlignment="Stretch"
-                     HorizontalAlignment="Center"
+                     HorizontalAlignment="Right"
                      Rows="2"
                      Columns="1"
                      Grid.Row="1"
@@ -50,7 +50,7 @@
                     Width="100"
                     Content="Cart" />
         </UniformGrid>
-        <ComboBox x:Name="regionList"
+        <!--<ComboBox x:Name="regionList"
                   HorizontalAlignment="Left"
                   Margin="10,10,0,0"
                   Grid.Row="1"
@@ -58,7 +58,7 @@
                   Width="160"
                   Loaded="ComboBox_Loaded"
                   SelectionChanged="regionList_SelectionChanged"
-                  Grid.Column="2" />
+                  Grid.Column="2" />-->
         <Image x:Name="image"
                Source="/img/Map/BlackWhite.png"
                HorizontalAlignment="Left"
@@ -69,7 +69,7 @@
                Width="613" />
         <!--<Border BorderThickness="2" BorderBrush="AliceBlue">-->
         <Image Source="/img/map/Bukit Merah.png"
-               x:Name="Bukit_MerahBtn"
+               x:Name="BukitMerah"
                HorizontalAlignment="Left"
                VerticalAlignment="Top"
                Width="63"
