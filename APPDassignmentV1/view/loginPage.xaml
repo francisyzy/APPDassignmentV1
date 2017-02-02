@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="APPDassignmentV1.Screens.loginPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:APPDassignmentV1.Screens"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <UniformGrid Name="resourceTypeUniformGrid" 
+	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="4" Columns="2" 
+	   Grid.Row="1" Grid.Column="0" Margin="410,148,-209,-172" Grid.RowSpan="2">
+            <UniformGrid.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Foreground" Value="Blue"/>
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#FFADADAD"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Foreground" Value="Blue"/>
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#FFADADAD"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </UniformGrid.Resources>
+
+        </UniformGrid>
+        <TextBox x:Name="emailInput" Height="25" Margin="464,218,-463,0" Grid.Row="1" TextWrapping="Wrap" Text="username@example.com" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="464,248,-463,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="22"/>
+        <Button x:Name="login_Btn" Content="Login" Click="login_Click" HorizontalAlignment="Left" Margin="464,338,-358,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Height="20"/>
+        <Button x:Name="createAccountBtn" Content="Create Account" Click="createAccount_Click" HorizontalAlignment="Left" Margin="569,338,-463,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Height="20"/>
+        <ComboBox x:Name="themeList" HorizontalAlignment="Left" Margin="10,8,-9,0" VerticalAlignment="Top" Width="200" Loaded="theme_Loaded" SelectionChanged="themeList_SelectionChanged"/>
+        <Label x:Name="UsernameLabel" Content="UserName:" HorizontalAlignment="Left" Margin="320,220,-263,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="23" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="PasswordLabel" Content="Password:" HorizontalAlignment="Left" Margin="320,247,-263,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Height="23" Foreground="White" FontWeight="Bold"/>
+    </Grid>
+</UserControl>
