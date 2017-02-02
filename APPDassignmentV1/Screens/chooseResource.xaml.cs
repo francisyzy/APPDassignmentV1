@@ -43,7 +43,7 @@ namespace APPDassignmentV1.Screens
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _resourceTypeID = int.Parse(_resourceType);
-            var resourceList = ((PageSwitcher)this.Parent).data.Resource;
+            var resourceList = ((PageSwitcher)this.Parent).data.Resource.Include(b=>b.Region);
                 foreach (Resource item in resourceList)
                 {
                     if((item.Region.RegionName == _regionSelected)&&(item.ResourceTypeId == _resourceTypeID)){
