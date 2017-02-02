@@ -74,7 +74,7 @@ namespace APPDassignmentV1.Screens
 
         private void addToCartButton_Click(object sender, RoutedEventArgs e)
         {
-            if (checkvalidation(this.startDateTime, this.endDateTime))
+            if (checkvalidation(this.startDateTime, this.endDateTime)&&checkDate(this.startDateTime, this.endDateTime))
             {
                 _cartitem.BookingStartDateAndTime = this.startDateTime;
                 _cartitem.BookingEndDateAndTime = this.endDateTime;
@@ -83,13 +83,9 @@ namespace APPDassignmentV1.Screens
             }
             else
             {
-                MessageBox.Show("Invalid Date");
+                MessageBox.Show("Date not available for booking or End date earlier than start date");
             }
         }
-
-
-
-
         public bool checkvalidation(DateTime start, DateTime end)
         {
             bool valid = true;
@@ -105,7 +101,16 @@ namespace APPDassignmentV1.Screens
                 }
             }
             return valid;
+        }
 
+        public bool checkDate(DateTime start, DateTime end)
+        {
+            bool vaild = true;
+            if (start > end)
+            {
+                vaild = false;
+            }
+            return vaild;
         }
     }
 }
