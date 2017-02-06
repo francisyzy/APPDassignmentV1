@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using APPDassignmentV1.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace APPDassignmentV1.Screens
 {
@@ -25,8 +27,15 @@ namespace APPDassignmentV1.Screens
             InitializeComponent();
         }
 
+        public string _connectionstring = @"Server=tcp:appd-assignment-v2.database.windows.net,1433;Initial Catalog = APPD_Assignment_V2; Persist Security Info=False;User ID = appdassignmenttwo; Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30; MultipleActiveResultSets=true;";
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            var resourceList = ((PageSwitcher)this.Parent).data.Booking.Include(b => b.Region);
+            foreach (Booking item in resourceList)
+            {
+                //TODO
+            }
 
         }
 
