@@ -292,6 +292,9 @@
     <Compile Include="Screens\shoppingCartScreen.xaml.cs">
       <DependentUpon>ShoppingCartScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Transaction.xaml.cs">
       <DependentUpon>Transaction.xaml</DependentUpon>
     </Compile>
@@ -330,6 +333,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Screens\ShoppingCartScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\Payment.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
