@@ -33,7 +33,7 @@ namespace APPDassignmentV1.Screens
             var bookingList = ((PageSwitcher)this.Parent).data.Booking.Include(b => b.Resource);
             var most = (from q in bookingList 
                         
-                        group q by q.ResourceId into qgrp 
+                        group q by new { q.ResourceId, q.Resource.Picture } into qgrp 
                         orderby qgrp.Count() descending
                         select new { Count = qgrp.Count(),qgrp}).Take(10);
             foreach (var booking in most)
@@ -46,7 +46,7 @@ namespace APPDassignmentV1.Screens
                     Width = 150,
                     Height = 150,
                     //http://stackoverflow.com/questions/14337071/convert-array-of-bytes-to-bitmapimage
-                    Source = (BitmapSource)new ImageSourceConverter().ConvertFrom((bookingList.Where(i=>i.ResourceId==booking.qgrp.Key)).Single<Booking>().Resource.Picture),
+                    Source = (BitmapSource)new ImageSourceConverter().ConvertFrom(booking.qgrp.Key.Picture),
                     //((PageSwitcher)this.Parent).data.Picture.Where
                     //(x => x.PictureId == (int)item.PictureId).Single<Picture>().Picturee),//(BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
                     Stretch = Stretch.UniformToFill
