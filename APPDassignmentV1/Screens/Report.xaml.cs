@@ -27,13 +27,41 @@ namespace APPDassignmentV1.Screens
             InitializeComponent();
         }
 
-        public string _connectionstring = @"Server=tcp:appd-assignment-v2.database.windows.net,1433;Initial Catalog = APPD_Assignment_V2; Persist Security Info=False;User ID = appdassignmenttwo; Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30; MultipleActiveResultSets=true;";
-
+        
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            var resourceList = ((PageSwitcher)this.Parent).data.Booking.Include(b => b.Region);
-            foreach (Booking item in resourceList)
+            var bookingList = ((PageSwitcher)this.Parent).data.Booking.Include(b => b.Resource);
+            var most = (from q in bookingList 
+                        
+                        group q by q.ResourceId into qgrp 
+                        orderby qgrp.Count() descending
+                        select new { Count = qgrp.Count(),qgrp}).Take(10);
+            foreach (var booking in most)
             {
+                StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
+
+
+                stackPanel.Children.Add(new Image
+                {
+                    Width = 150,
+                    Height = 150,
+                    //http://stackoverflow.com/questions/14337071/convert-array-of-bytes-to-bitmapimage
+                    Source = (BitmapSource)new ImageSourceConverter().ConvertFrom((bookingList.Where(i=>i.ResourceId==booking.qgrp.Key)).Single<Booking>().Resource.Picture),
+                    //((PageSwitcher)this.Parent).data.Picture.Where
+                    //(x => x.PictureId == (int)item.PictureId).Single<Picture>().Picturee),//(BitmapSource)new ImageSourceConverter().ConvertFrom(item.Picture.Picturee),
+                    Stretch = Stretch.UniformToFill
+                });
+                stackPanel.Children.Add(new TextBox
+                {
+                    Width = 100,
+                    Height = 20,
+                    Margin = new Thickness(5),
+                    Text = booking.qgrp.Key.ToString(),
+                    IsEnabled = false
+                });
+                
+                
+                bookingUniformGrid.Children.Add(stackPanel);
                 //TODO
             }
 
