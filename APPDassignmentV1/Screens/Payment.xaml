@@ -7,51 +7,7 @@
              mc:Ignorable="d" Loaded="UserControl_Loaded"
              d:DesignHeight="700" d:DesignWidth="1000">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="400*" />
-            <RowDefinition Height="30" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <UniformGrid Name="reciptScreenUniformGrid" 
-	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="3" Columns="2" 
-	   Grid.Row="1" Grid.Column="0" Margin="2,2,2,0">
-            <UniformGrid.Resources>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Foreground" Value="Blue"/>
-                    <Setter Property="IsEnabled" Value="True"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Foreground" Value="#FFADADAD"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </UniformGrid.Resources>
-        </UniformGrid>
-        <UniformGrid Name="menuGrid" 
-	VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="3" 
-	   Grid.Row="0" Grid.Column="1" Margin="2,2,2,0">
-            <Button Name="goto_ChooseResourceScreenButton"
-                    Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
-        </UniformGrid>
-        <UniformGrid Name="userGrid"
-            VerticalAlignment="Stretch" HorizontalAlignment="Center" Rows="1" Columns="1" Grid.Row="1" Grid.Column="1" Margin="2,2,2,0">
-        </UniformGrid>
-        <Label x:Name="totalPrice_Label" Content="Total Price" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" FontSize="36" Margin="0,550,0,0" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="totalPrice" Content="S$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="2" FontSize="36" Margin="0,550,0,0" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="FirstName_Label" Content="First Name:" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1" Grid.Row="1" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="LastName_Label" Content="Last Name:" HorizontalAlignment="Left" Margin="150,50,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Grid.Column="1" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="Email_Label" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="150,100,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="PhoneNum_Label" Content="PhoneNumber:" Grid.Column="1" HorizontalAlignment="Left" Margin="150,150,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="CreditCardNo_Label" Content="CreditCardNO:" Grid.Column="1" HorizontalAlignment="Left" Margin="150,200,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="firstNameLabel" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="115" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lastNameLabel" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="0,50,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="84" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="emailLabel" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="0,100,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="phoneNumberLabel" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="0,150,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="creditNumberLabel" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="0,200,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="630,374,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+
     </Grid>
 </UserControl>

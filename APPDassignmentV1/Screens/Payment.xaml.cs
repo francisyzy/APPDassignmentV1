@@ -32,16 +32,12 @@ namespace APPDassignmentV1.Screens
             InitializeComponent();
         }
 
-        
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)//When user control is loaded, run:
         {
-            var gateway = new BraintreeGateway
-            {
-                Environment = Braintree.Environment.SANDBOX,
-                MerchantId = "pwkgm6dh9scwq8hp",
-                PublicKey = "djzhmwmxm85zymyq",
-                PrivateKey = "8b51991c9dfc9df934c35c5a27b54738"
-            };
+            
+
+
 
 
         }
@@ -51,6 +47,69 @@ namespace APPDassignmentV1.Screens
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            var gateway = new BraintreeGateway
+            {
+                Environment = Braintree.Environment.SANDBOX,
+                MerchantId = "pwkgm6dh9scwq8hp",
+                PublicKey = "djzhmwmxm85zymyq",
+                PrivateKey = "8b51991c9dfc9df934c35c5a27b54738"
+            };
+
+            TransactionRequest request = new TransactionRequest
+            {
+                Amount = 10.00M,
+                OrderId = "order id",
+                MerchantAccountId = "a_merchant_account_id",
+                PaymentMethodNonce = "fake-valid-nonce",
+                Customer = new CustomerRequest
+                {
+                    FirstName = "Tripp",
+                    LastName = "Jacobson",
+                    
+                    Phone = "312-555-1234",
+                    Fax = "312-555-1235",
+                    Website = "http://www.example.com",
+                    Email = "drew@example.com"
+                },
+                BillingAddress = new AddressRequest
+                {
+                    FirstName = "Paul",
+                    LastName = "Smith",
+                    Company = "Braintree",
+                    StreetAddress = "1 E Main St",
+                    ExtendedAddress = "Suite 403",
+                    Locality = "Chicago",
+                    Region = "IL",
+                    PostalCode = "60622",
+                    CountryCodeAlpha2 = "US"
+                },
+                ShippingAddress = new AddressRequest
+                {
+                    FirstName = "Jen",
+                    LastName = "Smith",
+                    Company = "Braintree",
+                    StreetAddress = "1 E 1st St",
+                    ExtendedAddress = "Suite 403",
+                    Locality = "Bartlett",
+                    Region = "IL",
+                    PostalCode = "60103",
+                    CountryCodeAlpha2 = "US"
+                },
+                Options = new TransactionOptionsRequest
+                {
+                    SubmitForSettlement = true
+                },
+            };
+
+            Result<Transaction> result = gateway.Transaction.Sale(request);
+        }
+
+        
+    
+    
     }
 }
 

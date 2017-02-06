@@ -118,7 +118,7 @@ namespace APPDassignmentV1.Screens
 
         private void goto_TransactionButton_Click(object sender, RoutedEventArgs e)//goes to transaction screen
         {
-            Switcher.Switch(new Payment(shoppingCart.totalprice));
+            Switcher.Switch(new Transaction());
         }
     }
 }
