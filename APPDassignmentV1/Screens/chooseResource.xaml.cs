@@ -101,5 +101,10 @@ namespace APPDassignmentV1.Screens
         {
             Switcher.Switch(new ShoppingCartScreen());
         }
+
+        private void goto_reportScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Report());
+        }
     }
 }

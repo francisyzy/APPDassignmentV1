@@ -120,6 +120,10 @@ namespace APPDassignmentV1.Screens
         {
             Switcher.Switch(new Transaction());
         }
+        private void goto_reportScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Report());
+        }
     }
 }
 

@@ -49,6 +49,10 @@
                     Click="goto_shoppingCartScreenButton_Click"
                     Width="100"
                     Content="Cart" />
+            <Button x:Name="goto_reportScreenButton"
+                    Click="goto_reportScreenButton_Click"
+                    Width="100"
+                    Content="Report" />
         </UniformGrid>
         <!--<ComboBox x:Name="regionList"
                   HorizontalAlignment="Left"

@@ -116,6 +116,10 @@ namespace APPDassignmentV1.Screens
         {
             ((Image)sender).Opacity = 0;
         }
+        private void goto_reportScreenButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Report());
+        }
         //private void themeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
         //    // ... Get the ComboBox.

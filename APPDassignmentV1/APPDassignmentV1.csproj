@@ -289,6 +289,9 @@
     <Compile Include="Screens\loginPage.xaml.cs">
       <DependentUpon>loginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\shoppingCartScreen.xaml.cs">
       <DependentUpon>ShoppingCartScreen.xaml</DependentUpon>
     </Compile>
@@ -328,6 +331,10 @@
     <Page Include="Screens\loginPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\ShoppingCartScreen.xaml">
       <Generator>MSBuild:Compile</Generator>

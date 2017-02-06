@@ -21,6 +21,10 @@
                     Click="goto_ChooseResourceScreenButton_Click" Width="100" Content="Resource"></Button>
             <Button x:Name="goto_shoppingCartScreenButton"
                     Click="goto_shoppingCartScreenButton_Click" Width="100" Content="Cart"/>
+            <Button x:Name="goto_reportScreenButton"
+                    Click="goto_reportScreenButton_Click"
+                    Width="100"
+                    Content="Report" />
         </UniformGrid>
 
         <UniformGrid Name="resourceUniformGrid" 
