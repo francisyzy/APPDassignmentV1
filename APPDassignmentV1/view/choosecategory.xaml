@@ -1,0 +1,162 @@
+﻿<UserControl x:Class="APPDassignmentV1.Screens.ChooseCategory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:APPDassignmentV1.Screens"
+             mc:Ignorable="d"
+             Loaded="UserControl_Loaded"
+             d:DesignHeight="700"
+             d:DesignWidth="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="400*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <UniformGrid Name="resourceTypeUniformGrid"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Right"
+                     Rows="2"
+                     Columns="1"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="2,2,2,0">
+            <UniformGrid.Resources>
+                <!--<Style TargetType="{x:Type Button}">
+                    <Setter Property="Foreground" Value="Blue"/>
+                    <Setter Property="IsEnabled" Value="True"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#FFADADAD"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>-->
+            </UniformGrid.Resources>
+        </UniformGrid>
+        <UniformGrid Name="menuGrid"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Center"
+                     Rows="1"
+                     Columns="3"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Margin="2,2,2,0">
+            <Button x:Name="goto_shoppingCartScreenButton"
+                    Click="goto_shoppingCartScreenButton_Click"
+                    Width="100"
+                    Content="Cart" />
+        </UniformGrid>
+        <!--<ComboBox x:Name="regionList"
+                  HorizontalAlignment="Left"
+                  Margin="10,10,0,0"
+                  Grid.Row="1"
+                  VerticalAlignment="Top"
+                  Width="160"
+                  Loaded="ComboBox_Loaded"
+                  SelectionChanged="regionList_SelectionChanged"
+                  Grid.Column="2" />-->
+        <Image x:Name="image"
+               Source="/img/Map/BlackWhite.png"
+               HorizontalAlignment="Left"
+               Height="387"
+               Margin="210,158,0,0"
+               Grid.Row="1"
+               VerticalAlignment="Top"
+               Width="613" />
+        <!--<Border BorderThickness="2" BorderBrush="AliceBlue">-->
+        <Image Source="/img/map/Bukit Merah.png"
+               x:Name="BukitMerah"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Width="63"
+               Margin="452,361,0,0"
+               Grid.Row="1"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
+               Height="41">
+        </Image>
+        <Image Source="/img/map/Clementi.png"
+               x:Name="Clementi"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Width="32"
+               Margin="392,311,0,0"
+               Grid.Row="1"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
+               Height="54">
+        </Image>
+        <Image Source="/img/map/Newton.png"
+               x:Name="Newton"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Width="50"
+               Margin="480,337,0,0"
+               Grid.Row="1"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
+               Height="51">
+        </Image>
+        <Image Source="/img/map/Pasir Ris.png"
+               x:Name="PasirRis"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Width="75"
+               Margin="589,241,0,0"
+               Grid.Row="1"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave">
+        </Image>
+        <Image Source="/img/map/Punggol.png"
+               x:Name="Punggol"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Width="43"
+               Margin="558,216,0,0"
+               Grid.Row="1"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
+               Height="39">
+        </Image>
+        <Image Source="/img/map/Yishun.png"
+               x:Name="Yishun"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               Width="68"
+               Margin="461,188,0,0"
+               Grid.Row="1"
+               MouseDown="Btn_Click"
+               MouseEnter="MouseEnter"
+               Panel.ZIndex="1"
+               Visibility="Visible"
+               Opacity="0"
+               MouseLeave="MouseLeave"
+               Height="62" >
+        </Image>
+
+    </Grid>
+</UserControl>

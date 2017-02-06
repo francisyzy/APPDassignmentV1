@@ -404,9 +404,7 @@
   <ItemGroup>
     <Resource Include="img\S2.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="view\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="img\Map\Singapore_Planning_Regions.png" />
   </ItemGroup>

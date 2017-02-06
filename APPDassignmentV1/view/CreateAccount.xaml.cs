@@ -41,7 +41,7 @@ namespace APPDassignmentV1.Screens
             //FirebaseClient database;
             if (passwordInput.Password == confirmPasswordInput.Password)
             {
-                var su = provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);
+                provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);
                 MessageBox.Show("Successful Created");
             }
             else
