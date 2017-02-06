@@ -24,6 +24,7 @@ namespace APPDassignmentV1.Screens
         private CartItem _cartitem = null;
         private DateTime startDateTime;
         private DateTime endDateTime;
+        private bool valid = false;
         public dateSelection(CartItem cartitem)
         {
             _cartitem = cartitem;
@@ -42,12 +43,14 @@ namespace APPDassignmentV1.Screens
             {
                 // ... A null object.
                 this.startDateTime = DateTime.Now;
+                nonull(picker.SelectedDate);
             }
             else
             {
                 // ... No need to display the time.
                 DateTime date = (DateTime)picker.SelectedDate;
                 this.startDateTime = date;
+                nonull(picker.SelectedDate);
             }
         }
 
@@ -63,18 +66,20 @@ namespace APPDassignmentV1.Screens
             {
                 // ... A null object.
                 this.endDateTime = DateTime.Now;
+                nonull(picker.SelectedDate);
             }
             else
             {
                 // ... No need to display the time.
                 DateTime date = (DateTime)picker.SelectedDate;
                 this.endDateTime = date;
+                nonull(picker.SelectedDate);
             }
         }
 
         private void addToCartButton_Click(object sender, RoutedEventArgs e)
         {
-            if (checkvalidation(this.startDateTime, this.endDateTime)&&checkDate(this.startDateTime, this.endDateTime))
+            if (checkvalidation(this.startDateTime, this.endDateTime)&&checkDate(this.startDateTime, this.endDateTime)&&valid&&notbftoday(this.startDateTime)
             {
                 _cartitem.BookingStartDateAndTime = this.startDateTime;
                 _cartitem.BookingEndDateAndTime = this.endDateTime;
@@ -111,6 +116,30 @@ namespace APPDassignmentV1.Screens
                 vaild = false;
             }
             return vaild;
+        }
+
+        public void nonull(DateTime? a){
+            if(a == null)
+            {
+                this.valid = false;
+            }
+            else
+            {
+                this.valid = true;
+            }
+
+        }
+
+        public bool notbftoday(DateTime start)
+        {
+            if (start <= DateTime.Now)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
