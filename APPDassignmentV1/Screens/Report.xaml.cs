@@ -38,6 +38,63 @@ namespace APPDassignmentV1.Screens
                         group q by q.ResourceId into qgrp 
                         orderby qgrp.Count() descending
                         select new { Count = qgrp.Count(),qgrp}).Take(10);
+            //Before stack panel legend thingy
+            StackPanel legend = new StackPanel(); //Adds data from json file into the stackpanel using textbox
+            legend.Orientation = Orientation.Horizontal;
+
+            legend.Children.Add(new TextBox
+            {
+                Width = 25,
+                Height = 20,
+                Margin = new Thickness(5),
+                Text = "No.",
+                IsEnabled = false
+            });
+            legend.Children.Add(new TextBox
+            {
+                Width = 100,
+                Height = 20,
+                Margin = new Thickness(5),
+                Text = "No. Of Booking",
+                IsEnabled = false
+            });
+            legend.Children.Add(new TextBox
+            {
+                Width = 150,
+                Height = 20,
+                Margin = new Thickness(5),
+                Text = "Picture",
+                IsEnabled = false
+            });
+            legend.Children.Add(new TextBox
+            {
+                Width = 30,
+                Height = 20,
+                Margin = new Thickness(5),
+                Text = "ID",
+                IsEnabled = false
+            });
+            legend.Children.Add(new TextBox
+            {
+                Width = 100,
+                Height = 20,
+                Margin = new Thickness(5),
+                Text = "Address",
+                IsEnabled = false
+            });
+
+            legend.Children.Add(new TextBox
+            {
+                Width = 100,
+                Height = 20,
+                Margin = new Thickness(5),
+                Text = "Button to check details",
+                IsEnabled = false
+
+            });
+
+            bookingUniformGrid.Children.Add(legend);
+
             foreach (var booking in most)
             {
                 StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
@@ -45,7 +102,7 @@ namespace APPDassignmentV1.Screens
 
                 stackPanel.Children.Add(new TextBox
                 {
-                    Width = 20,
+                    Width = 25,
                     Height = 20,
                     Margin = new Thickness(5),
                     Text = count.ToString(),
@@ -53,7 +110,7 @@ namespace APPDassignmentV1.Screens
                 });
                 stackPanel.Children.Add(new TextBox
                 {
-                    Width = 20,
+                    Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
                     Text = booking.Count.ToString(),
