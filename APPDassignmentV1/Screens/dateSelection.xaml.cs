@@ -79,16 +79,29 @@ namespace APPDassignmentV1.Screens
 
         private void addToCartButton_Click(object sender, RoutedEventArgs e)
         {
-            if (checkvalidation(this.startDateTime, this.endDateTime)&&checkDate(this.startDateTime, this.endDateTime)&&valid&&notbftoday(this.startDateTime)
+            if (!checkvalidation(this.startDateTime, this.endDateTime))
+            {
+                MessageBox.Show("Date not available for booking");
+            }
+            else if(!checkDate(this.startDateTime, this.endDateTime))
+            {
+                MessageBox.Show("End date earlier than start date");
+            }
+            else if(!valid)
+            {
+                MessageBox.Show("Please select a date");
+            }
+            else if (!notbftoday(this.startDateTime))
+            {
+                MessageBox.Show("Please check start date selection. Booking can only be made on days after today");
+            }
+            else
             {
                 _cartitem.BookingStartDateAndTime = this.startDateTime;
                 _cartitem.BookingEndDateAndTime = this.endDateTime;
                 shoppingCart.AddCartItem(_cartitem);//add datetime into cart
                 Switcher.Switch(new ChooseCategory());//goes back into main page
-            }
-            else
-            {
-                MessageBox.Show("Date not available for booking or End date earlier than start date");
+                
             }
         }
         public bool checkvalidation(DateTime start, DateTime end)
