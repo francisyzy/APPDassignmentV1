@@ -82,7 +82,7 @@ namespace APPDassignmentV1.Screens
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = booking.qgrp.Key.ToString(),//This is supoosed to be full address
+                    Text = (((PageSwitcher)this.Parent).data.Resource.Where(i => i.ResourceId == booking.qgrp.Key.ToString())).Single<Resource>().Fulladdress,//This is supoosed to be full address
                     IsEnabled = false
                 });
 
