@@ -21,14 +21,12 @@ namespace APPDassignmentV1.Screens
     /// </summary>
     public partial class detailPageScreen : UserControl
     {
-        private int _resourceTypeID = 0;
         private string _resourceID = "";
         private Resource selectedResource = null;
 
-        public detailPageScreen(string tag, int resourcetypeID)
+        public detailPageScreen(string tag)
         {
             _resourceID = tag;
-            _resourceTypeID = resourcetypeID;
             InitializeComponent();
         }
 
@@ -56,14 +54,14 @@ namespace APPDassignmentV1.Screens
 
         private void BookButton_Click(object sender, RoutedEventArgs e)//When book button is clicked
         {
-            if (_resourceTypeID == 1)//finding appropirate datatype
-            {
+            //if (_resourceTypeID == 1)//finding appropirate datatype
+            //{
                 selectedResource = ((PageSwitcher)this.Parent).data.Resource.Where(input => input.ResourceId == _resourceID).Single<Resource>();//ask database for resource
-            }
-            else if (_resourceTypeID == 2)
-            {
-                selectedResource = ((PageSwitcher)this.Parent).data.Resource.Where(input => input.ResourceId == _resourceID).Single<Resource>();//ask database for resource
-            }
+            //}
+            //else if (_resourceTypeID == 2)
+            //{
+                //selectedResource = ((PageSwitcher)this.Parent).data.Resource.Where(input => input.ResourceId == _resourceID).Single<Resource>();//ask database for resource
+            //}
             CartItem cartItem = new CartItem(selectedResource);//adds item into cart
             Switcher.Switch(new dateSelection(cartItem));//brings cart item info into next page
         }

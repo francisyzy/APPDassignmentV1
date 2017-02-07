@@ -30,6 +30,8 @@ namespace APPDassignmentV1.Screens
         
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+
+            int count = 1;
             var bookingList = ((PageSwitcher)this.Parent).data.Booking.Include(b => b.Resource);
             var most = (from q in bookingList 
                         
@@ -39,8 +41,24 @@ namespace APPDassignmentV1.Screens
             foreach (var booking in most)
             {
                 StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
+                stackPanel.Orientation = Orientation.Horizontal;
 
-
+                stackPanel.Children.Add(new TextBox
+                {
+                    Width = 20,
+                    Height = 20,
+                    Margin = new Thickness(5),
+                    Text = count.ToString(),
+                    IsEnabled = false
+                });
+                stackPanel.Children.Add(new TextBox
+                {
+                    Width = 20,
+                    Height = 20,
+                    Margin = new Thickness(5),
+                    Text = booking.Count.ToString(),
+                    IsEnabled = false
+                });
                 stackPanel.Children.Add(new Image
                 {
                     Width = 150,
@@ -53,7 +71,7 @@ namespace APPDassignmentV1.Screens
                 });
                 stackPanel.Children.Add(new TextBox
                 {
-                    Width = 100,
+                    Width = 30,
                     Height = 20,
                     Margin = new Thickness(5),
                     Text = booking.qgrp.Key.ToString(),
@@ -64,14 +82,33 @@ namespace APPDassignmentV1.Screens
                     Width = 100,
                     Height = 20,
                     Margin = new Thickness(5),
-                    Text = booking.Count.ToString(),
+                    Text = booking.qgrp.Key.ToString(),//This is supoosed to be full address
                     IsEnabled = false
                 });
 
+                Button button = new Button() //Adds button to check the details of the item that user selected
+                {
+                    Width = 100,
+                    Height = 20,
+                    Margin = new Thickness(5),
+                    Content = "Check Detail",
+                    Tag = booking.qgrp.Key.ToString()
+
+                };
+                button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
+                stackPanel.Children.Add(button);
+
                 bookingUniformGrid.Children.Add(stackPanel);
-                //TODO
+
+                count++;
             }
 
+        }
+
+        private void goto_DetailPageScreenButton_Click(object sender, RoutedEventArgs e)//page switching
+        {
+            Button button = (Button)sender;
+            Switcher.Switch(new detailPageScreen((((Button)sender).Tag.ToString())));//bring info from previous page to new page
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)//Button to goto shopping cart

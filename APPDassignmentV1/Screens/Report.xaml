@@ -37,8 +37,8 @@
         <UniformGrid Name="bookingUniformGrid"
                      VerticalAlignment="Stretch"
                      HorizontalAlignment="Center"
-                     Rows="3"
-                     Columns="2"
+                     Rows="10"
+                     Columns="1"
                      Grid.Row="1"
                      Grid.Column="0"
                      Margin="2,2,2,0">
