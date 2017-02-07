@@ -178,5 +178,25 @@ namespace APPDassignmentV1.Screens
             Button button = (Button)sender;
             Switcher.Switch(new ChooseCategory());
         }
+
+        private void topBooking_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void topPeriodBooking_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lastWeekBooking_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void lastMonthBooking_Click(object sender, RoutedEventArgs e)
+        {
+            //idk what to add here
+        }
     }
 }
