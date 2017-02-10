@@ -333,9 +333,7 @@ namespace APPDassignmentV1.Screens
             
             bookingUniformGrid.Children.Clear();
             displaydetail();
-            ScrollViewer scroll = new ScrollViewer();
-            scroll.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
-            scroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
+            
             foreach (var booking in bookingList)
             {
                 StackPanel stackPanel = new StackPanel(); //Adds data from json file into the stackpanel using textbox
@@ -395,8 +393,8 @@ namespace APPDassignmentV1.Screens
                 };
                 button.Click += new RoutedEventHandler(goto_DetailPageScreenButton_Click);
                 stackPanel.Children.Add(button);
-                scroll.Content = stackPanel;
-                bookingUniformGrid.Children.Add(scroll);
+                
+                bookingUniformGrid.Children.Add(stackPanel);
 
                 count++;
             }
