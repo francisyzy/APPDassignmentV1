@@ -154,5 +154,10 @@ namespace APPDassignmentV1.Screens
                 return true;
             }
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new ChooseCategory());
+        }
     }
 }

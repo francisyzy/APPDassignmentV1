@@ -89,8 +89,15 @@ namespace APPDassignmentV1.Screens
 
         private void chooseResourceTypeButton_Click(object sender, RoutedEventArgs e)//goes into new page
         {
-            Button button = (Button)sender;
-            Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()),this.regionSelected));
+            if (this.regionSelected != null)
+            {
+                Button button = (Button)sender;
+                Switcher.Switch(new ChooseResource((((Button)sender).Tag.ToString()), this.regionSelected));
+            }
+            else
+            {
+                MessageBox.Show("Please select a region.");
+            }
         }
 
         private void goto_shoppingCartScreenButton_Click(object sender, RoutedEventArgs e)

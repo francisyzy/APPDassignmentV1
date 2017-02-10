@@ -10,6 +10,7 @@
         <DatePicker x:Name="startTimeDatePicker" HorizontalAlignment="Left" Margin="476,159,0,0" VerticalAlignment="Top" Width="274" SelectedDateChanged="startTimeDatePicker_SelectedDateChanged" Height="39"/>
         <DatePicker x:Name="endTimeDatePicker" HorizontalAlignment="Left" Margin="476,358,0,0" VerticalAlignment="Top" Width="274" SelectedDateChanged="endTimeDatePicker_SelectedDateChanged" Height="39"/>
         <Button x:Name="addToCartButton" Content="AddToCart" HorizontalAlignment="Left" Margin="402,497,0,0" VerticalAlignment="Top" Width="147" Click="addToCartButton_Click" Height="30"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="280,500,0,0" VerticalAlignment="Top" Width="103" Click="BackButton_Click" Height="22"/>
         <Label x:Name="Starttime" Content="Start Time:" HorizontalAlignment="Left" Margin="269,157,0,0" VerticalAlignment="Top" Width="157" Height="26" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="Endtime" Content="End Time:" HorizontalAlignment="Left" Margin="269,354,0,0" VerticalAlignment="Top" Width="157" Height="27" Foreground="White" FontWeight="Bold"/>
 
