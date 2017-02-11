@@ -35,14 +35,28 @@ namespace APPDassignmentV1.Screens
             InitializeComponent();
         }
 
-        private void createBtn_Click(object sender, RoutedEventArgs e)
+        private async void createBtn_Click(object sender, RoutedEventArgs e)
         {
             var provider = new FirebaseAuthProvider(new FirebaseConfig(API_KEY));
             //FirebaseClient database;
             if (passwordInput.Password == confirmPasswordInput.Password)
             {
-                var su = provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);
-                MessageBox.Show("Successful Created");
+                try
+                {
+                    var su = await provider.CreateUserWithEmailAndPasswordAsync(emailInput.Text, passwordInput.Password);
+                    MessageBox.Show("Successful Created");
+                    Switcher.Switch(new loginPage());
+                }
+                catch(Exception a)
+                {
+                    
+                    MessageBox.Show("Create account failed");
+                }
+
+
+                   
+                
+               
             }
             else
                 MessageBox.Show("Passwords do not match! \n Please check passwords");
