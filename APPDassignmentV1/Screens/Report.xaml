@@ -61,8 +61,8 @@
                     Width="150"
                     Content="Last Month Booking" />
         </UniformGrid>
-        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
-        <UniformGrid Name="bookingUniformGrid"
+        
+            <UniformGrid Name="bookingUniformGrid"
                      VerticalAlignment="Stretch"
                      HorizontalAlignment="Center"
                      Rows="10"
@@ -86,6 +86,6 @@
                 </Style>
             </UniformGrid.Resources>
         </UniformGrid>
-        </ScrollViewer>
+        
     </Grid>
 </UserControl>
