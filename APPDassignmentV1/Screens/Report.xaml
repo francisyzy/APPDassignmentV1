@@ -51,7 +51,7 @@
             <Button x:Name="topPeriodBooking"
                     Click="topPeriodBooking_Click"
                     Width="150"
-                    Content="Top Booking Duration" />
+                    Content="Total Booking" />
             <Button x:Name="lastWeekBooking"
                     Click="lastWeekBooking_Click"
                     Width="150"
