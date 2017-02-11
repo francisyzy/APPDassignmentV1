@@ -118,7 +118,11 @@ namespace APPDassignmentV1.Screens
 
         private void goto_TransactionButton_Click(object sender, RoutedEventArgs e)//goes to transaction screen
         {
-            Switcher.Switch(new Transaction());
+            var testTotalPrice = shoppingCart.totalprice();
+            if (testTotalPrice > 0)
+                Switcher.Switch(new Transaction());
+            else
+                MessageBox.Show("please add something in shopping cart before confirming");
         }
         private void goto_reportScreenButton_Click(object sender, RoutedEventArgs e)
         {

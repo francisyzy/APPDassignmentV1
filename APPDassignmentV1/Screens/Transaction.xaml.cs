@@ -133,7 +133,7 @@ namespace APPDassignmentV1.Screens
 
             //firstNameLabel.Content = currentUser.cu.firstName;//Gets userinformation & Display them
             //lastNameLabel.Content = currentUser.cu.lastName;
-            //emailLabel.Content = currentUser.cu.email;
+            emailLabel.Content = Models.User.getuser();
             //phoneNumberLabel.Content = currentUser.cu.phoneNum;
             shoppingCart.RemoveAllCartItem();//remove all shopping cart items after transection is over
         }

@@ -31,18 +31,18 @@ namespace APPDassignmentV1
                 CartItems.Clear();
             }
             public static List<CartItem> GetCartItems()//allow shopping cart screen to see all the cart items
-                {
-                    return CartItems;
-                }
-                public static double totalprice()
-                {
-                    double a = 0;
-                    foreach (CartItem item in CartItems)
-                    {
-                        a += item.itemPrice;
-                    }
-                    return a;
-                }
+            {
+                return CartItems;
+            }
+            public static double totalprice()
+            {
+               double a = 0;
+               foreach (CartItem item in CartItems)
+               {
+                   a += item.itemPrice;
+               }
+            return a;
+            }
         }
 
         public class CartItem : Resource//let cart item get info from resource
