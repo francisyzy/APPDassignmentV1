@@ -161,6 +161,8 @@
                MouseLeave="MouseLeave"
                Height="62" >
         </Image>
+        <Label x:Name="rs" HorizontalAlignment="Left" Margin="684,2,0,0" VerticalAlignment="Top" Height="28" Width="286" FontSize="18" Content="Region Select :" Foreground="White"/>
+
 
     </Grid>
 </UserControl>

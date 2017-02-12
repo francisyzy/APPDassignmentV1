@@ -32,7 +32,7 @@
 	   Grid.Row="1" Grid.Column="1" Margin="2,2,2,0">
         </UniformGrid>
 
-        
+
         <TextBlock Grid.Row="2" Grid.Column="0"  Name="resultTextBlock"></TextBlock>
     </Grid>
 </UserControl>

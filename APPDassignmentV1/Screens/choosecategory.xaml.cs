@@ -46,6 +46,7 @@ namespace APPDassignmentV1.Screens
                     Content = string.Format("{0}", resourceTypes.ResourceTypeName),//generate button content based on resourceTypeName data
                     Tag = resourceTypes.ResourceTypeId,
                     Height = 35,
+                    Width = 200,
                     HorizontalAlignment = HorizontalAlignment.Stretch
                 };
                 button.Click += new RoutedEventHandler(chooseResourceTypeButton_Click);
@@ -71,16 +72,16 @@ namespace APPDassignmentV1.Screens
         //}
         
 
-        private void regionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // ... Get the ComboBox.
-            var comboBox = sender as ComboBox;
+        //private void regionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    // ... Get the ComboBox.
+        //    var comboBox = sender as ComboBox;
 
-            // ... Set SelectedItem as Window Title.
-            string value = comboBox.SelectedItem as string;
-            this.regionSelected = value;
+        //    // ... Set SelectedItem as Window Title.
+        //    string value = comboBox.SelectedItem as string;
+        //    this.regionSelected = value;
             
-        }
+        //}
 
         public void UtilizeState(object state)
         {
@@ -111,7 +112,11 @@ namespace APPDassignmentV1.Screens
             
             regionSelected = ((Image)sender).Name;
             ((Image)sender).Opacity = 100;
+
+            rs.Content = "Region Select : " + regionSelected; 
             MessageBox.Show(regionSelected);
+
+
         }
 
         private void MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
