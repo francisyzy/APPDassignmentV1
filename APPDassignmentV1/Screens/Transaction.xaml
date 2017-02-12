@@ -44,8 +44,20 @@
         <Label x:Name="totalPrice_Label" Content="Total Price" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" FontSize="36" Margin="0,550,0,0" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="totalPrice" Content="S$" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="2" FontSize="36" Margin="0,550,0,0" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="Email_Label" Content="Thanks you for your order" Grid.Column="1" HorizontalAlignment="Left"
-               Margin="57,100,0,0"
+               Margin="10,496,0,0"
                Grid.Row="1" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="emailLabel" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="0,100,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235" Foreground="White" FontWeight="Bold"/>
+        <ListView x:Name="listView" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="310" Margin="114,100,0,0" Grid.Row="1" VerticalAlignment="Top" Width="729">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ResourceID" Width="120" DisplayMemberBinding="{Binding ResourceId}" />
+                    <GridViewColumn Header="Booking Start Date" Width="50" DisplayMemberBinding="{Binding BookingStartDate}" />
+                    <GridViewColumn Header="Booking End Date" Width="150" DisplayMemberBinding="{Binding BookingEndDate}" />
+                    <GridViewColumn Header="Booking Price" Width="150" DisplayMemberBinding="{Binding BookingPrice}" />
+                    <GridViewColumn Header="BookingDate" Width="150" DisplayMemberBinding="{Binding BookingDate}" />
+                    <GridViewColumn Header="Email" Width="150" DisplayMemberBinding="{Binding Email}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

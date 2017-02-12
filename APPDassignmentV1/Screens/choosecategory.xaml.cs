@@ -110,7 +110,7 @@ namespace APPDassignmentV1.Screens
         private void Btn_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             
-            regionSelected = ((Image)sender).Name;
+            regionSelected = ((Image)sender).Name;  
             ((Image)sender).Opacity = 100;
 
             rs.Content = "Region Select : " + regionSelected; 

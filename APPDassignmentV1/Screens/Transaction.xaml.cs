@@ -34,70 +34,72 @@ namespace APPDassignmentV1.Screens
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)//When user control is loaded, run:
         {
+            List<Booking> listdisplay = new List<Booking>();
+
             foreach (CartItem item in shoppingCart.GetCartItems())//Generate display information for every item in the cart
             {
 
-                StackPanel stackPanel = new StackPanel();
-                stackPanel.Children.Add(new Label//generate label for resourceId
-                {
-                    Content = "ResourceID",
-                    Foreground = new SolidColorBrush(Colors.White),
-                    FontWeight = FontWeights.Bold
-                });
-                stackPanel.Children.Add(new TextBox//generate textbox (used as label) for resourceId
-                {
-                    Width = 100,
-                    Height = 20,
-                    Margin = new Thickness(5),
-                    Text = item.ResourceId.ToString(),
-                    IsEnabled = false
+                //StackPanel stackPanel = new StackPanel();
+                //stackPanel.Children.Add(new Label//generate label for resourceId
+                //{
+                //    Content = "ResourceID",
+                //    Foreground = new SolidColorBrush(Colors.White),
+                //    FontWeight = FontWeights.Bold
+                //});
+                //stackPanel.Children.Add(new TextBox//generate textbox (used as label) for resourceId
+                //{
+                //    Width = 100,
+                //    Height = 20,
+                //    Margin = new Thickness(5),
+                //    Text = item.ResourceId.ToString(),
+                //    IsEnabled = false
 
-                });
-                stackPanel.Children.Add(new Label
-                {
-                    Content = "Booking Start Date",
-                    Foreground = new SolidColorBrush(Colors.White),
-                    FontWeight = FontWeights.Bold
-                });
-                stackPanel.Children.Add(new TextBox
-                {
-                    Width = 100,
-                    Height = 20,
-                    Margin = new Thickness(5),
-                    Text = item.BookingStartDateAndTime.ToString(),
-                    IsEnabled = false
-                });
-                stackPanel.Children.Add(new Label
-                {
-                    Content = "Booking End Date",
-                    Foreground = new SolidColorBrush(Colors.White),
-                    FontWeight = FontWeights.Bold
-                });
-                stackPanel.Children.Add(new TextBox
-                {
-                    Width = 100,
-                    Height = 20,
-                    Margin = new Thickness(5),
-                    Text = item.BookingEndDateAndTime.ToString(),
-                    IsEnabled = false
-                });
-                stackPanel.Children.Add(new Label
-                {
-                    Content = "Booking Price",
-                    Foreground = new SolidColorBrush(Colors.White),
-                    FontWeight = FontWeights.Bold
-                });
-                stackPanel.Children.Add(new TextBox
-                {
-                    Width = 100,
-                    Height = 20,
-                    Margin = new Thickness(5),
-                    Text = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime).ToString(),
-                    IsEnabled = false
+                //});
+                //stackPanel.Children.Add(new Label
+                //{
+                //    Content = "Booking Start Date",
+                //    Foreground = new SolidColorBrush(Colors.White),
+                //    FontWeight = FontWeights.Bold
+                //});
+                //stackPanel.Children.Add(new TextBox
+                //{
+                //    Width = 100,
+                //    Height = 20,
+                //    Margin = new Thickness(5),
+                //    Text = item.BookingStartDateAndTime.ToString(),
+                //    IsEnabled = false
+                //});
+                //stackPanel.Children.Add(new Label
+                //{
+                //    Content = "Booking End Date",
+                //    Foreground = new SolidColorBrush(Colors.White),
+                //    FontWeight = FontWeights.Bold
+                //});
+                //stackPanel.Children.Add(new TextBox
+                //{
+                //    Width = 100,
+                //    Height = 20,
+                //    Margin = new Thickness(5),
+                //    Text = item.BookingEndDateAndTime.ToString(),
+                //    IsEnabled = false
+                //});
+                //stackPanel.Children.Add(new Label
+                //{
+                //    Content = "Booking Price",
+                //    Foreground = new SolidColorBrush(Colors.White),
+                //    FontWeight = FontWeights.Bold
+                //});
+                //stackPanel.Children.Add(new TextBox
+                //{
+                //    Width = 100,
+                //    Height = 20,
+                //    Margin = new Thickness(5),
+                //    Text = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime).ToString(),
+                //    IsEnabled = false
 
-                });
+                //});
 
-                reciptScreenUniformGrid.Children.Add(stackPanel);
+                //reciptScreenUniformGrid.Children.Add(stackPanel);
 
                 Booking _booking = new Booking()
                 {
@@ -106,10 +108,15 @@ namespace APPDassignmentV1.Screens
                     BookingStartDate = item.BookingStartDateAndTime,
                     BookingEndDate = item.BookingEndDateAndTime,
                     ResourceId = item.ResourceId,
-                    Email = Models.User.getuser()
-                    
+                    Email = Models.User.getuser(),
+                    BookingPrice = item.CalculatePrice(item.BookingStartDateAndTime, item.BookingEndDateAndTime)
+
 
                 };
+
+
+                listdisplay.Add(_booking);
+                
                 //using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
                 //{
                 //    using (var conn = new System.Data.SqlClient.SqlConnection(_connectionstring))
@@ -129,6 +136,8 @@ namespace APPDassignmentV1.Screens
 
 
             }
+
+            listView.ItemsSource = listdisplay;
             totalPrice.Content = "S$" + shoppingCart.totalprice();//get total S$
 
             //firstNameLabel.Content = currentUser.cu.firstName;//Gets userinformation & Display them
@@ -137,6 +146,9 @@ namespace APPDassignmentV1.Screens
             //phoneNumberLabel.Content = currentUser.cu.phoneNum;
             shoppingCart.RemoveAllCartItem();//remove all shopping cart items after transection is over
         }
+
+
+
 
         private void goto_ChooseResourceScreenButton_Click(object sender, RoutedEventArgs e)//Button to go back
         {

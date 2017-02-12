@@ -13,6 +13,7 @@ namespace APPDassignmentV1.Models
         public DateTime BookingDate { get; set; }
         public DateTime BookingStartDate { get; set; }
         public DateTime BookingEndDate { get; set; }
+        public double BookingPrice { get; set; }
         public string ResourceId { get; set; }
         public string Email { get; set; }
 

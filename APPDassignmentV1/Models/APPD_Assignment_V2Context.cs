@@ -40,10 +40,17 @@ namespace APPDassignmentV1.Models
                     .HasColumnName("bookingStartDate")
                     .HasColumnType("date");
 
+                entity.Property(e => e.BookingPrice)
+                    .HasColumnName("bookingPrice")
+                    .HasColumnType("float");
+
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasColumnName("email")
                     .HasColumnType("varchar(100)");
+
+
+
 
                 entity.Property(e => e.ResourceId)
                     .IsRequired()
