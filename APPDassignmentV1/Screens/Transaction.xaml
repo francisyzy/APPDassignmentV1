@@ -46,6 +46,7 @@
         <Label x:Name="Email_Label" Content="Thanks you for your order" Grid.Column="1" HorizontalAlignment="Left"
                Margin="10,496,0,0"
                Grid.Row="1" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="emailLabel" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="306,496,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Width="235" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <ListView x:Name="listView" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="310" Margin="114,100,0,0" Grid.Row="1" VerticalAlignment="Top" Width="729">
             <ListView.View>
                 <GridView>
