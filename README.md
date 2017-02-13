@@ -5,3 +5,6 @@ V1.1 is me trying to copy code from assignment research into our own assignment.
 V1.1 is working now
 
 V1.1.1 is the backup of V1.1 on 6pm 11dec
+
+
+V2 is the version for part 2 of the assignment with the database
