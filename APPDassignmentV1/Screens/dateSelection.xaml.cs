@@ -118,7 +118,16 @@ namespace APPDassignmentV1.Screens
                     valid = false;
                 }
             }
-            
+            foreach (CartItem booking in (shoppingCart.GetCartItems()).Where(x => x.ResourceId == _cartitem.ResourceId))
+            {
+                int bigthanzero = DateTime.Compare(start, booking.BookingEndDateAndTime);
+                int smallthanzero = DateTime.Compare(end, booking.BookingStartDateAndTime);
+
+                if (!((bigthanzero > 0) || (smallthanzero < 0)))
+                {
+                    valid = false;
+                }
+            }
 
 
             return valid;
