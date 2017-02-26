@@ -10,7 +10,7 @@ By
 Class: DIT/FT/1A/23
 
 Team Members(Student ID):
-Francis Yeo Zhao Yik (1625950)
+Francis Yeo (1625950)
 ZHAO FENGYE (1651449)
 
 
